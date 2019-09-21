@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>展览-故宫博物院</title>
+    <link rel="stylesheet" href="base_lm.css">
+    <link rel="stylesheet" href="show.css">
+    <link rel="icon" href="首位部/favicon.ico">
+    <link rel="stylesheet" href="首位部/css_nav/nav_white.css">
+    <link rel="stylesheet" href="首位部/css_nav/base.css">
+    <script src="首位部/lib/jquery-3.4.1.js"></script>
+    <script src="show.js"></script>
+    <script src="./js/link.js"></script>
+    <style>
+        footer {
+            margin-top: 21px;
+            width: 100%;
+            height: 119px;
+            background-color: #272727;
+            padding-top: 21px;
+            padding-bottom: 18.9px;
+            box-sizing: border-box;
+        }
+
+        footer .footer_wrap {
+            width: 1100.4px;
+            height: 88.2px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        footer .footer_wrap .qr_code {
+            position: absolute;
+            cursor: pointer;
+            right: 252px;
+            top: 25.2px;
+            width: 26.6px;
+            height: 26.6px;
+            background: url('./img/footer_ico_code.png') no-repeat;
+            background-size: contain;
+        }
+
+        footer .footer_wrap .qr_code img {
+            transform: scale(0.7);
+            position: absolute;
+            top: -380px;
+            right: -127px;
+            z-index: 10;
+            display: none;
+        }
+
+        footer .footer_wrap .qr_code:hover img {
+            display: block;
+        }
+
+        footer .footer_wrap .qr_code::after {
+            content: '';
+            animation: footer_move 0.5s infinite alternate;
+            position: absolute;
+            right: -9.8px;
+            top: 17.5px;
+            display: block;
+            width: 18.2px;
+            height: 18.2px;
+            background: url('./img/footer_ico_hand.png') no-repeat;
+            background-size: contain;
+        }
+
+        @keyframes footer_move {
+            from {
+                right: -9.8px;
+                top: 17.5px;
+            }
+
+            to {
+                right: -11.9px;
+                top: 23.1px;
+            }
+        }
+
+        footer .footer_wrap .visit {
+            width: 100%;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        footer .footer_wrap .visit span {
+            color: #fff;
+            font-size: 9.8px;
+            line-height: 19.6px;
+            margin-right: 14px;
+        }
+
+        footer .footer_wrap .visit ul li {
+            width: 14px;
+            height: 19.6px;
+            background-color: #404040;
+            float: left;
+            color: #fff;
+            margin-right: 7px;
+            text-align: center;
+            line-height: 19.6px;
+            font-size: 9.8px;
+        }
+
+        footer .footer_wrap .link {
+            margin-top: 14px;
+            width: 100%;
+        }
+
+        footer .footer_wrap .link ul {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer .footer_wrap .link ul li {
+            margin-right: 7px;
+        }
+
+        footer .footer_wrap .link ul li a {
+            color: #fff;
+            font-size: 9.8px;
+        }
+
+        footer .footer_wrap .link ul li a:hover {
+            color: #909090;
+        }
+
+        footer .footer_wrap .com {
+            margin-top: 14px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer .footer_wrap .com p {
+            color: #fff;
+            font-size: 9.8px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 组长写的导航 -->
+
+    <div class="header">
+        <div class="w">
+            <nav>
+                <img src="./img_nav/logo_red.png" alt="LOGO" class="left logo">
+                <ul id="ul_tr">
+                    <li id="li1"><a href="javascript:;">首页</a>
+                        <div id="tr1"></div>
+                    </li>
+                    <li id="li2"><a href="javascript:;">导览</a>
+                        <div id="tr2"></div>
+                    </li>
+                    <li id="li3"><a href="javascript:;">展览</a>
+                        <div id="tr3"></div>
+                    </li>
+                    <li id="li4"><a href="javascript:;">教育</a>
+                        <div id="tr4"></div>
+                    </li>
+                    <li id="li5"><a href="javascript:;">探索</a>
+                        <div id="tr5"></div>
+                    </li>
+                    <li id="li6"><a href="javascript:;">学术</a>
+                        <div id="tr6"></div>
+                    </li>
+                    <li id="li7"><a href="javascript:;">文创</a>
+                        <div id="tr7"></div>
+                    </li>
+                    <li id="li8"><a href="javascript:;">关于</a>
+                        <div id="tr8"></div>
+                    </li>
+                </ul>
+                <div class="tools">
+                    <span class="img btn" id="login_icon">
+                        <img src="./img_nav/login.png" alt="" id="login">
+                        <div id="login_box">
+                            <a href="javascript:;">登录</a>
+                            <a href="javascript:;">注册</a>
+                        </div>
+                    </span>
+                    <span class="public" id="line">|</span>
+                    <span class="zhong btn" id="zhong_icon">
+                        <img src="./img_nav/zhong.png" alt="" id="zhong">
+                        <div id="zhong_box">
+                            <a href="javascript:;">EN</a>
+                            <a href="javascript:;">青少年版</a>
+                        </div>
+                    </span>
+                </div>
+                <div class="menu" id="menu_btn">
+                    <img src="./img_nav/menu.png" alt="" id="menu">
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="nav_child" id="nav_child">
+        <div class="nav_child2 public" id="box2">
+            <ul class="clearfix" id="ul2">
+                <li><a href="javascript:;">开放时间</a></li>
+                <li><a href="javascript:;">票务服务</a></li>
+                <li><a href="javascript:;">交通路线</a></li>
+                <li><a href="javascript:;">游览须知</a></li>
+                <li><a href="javascript:;">全景故宫</a></li>
+            </ul>
+        </div>
+        <div class="nav_child3 public" id="box3">
+            <ul class="clearfix" id="ul3">
+                <li><a href="javascript:;">近期展览</a></li>
+                <li><a href="javascript:;">专馆</a></li>
+                <li><a href="javascript:;">原状陈列</a></li>
+                <li><a href="javascript:;">赴外展览</a></li>
+            </ul>
+        </div>
+        <div class="nav_child4 public" id="box4">
+            <ul class="clearfix" id="ul4">
+                <li><a href="javascript:;">教育新闻</a></li>
+                <li><a href="javascript:;">故宫博物院教育中心</a></li>
+                <li><a href="javascript:;">国际博协培训中心</a></li>
+                <li><a href="javascript:;">故宫志愿者</a></li>
+            </ul>
+        </div>
+        <div class="nav_child5 public" id="box5">
+            <ul class="clearfix" id="ul5">
+                <li><a href="javascript:;">建筑</a></li>
+                <li><a href="javascript:;">藏品</a></li>
+                <li><a href="javascript:;">古籍</a></li>
+                <li><a href="javascript:;">宫廷历史</a></li>
+                <li><a href="javascript:;">文化医院</a></li>
+                <li><a href="javascript:;">文化专题</a></li>
+                <li><a href="javascript:;">文化医院</a></li>
+                <li><a href="javascript:;">名画记</a></li>
+                <li><a href="javascript:;">数字多宝阁</a></li>
+                <li><a href="javascript:;">数字文物库</a></li>
+
+            </ul>
+        </div>
+        <div class="nav_child6 public" id="box6">
+            <ul class="clearfix" id="ul6">
+                <li><a href="javascript:;">学术活动</a></li>
+                <li><a href="javascript:;">专家名录</a></li>
+                <li><a href="javascript:;">故宫研究院</a></li>
+                <li><a href="javascript:;">故宫学院</a></li>
+                <li><a href="javascript:;">其他学术机构</a></li>
+                <li><a href="javascript:;">故宫博物院院刊</a></li>
+            </ul>
+        </div>
+        <div class="nav_child7 public" id="box7">
+            <ul class="clearfix" id="ul7">
+                <li><a href="javascript:;">故宫出版</a></li>
+                <li><a href="javascript:;">文创产品</a></li>
+                <li><a href="javascript:;">故宫壁纸</a></li>
+                <li><a href="javascript:;">故宫APP</a></li>
+                <li><a href="javascript:;">故宫游戏</a></li>
+            </ul>
+        </div>
+        <div class="nav_child8 public" id="box8">
+            <ul class="clearfix" id="ul8">
+                <li><a href="javascript:;">总说</a></li>
+                <li><a href="javascript:;">领导</a></li>
+                <li><a href="javascript:;">咨询</a></li>
+                <li><a href="javascript:;">院史编年</a></li>
+                <li><a href="javascript:;">景仁榜</a></li>
+                <li><a href="javascript:;">机构设置</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="nav_list" id="nav_list">
+        <div class="close" id="close"></div>
+        <div class="nav_table clearfix">
+            <div>
+                <h1>导览</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>开票时间</a>
+                <a>票务服务</a>
+                <a>交通路线</a>
+                <a>游览须知</a>
+                <a>全景故宫</a>
+            </div>
+            <div>
+                <h1>展览</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>近期展览</a>
+                <a>专馆</a>
+                <a>原状陈列</a>
+                <a>赴外展览</a>
+            </div>
+            <div>
+                <h1>教育</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>教育新闻</a>
+                <a>故宫博物院教育中心</a>
+                <a>国际博协培训中心</a>
+                <a>故宫志愿者</a>
+            </div>
+            <div>
+                <h1>探索</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>建筑</a>
+                <a>藏品</a>
+                <a>古籍</a>
+                <a>宫廷历史</a>
+                <a>文物医院</a>
+                <a>文化专题</a>
+                <a>名画记</a>
+                <a>数字多宝阁</a>
+                <a>数字文物库</a>
+
+            </div>
+            <div>
+                <h1>学术</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>学术活动</a>
+                <a>专家名录</a>
+                <a>故宫研究院</a>
+                <a>其他学术机构</a>
+                <a>故宫博物院院刊</a>
+            </div>
+            <div>
+                <h1>文创</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>故宫出版</a>
+                <a>文创产品</a>
+                <a>故宫壁纸</a>
+                <a>故宫APP</a>
+                <a>故宫游戏</a>
+            </div>
+            <div>
+                <h1>关于</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>总说</a>
+                <a>领导</a>
+                <a>咨询</a>
+                <a>院史编年</a>
+                <a>景仁榜</a>
+                <a>机构设置</a>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="./js_nav/nav_white.js"></script> -->
+    <!-- <div class="bg">
+        <img src="./img_nav/test.png" alt="">
+    </div> -->
+    <script src="首位部/js_nav/nav_white.js"></script>
+
+
+
+    <!-- 1.第一部分 普通文字a标签 -->
+    <div class="show_word1 w">
+        <a href="#" class="left">首页</a>
+        <span class="left">>></span>
+        <a href="#" class="left">展览</a>
+    </div>
+
+
+    <!-- 第二部轮播图 重点部分 -->
+    <div class="banner w">
+        <div class="banner_1">
+            <ul>
+                <li><a href="#"><img src="img_lm/lb1_4.jpg"></a></li>
+                <li><a href="#"><img src="img_lm/lb1_2.jpg"></a></li>
+                <li><a href="#"><img src="img_lm/lb1_3.jpg"></a></li>
+                <li><a href="#"><img src="img_lm/lb1_1.jpg"></a></li>
+                <li><a href="#"><img src="img_lm/lb1_5.jpg"></a></li>
+
+            </ul>
+        </div>
+
+        <div class="banner_2">
+            <span class="lm_active1"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+    </div>
+
+    <script src="annimation.js"></script>
+
+
+    <!-- //轮播图js -->
+
+    <script>
+        var ul = document.querySelector('.banner_1 ul');
+        var ban2 = document.querySelector('.banner_2');
+        var span = document.querySelectorAll('.banner_2 span');
+        var PageIndex = 0;
+        var imgW = document.querySelector(".banner_1").offsetWidth;
+
+        //定时播放轮播效果
+        setInterval(function () {
+
+            PageIndex++;
+            if (PageIndex == 6) {
+                PageIndex = 0;
+                ul.style.left = 0;
+
+
+            }
+
+            annimation(ul, ul.offsetWidth, -imgW * PageIndex, 50, 20);
+
+            //底部龙跟着移动
+            for (var i = 0; i < span.length; i++) {
+
+                span[i].className = " ";
+                //给每个span加个索引 方便下边的点击龙跳转
+
+
+            }
+            if (PageIndex == 5) {
+                span[0].className = 'lm_active1';
+            } else {
+
+                span[PageIndex].className = 'lm_active1';
+            }
+
+        }, 3000);
+
+        var fl_img_clone = ul.firstElementChild.cloneNode(true);
+        ul.appendChild(fl_img_clone);
+
+        //点击下边的龙 直接到达某一页
+        for (var i = 0; i < span.length; i++) {
+            span[i].span_id = i;
+
+            span[i].onclick = function () {
+                PageIndex = this.span_id;
+                annimation(ul, ul.offsetWidth, -imgW * PageIndex, 2000, 100);
+
+
+                for (var j = 0; j < span.length; j++) {
+                    span[j].className = '';
+                }
+                span[PageIndex].className = 'lm_active1';
+
+            }
+        }
+    </script>
+
+
+    <!-- 第二块内容页面html -->
+    <div class="lm_blank1 w"></div>
+
+    <!-- 近期展览 -->
+    <div class="lm_content1 w">
+        <div class="lm_content1_1">
+            <img src="img_lm/temporary-title-1.png">
+
+        </div>
+
+        <div class="lm_content1_2">
+            <img src="img_lm/img_word1.png">
+
+        </div>
+        <div class="lm_content1_3">
+            <img src="img_lm/temporary-title1-1.png">
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="lm_blank1 w"></div>
+    <!-- 第三块彪哥内容 -->
+    <div class="lm_content2 w">
+        <div class="zhanweizhi_1">
+
+
+
+            <div class="lm_tab1 public_1">
+                <table class="tab1">
+                    <tr>
+                        <th>展览名称</th>
+                        <th>展览地点</th>
+                        <th>展览时间</th>
+                    </tr>
+
+                    <tr>
+                        <td>万紫千红——中国古代花木题材文物特展<span class="table_span1">待展</span></td>
+                        <td>午门展厅</td>
+                        <td>2019/09/03 - 2019/10/31</td>
+                    </tr>
+
+                    <tr>
+                        <td>穆穆之仪：来自莫斯科克里姆林宫的俄罗斯宫廷典礼展<span class="table_span1">待展</span></td>
+                        <td>神武门展厅</td>
+                        <td> 2019/08/29 - 2019/11/08</td>
+                    </tr>
+
+                    <tr>
+                        <td>观鱼知乐——宫廷金鱼文化与故宫博物院藏金鱼题材文物联展<span class="table_span1">展出</span></td>
+                        <td> 延禧宫展厅</td>
+                        <td> 2019/07/30 - 2019/08/30</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>天下龙泉——龙泉青瓷与全球化 <span class="table_span1">展出</span>
+
+                            <i class="table_i">
+                                <img src="img_lm/qj1.png">
+                            </i></td>
+                        <td>斋宫、景仁宫展厅</td>
+                        <td> 2019/07/16 - 2019/10/20</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>良渚与古代中国——玉器显示的五千年文明<span class="table_span1">展出</span>
+                            <i class="table_i">
+                                <img src="img_lm/qj1.png">
+                            </i>
+                        </td>
+                        <td> 武英殿展厅</td>
+                        <td> 2019/07/16 - 2019/10/20</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>釉彩国度——葡萄牙瓷板画500年<span class="table_span1">展出</span><i class="table_i">
+                                <img src="img_lm/qj1.png">
+                            </i></td>
+                        <td>永寿宫展厅</td>
+                        <td> 2019/06/12 - 2019/10/07</td>
+                    </tr>
+
+                </table>
+            </div>
+
+
+
+            <!-- 隐藏的第二页表格 -->
+
+            <div class="lm_tab2 public_1">
+                <table class="tab2">
+                    <tr>
+                        <th>展览名称</th>
+                        <th>展览地点</th>
+                        <th>展览时间</th>
+                    </tr>
+
+                    <tr>
+                        <td>清代军机处史料展<span class="table_span1">待展</span></td>
+                        <td>乾清门广场西北隅值房</td>
+                        <td>2019/09/03 - 2019/10/31</td>
+                    </tr>
+
+                    <tr>
+                        <td>营造之道——紫禁城建筑艺术展<span class="table_span1">待展</span></td>
+                        <td>东南角楼、銮仪卫、东华门</td>
+                        <td> 2019/08/29 - 2019/11/08</td>
+                    </tr>
+
+                    <tr>
+                        <td>庆隆尊养——崇庆皇太后专题展<span class="table_span1">展出</span></td>
+                        <td> 寿康宫展厅</td>
+                        <td> 2019/07/30 - 2019/08/30</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>天子万年——清代万寿庆典展 <span class="table_span1">展出</span>
+
+                            <i class="table_i">
+                                <img src="img_lm/qj1.png">
+                            </i></td>
+                        <td>乾清宫西庑</td>
+                        <td> 2019/07/16 - 2019/10/20</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>观鱼知乐——宫廷金鱼文化与故宫博物院藏金鱼题材文物联展<span class="table_span1">展出</span>
+                            <i class="table_i">
+                                <img src="img_lm/qj1.png">
+                            </i>
+                        </td>
+                        <td> 延禧宫展厅</td>
+                        <td> 2019/07/16 - 2019/10/20</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>有界之外——卡地亚与故宫博物院特展<span class="table_span1">展出</span><i class="table_i">
+                                <img src="img_lm/qj1.png">
+                            </i></td>
+                        <td> 午门—雁翅楼展厅</td>
+                        <td> 2019/06/12 - 2019/10/07</td>
+                    </tr>
+
+                </table>
+            </div>
+
+
+
+            <div class="lm_tab3 public_1">
+                <table class="tab1">
+                    <tr>
+                        <th>展览名称</th>
+                        <th>展览地点</th>
+                        <th>展览时间</th>
+                    </tr>
+
+                    <tr>
+                        <td>传心之美——梵蒂冈博物馆藏中国文物展<span class="table_span1">待展</span></td>
+                        <td>神武门展厅</td>
+                        <td>2019/09/03 - 2019/10/31</td>
+                    </tr>
+
+                    <tr>
+                        <td>奥林匹克博览会故宫大展<span class="table_span1">待展</span></td>
+                        <td>午门—雁翅楼展厅</td>
+                        <td> 2019/08/29 - 2019/11/08</td>
+                    </tr>
+
+                    <tr>
+                        <td>“国色天香——紫禁城里赏牡丹”故宫菏泽牡丹展<span class="table_span1">展出</span></td>
+                        <td> 慈宁宫</td>
+                        <td> 2019/07/30 - 2019/08/30</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>几暇怡情——乾隆朝君臣书画特展 <span class="table_span1">展出</span>
+
+                            <i class="table_i">
+                                <img src="img_lm/qj1.png">
+                            </i></td>
+                        <td> 文华殿展厅</td>
+                        <td> 2019/07/16 - 2019/10/20</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>一带一路国际版画交流项目汇报展<span class="table_span1">展出</span>
+                            <i class="table_i">
+                                <img src="img_lm/qj1.png">
+                            </i>
+                        </td>
+                        <td> 斋宫展厅</td>
+                        <td> 2019/07/16 - 2019/10/20</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>贺岁迎祥——紫禁城里过大年<span class="table_span1">展出</span><i class="table_i">
+                                <img src="img_lm/qj1.png">
+                            </i></td>
+                        <td> 午门—雁翅楼展厅</td>
+                        <td> 2019/06/12 - 2019/10/07</td>
+                    </tr>
+
+                </table>
+            </div>
+
+
+            <div class="lm_tab4 public_1">
+                <table class="tab1">
+                    <tr>
+                        <th>展览名称</th>
+                        <th>展览地点</th>
+                        <th>展览时间</th>
+                    </tr>
+
+                    <tr>
+                        <td>韩美林生肖艺术大展<span class="table_span1">待展</span></td>
+                        <td> 文华殿</td>
+                        <td>2019/09/03 - 2019/10/31</td>
+                    </tr>
+
+                    <tr>
+                        <td>奥林匹克博览会故宫大展<span class="table_span1">待展</span></td>
+                        <td>午门—雁翅楼展厅</td>
+                        <td> 2019/08/29 - 2019/11/08</td>
+                    </tr>
+
+                    <tr>
+                        <td>“国色天香——紫禁城里赏牡丹”故宫菏泽牡丹展<span class="table_span1">展出</span></td>
+                        <td> 慈宁宫</td>
+                        <td> 2019/07/30 - 2019/08/30</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>几暇怡情——乾隆朝君臣书画特展 <span class="table_span1">展出</span>
+
+                            <i class="table_i">
+                                <img src="img_lm/qj1.png">
+                            </i></td>
+                        <td> 文华殿展厅</td>
+                        <td> 2019/07/16 - 2019/10/20</td>
+                    </tr>
+
+
+
+                </table>
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+        <!-- 页码表示 -->
+        <div class="lm_content2_2">
+            <span class="con2_btn1  yincang"></span>
+
+            <!-- 类名当中 谨防空格！！！！！！！！！！！！！！！！！！！！！！ -->
+            <a href="javascript:;" class="lm_active2" id="suoyin1">1</a>
+            <a href="javascript:;" id="suoyin2">2</a>
+            <a href="javascript:;" id="suoyin3">3</a>
+            <a href="javascript:;" id="suoyin4">4</a>
+
+
+            <span class="con2_btn2"></span>
+
+        </div>
+
+        <!-- 页面的点击事件，用简单的display实现 -->
+        <script>
+            //用jquery实现页面切换
+
+            //1.先隐式迭代所有div
+            //所有的addClass 和所有的removeClass() 里面的类名都不能加点！！！
+            var num = 1;
+            $('.lm_content2_2 a:nth-child(2)').click(function () {
+                $('.zhanweizhi_1 div:nth-child(1)').show().siblings().hide();
+                $('.lm_content2_2 a:nth-child(2)').addClass('lm_active2').siblings().removeClass();
+                $('.lm_content2_2 span:nth-child(1)').addClass('yincang');
+                num = 1;
+
+
+            });
+            $('.lm_content2_2 a:nth-child(3)').click(function () {
+                $('.zhanweizhi_1 div:nth-child(2)').show().siblings().hide();
+
+                $('.lm_content2_2 span:nth-child(1)').removeClass('yincang');
+
+                $('.lm_content2_2 a:nth-child(3)').addClass('lm_active2').siblings().removeClass();
+                num = 2;
+
+
+            });
+            $('.lm_content2_2 a:nth-child(4)').click(function () {
+                $('.zhanweizhi_1 div:nth-child(3)').show().siblings().hide();
+
+                $('.lm_content2_2 span:nth-child(1)').removeClass('yincang');
+
+                $('.lm_content2_2 a:nth-child(4)').addClass('lm_active2').siblings().removeClass();
+                num = 3;
+                console.log(num);
+
+            });
+            $('.lm_content2_2 a:nth-child(5)').click(function () {
+                $('.zhanweizhi_1 div:nth-child(4)').show().siblings().hide();
+
+                $('.lm_content2_2 span:nth-child(1)').removeClass('yincang');
+
+                $('.lm_content2_2 a:nth-child(5)').addClass('lm_active2').siblings().removeClass();
+
+                num = 4;
+            });
+            // 右侧点击案例切换分页功能
+            $('.lm_content2 span:nth-child(6)').click(function () {
+                num++;
+                if (num >= 1 && num <= 4) {
+                    $('.zhanweizhi_1 div').hide();
+                    $('.lm_tab' + num).show();
+
+
+                    $('.lm_content2_2 a').removeClass('lm_active2');
+
+                    $('#suoyin' + num).addClass('lm_active2');
+                    console.log('#suoyin' + num);
+
+                    $('.lm_content2_2 span:nth-child(1)').removeClass('yincang');
+                    console.log(num);
+
+
+                }
+
+
+            });
+            // 点击按钮切换分页
+            $('.lm_content2_2 span:nth-child(1)').click(function () {
+                num--;
+                if (num >= 1 && num <= 4) {
+                    $('.zhanweizhi_1 div').hide();
+                    $('.lm_tab' + num).show();
+                    $('.lm_content2_2 a').removeClass('lm_active2');
+                    $('#suoyin' + num).addClass('lm_active2');
+                    if (num == 1) {
+                        $('.lm_content2_2 span:nth-child(1)').addClass('yincang');
+                    }
+                }
+
+
+            });
+        </script>
+
+
+
+
+        <div class="lm_content2_3">
+            <a href="#">历年展览与陈列</a>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- 两块空格 -->
+    <div class="lm_blank1 w"></div>
+
+
+    <div class="lm_bgc2">
+        <div class="lm_blank1 w"></div>
+
+
+        <!-- 专管 -->
+        <div class="lm_content3 w">
+            <div class="lm_content3_1">
+                <img src="img_lm/temporary-title-1.png">
+
+            </div>
+
+            <div class="lm_content3_2">
+                <img src="img_lm/img_word2.png">
+
+            </div>
+            <div class="lm_content3_3">
+                <img src="img_lm/temporary-title1-1.png">
+
+            </div>
+        </div>
+
+        <!-- 第二部轮播图，部分轮播，加缩放 -->
+
+        <div class="lm_banner2 w">
+            <div class="lm_banner2_box">
+                <div class="lm_banner2_box_1">
+                    <ul class="ul1">
+                        <li><a href="#"><img src="img_lm/s586e206f85892.jpg"></a></li>
+                        <li><a href="#"><img src="img_lm/s586e0bbc96a24.jpg"></a></li>
+                        <li><a href="#"><img src="img_lm/s586e1fe0d4bac.jpg"></a></li>
+                        <li><a href="#"><img src="img_lm/s586e2015d4aa3.jpg"></a></li>
+                        <li><a href="#"><img src="img_lm/s586e2049cee77.jpg"></a></li>
+                        <li><a href="#"><img src="img_lm/s586e2c0f3e849.jpg"></a></li>
+                    </ul>
+                </div>
+                <div class="lm_banner2_box_2">
+                    <ul class="ul2">
+                        <li><a href="#"><img src="img_lm/s586e2c1f0bb50.jpg"></a></li>
+                        <li><a href="#"><img src="img_lm/s586e2049cee77.jpg"></a></li>
+                        <li><a href="#"><img src="img_lm/s586e2c40eb7d4.jpg"></a></li>
+                        <li><a href="#"><img src="img_lm/s586e2c0f3e849.jpg"></a></li>
+                        <li><a href="#"><img src="img_lm/s586e206f85892.jpg"></a></li>
+                        <li><a href="#"><img src="img_lm/s586e0bbc96a24.jpg"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="lm_banner2_btn">
+                <a href="javascript:;" class="ul_btn1"><img src="img_lm/prev-btn1-1.png"></a>
+                <a href="javascript:;" class="ul_btn2"><img src="img_lm/prev-btn1-1.png"></a>
+            </div>
+
+            <div class="lm_banner2_3">
+                <a href="#">导航与地图</a>
+            </div>
+
+        </div>
+
+        <script>
+            var ul1 = document.querySelector('.ul1');
+            var ul2 = document.querySelector('.ul2');
+            var ul_btn1 = document.querySelector('.ul_btn1');
+            var ul_btn2 = document.querySelector('.ul_btn2');
+            var img_width = document.querySelector('.lm_banner2_box ul li a img').offsetWidth;
+
+            var index = 0;
+            ul_btn2.onclick = function () {
+                if (index == 0) {
+                    index++;
+                    annimation(ul1, ul1.offsetLeft, -index * img_width - 9, 50, 20);
+                    annimation(ul2, ul2.offsetLeft, -index * img_width - 9, 50, 20);
+                }
+
+
+            }
+            ul_btn1.onclick = function () {
+                if (index == 1) {
+                    index = 0;
+                    annimation(ul1, ul1.offsetLeft, index * img_width, 50, 20);
+                    annimation(ul2, ul2.offsetLeft, index * img_width, 50, 20);
+
+                }
+
+            }
+        </script>
+
+
+
+
+
+        <!-- 原装陈列 -->
+        <div class="lm_blank2 w"></div>
+
+        <!-- 近期展览 -->
+        <div class="lm_content4 w">
+            <div class="lm_content4_1">
+                <img src="img_lm/temporary-title-1.png">
+
+            </div>
+
+            <div class="lm_content4_2">
+                <img src="img_lm/img_word3.png">
+
+            </div>
+            <div class="lm_content4_3">
+                <img src="img_lm/temporary-title1-1.png">
+
+            </div>
+        </div>
+
+
+
+        <!-- 近期展览的图片内容 -->
+        <div class="lm_blank2 w"></div>
+
+
+        <div class="lm_content5 w">
+            <div>
+                <img src="img_lm/s585b38f00e48c.jpg">
+                <span>太和殿</span>
+            </div>
+
+            <div class="lm_content5_2">
+
+                原状陈列是故宫博物院历史悠久、极具特色，且深受广大观众喜爱的展览类型。原状宫殿中的陈设都是严格遵循历史档案记载去选择与布置，力求恢复历史原貌，让观众能够真切地感受到厚重的历史文化氛围。这些精美的文物藏品与历尽沧桑的古代建筑一起构成和谐统一的整体，蕴含着丰富的历史信息和文化内涵，向世人形象地展示宫廷文化。
+
+
+            </div>
+
+            <div class="lm_often">
+                <img src="img_lm/s585b38b930168.jpg">
+
+                <span>中和殿</span>
+
+
+            </div>
+
+
+
+            <div class="lm_often">
+                <img src="img_lm/s585b3889f3e66.jpg">
+
+                <span>保和殿</span>
+
+
+            </div>
+
+
+
+        </div>
+
+
+        <!-- 主要图片地区，以复制为主 -->
+        <div class="lm_content6 w">
+
+            <div class="lm_often">
+                <img src="img_lm/s585b3852595a2.jpg">
+
+                <span>乾清宫</span>
+
+
+            </div>
+
+            <div class="lm_often">
+                <img src="img_lm/s585b381e7251b.jpg">
+
+                <span>交泰殿</span>
+
+
+            </div>
+
+            <div class="lm_often">
+                <img src="img_lm/s585b37f03ce66.jpg">
+
+                <span>坤宁宫</span>
+
+
+            </div>
+
+            <div class="lm_often">
+                <img src="img_lm/s585b37bf60105.jpg">
+
+                <span>咸若宫</span>
+
+
+            </div>
+
+
+            <div class="lm_often">
+                <img src="img_lm/s585b377bbd0a0.jpg">
+
+                <span>寿康宫</span>
+
+
+            </div>
+
+            <div class="lm_often">
+                <img src="img_lm/s585b370b35c25.jpg">
+
+                <span>养心殿</span>
+
+
+            </div>
+
+
+
+            <div class="lm_often">
+                <img src="img_lm/s585b36db6eec1.jpg">
+
+                <span>储秀宫</span>
+
+
+            </div>
+
+
+
+            <div class="lm_often">
+                <img src="img_lm/s585b363502ae9.jpg">
+
+                <span>皇极殿</span>
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+        <!-- 近期展览 -->
+
+
+
+        <div class="lm_content7 w">
+            <div class="lm_content7_1">
+                <img src="img_lm/temporary-title-1.png">
+
+            </div>
+
+            <div class="lm_content7_2">
+                <img src="img_lm/img_word4.png">
+
+            </div>
+            <div class="lm_content7_3">
+                <img src="img_lm/temporary-title1-1.png">
+
+            </div>
+        </div>
+
+
+
+        <!-- 原装陈列 -->
+        <div class="lm_blank2 w"></div>
+
+        <div class="lm_content8 w">
+            <div class="lm_content8_1">
+                <img src="img_lm/s5bbaf68c3f440.jpg">
+
+            </div>
+
+            <div class="lm_content8_2">
+                <div class="zhanweizhi_box">
+
+                    <div class="zhanweizhi_2 lm_suoyin1">
+
+                        <div class="lm_content8_2_1">
+
+                            <div class="ct8_1">
+                                <img src="img_lm/temporary6-icon1-1.png">
+                                勤政亲贤——故宫养心殿文物精品展
+                                <span>展出</span>
+                            </div>
+                            <div class="ct8_2">
+                                <span>安徽博物院</span>
+                                <e>2019/07/16 - 2019/10/16</e>
+                            </div>
+
+
+                        </div>
+                        <div class="lm_content8_2_1">
+
+                            <div class="ct8_1">
+                                <img src="img_lm/temporary6-icon1-1.png">
+                                故宫博物院藏器座展
+                                <span>展出</span>
+                            </div>
+                            <div class="ct8_2">
+                                <span>嘉德艺术中心</span>
+                                <e>2019/07/16 - 2019/10/16</e>
+                            </div>
+
+
+                        </div>
+                        <div class="lm_content8_2_1">
+
+                            <div class="ct8_1">
+                                <img src="img_lm/temporary6-icon1-1.png">
+                                丝绸之路上的文物交流——吐蕃艺术珍品展（参展）
+                                <span>展出</span>
+                            </div>
+                            <div class="ct8_2">
+                                <span>敦煌研究院</span>
+                                <e>2019/07/16 - 2019/10/16</e>
+                            </div>
+
+
+                        </div>
+                        <div class="lm_content8_2_1">
+
+                            <div class="ct8_1">
+                                <img src="img_lm/temporary6-icon1-1.png">
+                                明十五世纪中期景德镇瓷器大展(参展)
+                                <span>展出</span>
+                            </div>
+                            <div class="ct8_2">
+                                <span>上海博物馆</span>
+                                <e>2019/07/16 - 2019/10/16</e>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="zhanweizhi_3 lm_suoyin2">
+
+                        <div class="lm_content8_2_1">
+
+                            <div class="ct8_1">
+                                <img src="img_lm/temporary6-icon1-1.png">
+                                君子比德于玉——故宫珍藏清代宫廷玉器精品展
+                                <span>展出</span>
+                            </div>
+                            <div class="ct8_2">
+                                <span>良渚博物院</span>
+                                <e>2019/07/16 - 2019/10/16</e>
+                            </div>
+
+
+                        </div>
+                        <div class="lm_content8_2_1">
+
+                            <div class="ct8_1">
+                                <img src="img_lm/temporary6-icon1-1.png">
+                                画屏：传统与未来（参展）
+                                <span>展出</span>
+                            </div>
+                            <div class="ct8_2">
+                                <span>苏州博物馆</span>
+                                <e>2019/07/16 - 2019/10/16</e>
+                            </div>
+
+
+                        </div>
+                        <div class="lm_content8_2_1">
+
+                            <div class="ct8_1">
+                                <img src="img_lm/temporary6-icon1-1.png">
+                                齐白石人物画专题展（参展）
+                                <span>展出</span>
+                            </div>
+                            <div class="ct8_2">
+                                <span>北京画院</span>
+                                <e>2019/07/16 - 2019/10/16</e>
+                            </div>
+
+
+                        </div>
+                        <div class="lm_content8_2_1">
+
+                            <div class="ct8_1">
+                                <img src="img_lm/temporary6-icon1-1.png">
+                                春睡梦先觉——纪念高剑父诞辰140周年展（参展）
+                                <span>展出</span>
+                            </div>
+                            <div class="ct8_2">
+                                <span>广州艺术博物院</span>
+                                <e>2019/07/16 - 2019/10/16</e>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="zhanweizhi_4 lm_suoyin3">
+
+                        <div class="lm_content8_2_1">
+
+                            <div class="ct8_1">
+                                <img src="img_lm/temporary6-icon1-1.png">
+                                明十五世纪中期景德镇瓷器大展(参展)
+                                <span>展出</span>
+                            </div>
+                            <div class="ct8_2">
+                                <span>上海博物馆</span>
+                                <e>2019/07/16 - 2019/10/16</e>
+                            </div>
+
+
+                        </div>
+                        <div class="lm_content8_2_1">
+
+                            <div class="ct8_1">
+                                <img src="img_lm/temporary6-icon1-1.png">
+                                根·魂——中华文物物语展 (参展)
+                                <span>展出</span>
+                            </div>
+                            <div class="ct8_2">
+                                <span>湖南省博物馆</span>
+                                <e>2019/07/16 - 2019/10/16</e>
+                            </div>
+
+
+                        </div>
+                        <div class="lm_content8_2_1">
+
+                            <div class="ct8_1">
+                                <img src="img_lm/temporary6-icon1-1.png">
+                                山西地方窑陶瓷精品展(参展)
+                                <span>展出</span>
+                            </div>
+                            <div class="ct8_2">
+                                <span>山西博物院</span>
+                                <e>2019/07/16 - 2019/10/16</e>
+                            </div>
+
+
+                        </div>
+                        <div class="lm_content8_2_1">
+
+                            <div class="ct8_1">
+                                <img src="img_lm/temporary6-icon1-1.png">
+                                海宇会同——元代瓷器文化展(参展)
+                                <span>展出</span>
+                            </div>
+                            <div class="ct8_2">
+                                <span>中国国家博物馆</span>
+                                <e>2019/07/16 - 2019/10/16</e>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="zhanweizhi_5 lm_suoyin4">
+
+                        <div class="lm_content8_2_1">
+
+                            <div class="ct8_1">
+                                <img src="img_lm/temporary6-icon1-1.png">
+                                和硕清雅——雍正故宫文物大展
+                                <span>展出</span>
+                            </div>
+                            <div class="ct8_2">
+                                <span>上海市奉贤区博物馆</span>
+                                <e>2019/07/16 - 2019/10/16</e>
+                            </div>
+
+
+                        </div>
+                        <div class="lm_content8_2_1">
+
+                            <div class="ct8_1">
+                                <img src="img_lm/temporary6-icon1-1.png">
+                                大美亚细亚——亚洲文明展(参展)
+                                <span>展出</span>
+                            </div>
+                            <div class="ct8_2">
+                                <span>文物交流中心</span>
+                                <e>2019/07/16 - 2019/10/16</e>
+                            </div>
+
+
+                        </div>
+                        <div class="lm_content8_2_1">
+
+                            <div class="ct8_1">
+                                <img src="img_lm/temporary6-icon1-1.png">
+                                凤舞紫禁：清代皇后的艺术与生活
+                                <span>展出</span>
+                            </div>
+                            <div class="ct8_2">
+                                <span>美国佛利尔美术馆 赛克勒美术馆</span>
+                                <e>2019/07/16 - 2019/10/16</e>
+                            </div>
+
+
+                        </div>
+                        <div class="lm_content8_2_1">
+
+                            <div class="ct8_1">
+                                <img src="img_lm/temporary6-icon1-1.png">
+                                荣擢百代——王羲之的谱系
+                                <span>展出</span>
+                            </div>
+                            <div class="ct8_2">
+                                <span>绍兴博物馆</span>
+                                <e>2019/07/16 - 2019/10/16</e>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="zhanweizhi_6 lm_suoyin5">
+
+                        <div class="lm_content8_2_1">
+
+                            <div class="ct8_1">
+                                <img src="img_lm/temporary6-icon1-1.png">
+                                趣从幽处有真情——故宫博物院藏韩槐准捐献瓷器展
+                                <span>展出</span>
+                            </div>
+                            <div class="ct8_2">
+                                <span>中国（海南）南海博物馆</span>
+                                <e>2019/07/16 - 2019/10/16</e>
+                            </div>
+
+
+                        </div>
+                        <div class="lm_content8_2_1">
+
+                            <div class="ct8_1">
+                                <img src="img_lm/temporary6-icon1-1.png">
+                                18世纪的东方盛世及清高宗乾隆皇帝展
+                                <span>展出</span>
+                            </div>
+                            <div class="ct8_2">
+                                <span>俄罗斯莫斯科克里姆林宫博物馆</span>
+                                <e>2019/07/16 - 2019/10/16</e>
+                            </div>
+
+
+                        </div>
+                        <div class="lm_content8_2_1">
+
+                            <div class="ct8_1">
+                                <img src="img_lm/temporary6-icon1-1.png">
+                                龙泰宸宇——故宫养心殿文物特展
+                                <span>展出</span>
+                            </div>
+                            <div class="ct8_2">
+                                <span>辽宁博物馆</span>
+                                <e>2019/07/16 - 2019/10/16</e>
+                            </div>
+
+
+                        </div>
+                        <div class="lm_content8_2_1">
+
+                            <div class="ct8_1">
+                                <img src="img_lm/temporary6-icon1-1.png">
+                                明十五世纪中期景德镇瓷器大展(参展)
+                                <span>展出</span>
+                            </div>
+                            <div class="ct8_2">
+                                <span>上海博物馆</span>
+                                <e>2019/07/16 - 2019/10/16</e>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="lm_content8_2_2">
+                    <span></span>
+                    <a href="javascript:;" class="lm_active3">1</a>
+                    <a href="javascript:;">2</a>
+                    <a href="javascript:;">3</a>
+                    <a href="javascript:;">4</a>
+                    <a href="javascript:;">5</a>
+
+                    <span></span>
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <!-- 页面的点击事件，用简单的display实现 -->
+        <script>
+            //用jquery实现页面切换
+            //页面切换即写好div的样式 让其他页去隐藏
+            //1.先利用隐式迭代遍历要点击的按钮。
+            //2.获取索引，然后去找对应的div的索引 让其显示。
+            //3.添加和排他对应的类名改变样式即可。
+            var lm_num = 0;
+            $('.lm_content8_2_2 a').click(function () {
+                var index = $(this).index();
+
+                $('.lm_content8_2 .zhanweizhi_box>div').eq(index).show().siblings().hide();
+                $(this).addClass('lm_active3').siblings().removeClass();
+                lm_num = index - 1;
+                if (index != 0) {
+                    $('.lm_content8_2_2 span:nth-child(1)').removeClass('yincang');
+                } else if (index == 4) {
+                    $('.lm_content8_2_2 span:nth-child(7)').hide();
+                }
+            });
+
+            //开始做右边点击按钮
+            $('.lm_content8_2_2 span:nth-child(7)').click(function () {
+
+                lm_num++;
+                if (lm_num > 0 && lm_num <= 4) {
+                    $('.lm_content8_2 .zhanweizhi_box>div').eq(lm_num).show().siblings().hide();
+                    $('.lm_content8_2_2 a').eq(lm_num).addClass('lm_active3').siblings().removeClass(
+                        'lm_active3');
+                    $('.lm_content8_2_2 span:nth-child(1)').removeClass('yincang');
+                    console.log(lm_num);
+                }
+
+            });
+
+            $('.lm_content8_2_2 span:nth-child(1)').click(function () {
+                lm_num--;
+                if (lm_num >= 0 && num <= 4) {
+                    $('.lm_content8_2 .zhanweizhi_box>div').eq(lm_num).show().siblings().hide();
+                    $('.lm_content8_2_2 a').eq(lm_num).addClass('lm_active3').siblings().removeClass(
+                        'lm_active3');
+                    console.log(lm_num);
+                } else if (lm_num == 0) {
+                    $('.lm_content8_2_2 span:nth-child(1)').hide();
+                }
+
+            });
+        </script>
+
+
+
+
+
+        <!-- 赵孟书画特展 -->
+        <div class="lm_blank2 w"></div>
+        <div class="lm_blank2 w"></div>
+
+        <div class="lm_content9 w">
+            <div class="lm_content9_1">
+                <span>
+                    <img src="img_lm/public-icon3.png">
+                </span>
+                <a href="#">赵孟頫书画特展</a>
+                <span>
+                    <img src="img_lm/public-icon4.png">
+                </span>
+            </div>
+
+
+            <div class="lm_content9_2">
+                <img src="img_lm/s5ac43fa78e77f.jpg">
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- final最后的结束栏 -->
+    <div class="lm_blank1 w"></div>
+
+    <footer>
+        <div class="footer_wrap">
+            <div class="qr_code">
+                <img src="./img/footer_big_code.jpg" alt="">
+            </div>
+            <div class="visit">
+                <span>网站访问量</span>
+                <ul>
+                    <li id="7">0</li>
+                    <li id="6">0</li>
+                    <li id="5">0</li>
+                    <li id="4">0</li>
+                    <li id="3">0</li>
+                    <li id="2">0</li>
+                    <li id="1">0</li>
+                    <li id="0">0</li>
+                </ul>
+            </div>
+            <div class="link">
+                <ul>
+                    <li><a href="javascript:;">网站地图</a></li>
+                    <li><a href="javascript:;">相关链接</a></li>
+                    <li><a href="javascript:;">影像授权</a></li>
+                    <li><a href="javascript:;">隐私政策</a></li>
+                    <li><a href="javascript:;">版权声明</a></li>
+                    <li><a href="javascript:;">常见问题</a></li>
+                    <li><a href="javascript:;">联系我们</a></li>
+                    <li><a href="javascript:;">关于我们</a></li>
+                </ul>
+            </div>
+            <div class="com">
+                <p>© 2001- 现在 故宫博物院 　京ICP备05067311号-1 网站建设： 北京分形科技</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // 封装底部计数函数
+        function footerNumber() {
+            if ($('footer').offset().top - $('body,html').scrollTop() <= $(window).height()) {
+                console.log('123');
+                var num = 0;
+                window.setInterval(function () {
+                    num = parseInt(num + parseInt(53565189 / 600));
+                    if (num >= 53565189) {
+                        num = 53565189;
+                    }
+                    $('#0').text(num % 10);
+                    $('#1').text((num % 100 - num % 10) / 10);
+                    $('#2').text((num % 1000 - num % 100) / 100);
+                    $('#3').text((num % 10000 - num % 1000) / 1000);
+                    $('#4').text((num % 100000 - num % 10000) / 10000);
+                    $('#5').text((num % 1000000 - num % 100000) / 100000);
+                    $('#6').text((num % 10000000 - num % 1000000) / 1000000);
+                    $('#7').text((num % 100000000 - num % 10000000) / 10000000);
+                }, 1);
+            }
+        }
+        $(window).scroll(function () {
+            if ($('#7').text() != 0) {
+                return;
+            }
+            footerNumber();
+        });
+        footerNumber();
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

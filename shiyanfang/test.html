@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getPrimers(arr) {
+            var array = arr.filter(function (ele) {
+                if (ele == 1) {
+                    return false;
+                } else if (ele <= 3) {
+                    return true;
+                } else {
+                    var flag = true;
+                    for (var i = 2; i < ele; i++) {
+                        if(ele%i == 0){
+                            flag = false;
+                        }
+                    }
+                    return flag;
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+/* 样式初始化文件 */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    color:#6d6e6b ;
+    font-size:14px ;
+    font-family: "微软雅黑";
+}
+a {
+    text-decoration: none;
+    /* color: #6d6e6b ; */
+    color: #000;
+    cursor: pointer;
+    font-size: 15px;
+}
+a:hover {
+    color: #e10200;
+}
+.w {
+    width: 1000px;
+    margin: 0 auto;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+    /* height: 0;
+    visibility: hidden; */
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+input {
+    border: none;
+    outline: none;
+}
+img {
+    vertical-align: bottom;
+}
+
+

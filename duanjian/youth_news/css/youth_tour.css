@@ -1,0 +1,76 @@
+body {
+  background: #f6f2e8 url('../img/bg.jpg') no-repeat top center;
+}
+header {
+  width: 100%;
+  height: 112px;
+}
+.content {
+  width: 100%;
+  height: 1304px;
+}
+.content .wrap {
+  width: 990px;
+  height: 1164px;
+  margin: 0 auto;
+  background: url('../img/bg2.jpg') repeat-y;
+}
+.content .wrap .article {
+  margin-top: 25px;
+  width: 100%;
+  height: 100%;
+  background: url('../img/bg3.jpg') no-repeat top center;
+}
+.content .wrap .article .article_content {
+  width: 100%;
+  height: 100%;
+  background: url('../img/bg4.jpg') no-repeat bottom center;
+  padding: 180px 200px 100px 100px;
+  box-sizing: border-box;
+}
+.content .wrap .article .article_content ul {
+  width: 690px;
+}
+.content .wrap .article .article_content ul li {
+  margin-top: 35px;
+  width: 100%;
+  height: 114px;
+  border-bottom: 1px solid #ccc;
+}
+.content .wrap .article .article_content ul li .time {
+  float: left;
+  width: 60px;
+  height: 58px;
+  text-align: center;
+}
+.content .wrap .article .article_content ul li .time h1 {
+  color: #c12519;
+  font-size: 38px;
+  font-family: '宋体';
+}
+.content .wrap .article .article_content ul li .time p {
+  font-size: 14px;
+  color: #c12519;
+}
+.content .wrap .article .article_content ul li .text {
+  float: left;
+  width: 610px;
+  height: 68px;
+}
+.content .wrap .article .article_content ul li .text h4 {
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.content .wrap .article .article_content ul li .text h4:hover {
+  color: #9e8641;
+}
+.content .wrap .article .article_content ul li .text p {
+  margin-left: 20px;
+  line-height: 1.5;
+  margin-top: 10px;
+  font-size: 12px;
+  text-indent: 20px;
+  color: #666;
+}

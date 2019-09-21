@@ -1,0 +1,107 @@
+footer {
+  margin-top: 30px;
+  width: 100%;
+  height: 170px;
+  background-color: #272727;
+  padding-top: 30px;
+  padding-bottom: 27px;
+  box-sizing: border-box;
+}
+footer .footer_wrap {
+  width: 1572px;
+  height: 126px;
+  margin: 0 auto;
+  position: relative;
+}
+footer .footer_wrap .qr_code {
+  position: absolute;
+  cursor: pointer;
+  right: 360px;
+  top: 36px;
+  width: 38px;
+  height: 38px;
+  background: url('../img_footer/footer_ico_code.png') no-repeat;
+}
+footer .footer_wrap .qr_code img {
+  position: absolute;
+  top: -470px;
+  right: -121px;
+  z-index: 10;
+  display: none;
+}
+footer .footer_wrap .qr_code:hover img {
+  display: block;
+}
+footer .footer_wrap .qr_code::after {
+  content: '';
+  animation: footer_move 0.5s infinite alternate;
+  position: absolute;
+  right: -14px;
+  top: 25px;
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: url('../img_footer/footer_ico_hand.png') no-repeat;
+}
+@keyframes footer_move {
+  from {
+    right: -14px;
+    top: 25px;
+  }
+  to {
+    right: -17px;
+    top: 33px;
+  }
+}
+footer .footer_wrap .visit {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+footer .footer_wrap .visit span {
+  color: #fff;
+  font-size: 14px;
+  line-height: 28px;
+  margin-right: 20px;
+}
+footer .footer_wrap .visit ul li {
+  width: 20px;
+  height: 28px;
+  background-color: #404040;
+  float: left;
+  color: #fff;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 28px;
+  font-size: 14px;
+}
+footer .footer_wrap .link {
+  margin-top: 20px;
+  width: 100%;
+}
+footer .footer_wrap .link ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+footer .footer_wrap .link ul li {
+  margin-right: 10px;
+}
+footer .footer_wrap .link ul li a {
+  color: #fff;
+  font-size: 14px;
+}
+footer .footer_wrap .link ul li a:hover {
+  color: #909090;
+}
+footer .footer_wrap .com {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+footer .footer_wrap .com p {
+  color: #fff;
+  font-size: 14px;
+}

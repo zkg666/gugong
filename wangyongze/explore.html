@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="北京故宫博物院建立于1925年10月10日，位于北京故宫紫禁城内。是在明朝、清朝两代皇宫及其收藏的基础上建立起来的中国综合性博物馆，也是中国最大的古代文化艺术博物馆，其文物收藏主要来源于清代宫中旧藏，是第一批全国爱国主义教育示范基地。">
+    <title>探索 - 故宫博物院</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/nav_white.css">
+    <link rel="stylesheet" href="./css/explore.css">
+    <link rel="stylesheet" href="./css/css_footer.css">
+    <link rel="stylesheet" type="text/css" href="./css/zeroModal.css" />
+    <script src="./lib/jquery-3.4.1.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/zeroModal.min.js"></script>
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="./js/link.js"></script>
+    <style>
+        footer {
+            margin-top: 21px;
+            width: 100%;
+            height: 119px;
+            background-color: #272727;
+            padding-top: 21px;
+            padding-bottom: 18.9px;
+            box-sizing: border-box;
+        }
+
+        footer .footer_wrap {
+            width: 1100.4px;
+            height: 88.2px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        footer .footer_wrap .qr_code {
+            position: absolute;
+            cursor: pointer;
+            right: 252px;
+            top: 25.2px;
+            width: 26.6px;
+            height: 26.6px;
+            background: url('./img/footer_ico_code.png') no-repeat;
+            background-size: contain;
+        }
+
+        footer .footer_wrap .qr_code img {
+            transform: scale(0.7);
+            position: absolute;
+            top: -380px;
+            right: -127px;
+            z-index: 10;
+            display: none;
+        }
+
+        footer .footer_wrap .qr_code:hover img {
+            display: block;
+        }
+
+        footer .footer_wrap .qr_code::after {
+            content: '';
+            animation: footer_move 0.5s infinite alternate;
+            position: absolute;
+            right: -9.8px;
+            top: 17.5px;
+            display: block;
+            width: 18.2px;
+            height: 18.2px;
+            background: url('./img/footer_ico_hand.png') no-repeat;
+            background-size: contain;
+        }
+
+        @keyframes footer_move {
+            from {
+                right: -9.8px;
+                top: 17.5px;
+            }
+
+            to {
+                right: -11.9px;
+                top: 23.1px;
+            }
+        }
+
+        footer .footer_wrap .visit {
+            width: 100%;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        footer .footer_wrap .visit span {
+            color: #fff;
+            font-size: 9.8px;
+            line-height: 19.6px;
+            margin-right: 14px;
+        }
+
+        footer .footer_wrap .visit ul li {
+            width: 14px;
+            height: 19.6px;
+            background-color: #404040;
+            float: left;
+            color: #fff;
+            margin-right: 7px;
+            text-align: center;
+            line-height: 19.6px;
+            font-size: 9.8px;
+        }
+
+        footer .footer_wrap .link {
+            margin-top: 14px;
+            width: 100%;
+        }
+
+        footer .footer_wrap .link ul {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer .footer_wrap .link ul li {
+            margin-right: 7px;
+        }
+
+        footer .footer_wrap .link ul li a {
+            color: #fff;
+            font-size: 9.8px;
+        }
+
+        footer .footer_wrap .link ul li a:hover {
+            color: #909090;
+        }
+
+        footer .footer_wrap .com {
+            margin-top: 14px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer .footer_wrap .com p {
+            color: #fff;
+            font-size: 9.8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="w">
+            <nav>
+                <img src="./img_nav/logo_red.png" alt="LOGO" class="left logo">
+                <ul id="ul_tr">
+                    <li id="li1"><a href="javascript:;">首页</a>
+                        <div id="tr1"></div>
+                    </li>
+                    <li id="li2"><a href="javascript:;">导览</a>
+                        <div id="tr2"></div>
+                    </li>
+                    <li id="li3"><a href="javascript:;">展览</a>
+                        <div id="tr3"></div>
+                    </li>
+                    <li id="li4"><a href="javascript:;">教育</a>
+                        <div id="tr4"></div>
+                    </li>
+                    <li id="li5"><a href="javascript:;">探索</a>
+                        <div id="tr5"></div>
+                    </li>
+                    <li id="li6"><a href="javascript:;">学术</a>
+                        <div id="tr6"></div>
+                    </li>
+                    <li id="li7"><a href="javascript:;">文创</a>
+                        <div id="tr7"></div>
+                    </li>
+                    <li id="li8"><a href="javascript:;">关于</a>
+                        <div id="tr8"></div>
+                    </li>
+                </ul>
+                <div class="tools">
+                    <span class="img btn" id="login_icon">
+                        <img src="./img_nav/login.png" alt="" id="login">
+                        <div id="login_box">
+                            <a href="javascript:;">登录</a>
+                            <a href="javascript:;">注册</a>
+                        </div>
+                    </span>
+                    <span class="public" id="line">|</span>
+                    <span class="zhong btn" id="zhong_icon">
+                        <img src="./img_nav/zhong.png" alt="" id="zhong">
+                        <div id="zhong_box">
+                            <a href="javascript:;">EN</a>
+                            <a href="javascript:;">青少年版</a>
+                        </div>
+                    </span>
+                </div>
+                <div class="menu" id="menu_btn">
+                    <img src="./img_nav/menu.png" alt="" id="menu">
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="nav_child" id="nav_child">
+        <div class="nav_child2 public" id="box2">
+            <ul class="clearfix" id="ul2">
+                <li><a href="javascript:;">开放时间</a></li>
+                <li><a href="javascript:;">票务服务</a></li>
+                <li><a href="javascript:;">交通路线</a></li>
+                <li><a href="javascript:;">游览须知</a></li>
+                <li><a href="javascript:;">全景故宫</a></li>
+            </ul>
+        </div>
+        <div class="nav_child3 public" id="box3">
+            <ul class="clearfix" id="ul3">
+                <li><a href="javascript:;">近期展览</a></li>
+                <li><a href="javascript:;">专馆</a></li>
+                <li><a href="javascript:;">原状陈列</a></li>
+                <li><a href="javascript:;">赴外展览</a></li>
+            </ul>
+        </div>
+        <div class="nav_child4 public" id="box4">
+            <ul class="clearfix" id="ul4">
+                <li><a href="javascript:;">教育新闻</a></li>
+                <li><a href="javascript:;">故宫博物院教育中心</a></li>
+                <li><a href="javascript:;">国际博协培训中心</a></li>
+                <li><a href="javascript:;">故宫志愿者</a></li>
+            </ul>
+        </div>
+        <div class="nav_child5 public" id="box5">
+            <ul class="clearfix" id="ul5">
+                <li><a href="javascript:;">建筑</a></li>
+                <li><a href="javascript:;">藏品</a></li>
+                <li><a href="javascript:;">古籍</a></li>
+                <li><a href="javascript:;">宫廷历史</a></li>
+                <li><a href="javascript:;">文化医院</a></li>
+                <li><a href="javascript:;">文化专题</a></li>
+                <li><a href="javascript:;">文化医院</a></li>
+                <li><a href="javascript:;">名画记</a></li>
+                <li><a href="javascript:;">数字多宝阁</a></li>
+                <li><a href="javascript:;">数字文物库</a></li>
+
+            </ul>
+        </div>
+        <div class="nav_child6 public" id="box6">
+            <ul class="clearfix" id="ul6">
+                <li><a href="javascript:;">学术活动</a></li>
+                <li><a href="javascript:;">专家名录</a></li>
+                <li><a href="javascript:;">故宫研究院</a></li>
+                <li><a href="javascript:;">故宫学院</a></li>
+                <li><a href="javascript:;">其他学术机构</a></li>
+                <li><a href="javascript:;">故宫博物院院刊</a></li>
+            </ul>
+        </div>
+        <div class="nav_child7 public" id="box7">
+            <ul class="clearfix" id="ul7">
+                <li><a href="javascript:;">故宫出版</a></li>
+                <li><a href="javascript:;">文创产品</a></li>
+                <li><a href="javascript:;">故宫壁纸</a></li>
+                <li><a href="javascript:;">故宫APP</a></li>
+                <li><a href="javascript:;">故宫游戏</a></li>
+            </ul>
+        </div>
+        <div class="nav_child8 public" id="box8">
+            <ul class="clearfix" id="ul8">
+                <li><a href="javascript:;">总说</a></li>
+                <li><a href="javascript:;">领导</a></li>
+                <li><a href="javascript:;">咨询</a></li>
+                <li><a href="javascript:;">院史编年</a></li>
+                <li><a href="javascript:;">景仁榜</a></li>
+                <li><a href="javascript:;">机构设置</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="nav_list" id="nav_list">
+        <div class="close" id="close"></div>
+        <div class="nav_table clearfix">
+            <div>
+                <h1>导览</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>开票时间</a>
+                <a>票务服务</a>
+                <a>交通路线</a>
+                <a>游览须知</a>
+                <a>全景故宫</a>
+            </div>
+            <div>
+                <h1>展览</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>近期展览</a>
+                <a>专馆</a>
+                <a>原状陈列</a>
+                <a>赴外展览</a>
+            </div>
+            <div>
+                <h1>教育</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>教育新闻</a>
+                <a>故宫博物院教育中心</a>
+                <a>国际博协培训中心</a>
+                <a>故宫志愿者</a>
+            </div>
+            <div>
+                <h1>探索</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>建筑</a>
+                <a>藏品</a>
+                <a>古籍</a>
+                <a>宫廷历史</a>
+                <a>文物医院</a>
+                <a>文化专题</a>
+                <a>名画记</a>
+                <a>数字多宝阁</a>
+                <a>数字文物库</a>
+
+            </div>
+            <div>
+                <h1>学术</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>学术活动</a>
+                <a>专家名录</a>
+                <a>故宫研究院</a>
+                <a>其他学术机构</a>
+                <a>故宫博物院院刊</a>
+            </div>
+            <div>
+                <h1>文创</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>故宫出版</a>
+                <a>文创产品</a>
+                <a>故宫壁纸</a>
+                <a>故宫APP</a>
+                <a>故宫游戏</a>
+            </div>
+            <div>
+                <h1>关于</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>总说</a>
+                <a>领导</a>
+                <a>咨询</a>
+                <a>院史编年</a>
+                <a>景仁榜</a>
+                <a>机构设置</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="body_content">
+        <!-- 首页和探索 -->
+        <div class="passage">
+            <div class="w">
+                <a href="#">首页</a>&nbsp;
+                <a>»</a>&nbsp;
+                <a href="#">探索</a>
+            </div>
+        </div>
+
+        <!-- 探索标题 -->
+        <div class="explore_top">
+            <div class="w">
+                <!-- 探索故宫的历史与文化 -->
+                <div class="top1">
+                    <img src="img/public-icon3.png" alt="">
+                    <span>探索故宫的历史与文化</span>
+                    <img src="img/public-icon4.png" alt="">
+                </div>
+                <!-- 独一无二的建筑风格 -->
+                <div class="top_content">
+                    <div class="long">
+                        <img src="img/loong.png" alt="">
+                    </div>
+                    <div class="build_style">
+                        <div class="bs_top">
+                            <img src="img/public-icon1.png" alt="">
+                            <span>独一无二的建筑风格</span>
+                            <img src="img/public-icon2.png" alt="">
+                        </div>
+                        <div class="bs_content">
+                            <p>紫禁城南北长961m，东西宽753m，四面围有高10m的城墙，城外有宽52m的护城河,真可谓有金城汤池之固。紫禁城有四座城门，南面为午门，北面为神武门，东面为东华门，西面为西华门。城墙的四角，各有一座风姿绰约的角楼，民间有九梁十八柱七十二条脊之说，形容其结构的复杂。
+                            </p>
+                        </div>
+                        <div class="more">
+                            <a href="javascript:;" class="more_1">
+                                <img src="img/img6.png" alt="">
+                                <span>太和殿</span>
+                            </a>
+                            <a href="javascript:;" class="more_1">
+                                <img src="img/img6.png" alt="">
+                                <span>中和殿</span>
+                            </a><a href="javascript:;" class="more_1">
+                                <img src="img/img6.png" alt="">
+                                <span>保和殿</span>
+                            </a><a href="javascript:;" class="more_1">
+                                <img src="img/img6.png" alt="">
+                                <span>体仁阁</span>
+                            </a><a href="javascript:;" class="more_1">
+                                <img src="img/img6.png" alt="">
+                                <span>弘义阁</span>
+                            </a><a href="javascript:;" class="more_1">
+                                <img src="img/img6.png" alt="">
+                                <span>乾清宫</span>
+                            </a><a href="javascript:;" class="more_1">
+                                <img src="img/img6.png" alt="">
+                                <span>交泰宫</span>
+                            </a>
+                            <a href="javascript:;" class="more_1">
+                                <img src="img/img6.png" alt="">
+                                <span>坤宁宫</span>
+                            </a>
+                            <a href="javascript:;" class="more_1">
+                                <img src="img/img6.png" alt="">
+                                <span>更多建筑</span>
+                            </a>
+                            <a href="javascript:;">
+                                <img src="img/build_map.png" alt="">
+                                <p>建筑地图</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="build">
+                        <img src="img/build.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 藏品 -->
+
+        <div class="collection">
+            <div class="w">
+                <div class="c_top">
+                    <div class="box1">
+                        <div class="gs">
+                            <img src="img/collection.png" alt="">
+                        </div>
+
+                        <div class="cp_tip">
+                            <img src="img/public-icon3.png" alt="">
+                            <span>数以百万计的珍贵藏品</span>
+                            <img src="img/public-icon4.png" alt="">
+                            <p>“故宫博物院”既是明清故宫（紫禁城）建筑群与宫廷史迹的保护管理机构，也是以明清皇室旧藏文物为基础的中国古代文化艺术品的收藏、研究和展示机构。</p>
+                        </div>
+
+                    </div>
+                    <div class="box2">
+                        <img src="img/famousPaint.jpg" alt="">
+                    </div>
+                    <div class="box3">
+                        <div class="people" id="people1">
+                            <img src="img/people.png" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>目前共有藏品</h3>
+                            <div class="text1">
+                                <span>1,862,690</span>
+                                <span></span>
+                            </div>
+                            <div class="search">
+                                <a>藏品分类查询</a>
+                                <img src="img/txtbg.png" alt="">
+                            </div>
+
+                            <img src="img/1.png" alt="">
+
+                            <div class="test1 svg">
+
+                                <a href="javascript:;">数字文物库</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="108" height="37"
+                                    style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); left: 145px;">
+                                    <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël
+                                    </desc>
+                                    <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs>
+                                    <path class="test2" fill="none" stroke="#dcdcdc"
+                                        d="M0,5L5,5L5,0L103,0L103,5L108,5L108,32L103,32L103,37L5,37L5,32L0,32L0,5"
+                                        stroke-width="2" stroke-dasharray="1000,1000"
+                                        style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-width: 2; stroke-dashoffset: 0px; stroke-dasharray: 500, 500;">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box4">
+                        <div class="l_b4">
+                            <h3>斗彩三秋杯</h3>
+                            <span>明成化</span>
+                            <p>此杯造型轻灵娟秀，胎体薄如蝉翼，画意清新。特别是飞舞于花间的彩蝶，欲落还飞，蝶翅施紫彩，色浓无光，为成化斗彩所仅有，也是后世仿品望尘莫及的。</p>
+                        </div>
+                        <div class="r_b4">
+                            <img src="img/bowl.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="box5">
+                        <div class="l_b5">
+                            <img src="img/paint.jpg" alt="">
+                        </div>
+                        <div class="r_b5">
+                            <h3>余省种秋花图轴</h3>
+                            <span>清</span>
+                            <p>该画表现课童种秋花的情景。蜂蝶两三萦绕篱径的庭院中，有的童子种植，有的培土、浇水。整幅画面生动活泼，表现出太平盛世人们安居乐业的惬意生活。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 宫中藏书 -->
+        <div class="ancient">
+            <div class="w">
+                <div class="ancient_book">
+                    <img src="img/public-icon3.png" alt="">
+                    <span>流传有序的宫中藏书</span>
+                    <img src="img/public-icon4.png" alt="">
+                </div>
+                <div class="long_bg">
+                    <div class="imperial">
+                        <img src="img/Imperial Palace.png" alt="">
+                    </div>
+                    <div class="ancient_1">
+                    </div>
+                    <div class="ancient_text">
+                        <ul>
+                            <li style="transition-delay: 0s;" class="lia">
+                                <img src="img/img8-1.png" alt="">
+                                <span>武英殿刻本</span>
+                            </li>
+                            <li style="transition-delay: 0.08s;" class="lia">
+                                <img src="img/img8-1.png" alt="">
+                                <span>元明清佳刻</span>
+                            </li>
+                            <li style="transition-delay: 0.16s;" class="lia">
+                                <img src="img/img8-1.png" alt="">
+                                <span>明清抄本</span>
+                            </li>
+                            <li style="transition-delay: 0.24s;" class="lia">
+                                <img src="img/img8-1.png" alt="">
+                                <span>地方志</span>
+                            </li>
+                            <li style="transition-delay: 0.32s;" class="lia">
+                                <img src="img/img8-1.png" alt="">
+                                <span>宫中特藏</span>
+                            </li>
+                            <li style="transition-delay: 0.40s;" class="lia">
+                                <img src="img/img8-1.png" alt="">
+                                <span>宫中档案</span>
+                            </li>
+                            <li style="transition-delay: 0.48s;" class="lia">
+                                <img src="img/img8-1.png" alt="">
+                                <span>内府戏本</span>
+                            </li>
+                            <li style="transition-delay: 0.56s;" class="lia">
+                                <img src="img/img8-1.png" alt="">
+                                <span>民族文字古籍</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="history">
+            <div class="w">
+                <div class="history_tip">
+                    <img src="img/history.png" alt="">
+                    <span>
+                        明朝（1368—1644年）和清朝（1644—1911年），是中国封建王朝史上最后两个朝代。两朝宫廷，既指是明清帝王使用的皇宫，也是明清两朝最高统治核心的代名词。明清宫廷五百多年的历史，作为整个明清史的一部分，以对帝后活动，包括等级制度、权力斗争、宗教祭祀、饮食服饰等问题的研究，向人们展示这五百多年来明清帝后多姿多彩又冷酷残忍的生活画卷。
+                    </span>
+                </div>
+                <div class="history_c">
+                    <div class="hs_1">
+                        <a href="javascript:;">
+                            <img src="img/y5.png" alt="">
+                            <span>宫廷世系</span>
+                        </a>
+                    </div>
+                    <div class="hs_1">
+                        <a href="javascript:;">
+                            <img src="img/y4.png" alt="">
+                            <span>宫廷典制</span>
+                        </a>
+                    </div>
+                    <div class="hs_1">
+                        <a href="javascript:;">
+                            <img src="img/y3.png" alt="">
+                            <span>宫廷人物</span>
+                        </a>
+                    </div>
+                    <div class="hs_1">
+                        <a href="javascript:;">
+                            <img src="img/y1.png" alt="">
+                            <span>宫廷事件</span>
+                        </a>
+                    </div>
+                    <div class="hs_1">
+                        <a href="javascript:;">
+                            <img src="img/y2.png" alt="">
+                            <span>宫廷文化</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="history_l svg">
+                    <a href="javascript:_drag()">更多历史</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="120" height="37"
+                        style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); left: 0px;">
+                        <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël</desc>
+                        <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs>
+                        <path class="his1" fill="none" stroke="#dcdcdc"
+                            d="M0,5L5,5L5,0L115,0L115,5L120,5L120,32L115,32L115,37L5,37L5,32L0,32L0,5" stroke-width="2"
+                            stroke-dasharray="1000,1000"
+                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-width: 2; stroke-dashoffset: 0px; stroke-dasharray: 500, 500;">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="heritage">
+            <div class="w">
+                <div class="heritage_book">
+                    <img src="img/public-icon3.png" alt="">
+                    <span>工匠精神的传承与发扬</span>
+                    <img src="img/public-icon4.png" alt="">
+                </div>
+                <div class="heritage_c">
+                    <div class="hc_l">
+                        <img src="img/Heritage_Hospital.png" alt="">
+                        <span>故宫文物医院（文保科技部）坐落在占地72.4万平方米的皇家宫殿里，半个多世纪以来，许多国宝在这里得以延年益寿。历史悠久的传统文物修复技艺，加上先进的现代科学技术，以及拥有一百多位从事各类文物保护修复与研究的优秀专业技术人才，使文保科技部成为一所名副其实的、有现代科学理念和架构的文物综合性医院。</span>
+                        <a href="javascript:_drag1();">
+                            文物医院保护工作
+                        </a>
+                    </div>
+                    <div class="hc_r">
+                        <ul>
+                            <li><img src="img/p1.jpg" alt=""></li>
+                            <li><img src="img/p2.jpg" alt=""></li>
+                        </ul>
+                        <div class="dotted">
+                            <a href="javascript:;" class="now"></a>
+                            <a href="javascript:;"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="culture">
+            <div class="w">
+                <div class="culture_1">
+                    <img src="img/public-icon3.png" alt="">
+                    <span>文化专题</span>
+                    <img src="img/public-icon4.png" alt="">
+                </div>
+                <div class="cul_2">
+                    <ul class="clearfix">
+                        <li>
+                            <div class="cul_l">
+                                <img src="img/culture2.jpg" alt="">
+                            </div>
+                            <div class="cul_r">
+                                <img src="img/b1-1.png" alt="">
+                                <a href="javascript:;">器物</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cul_l">
+                                <img src="img/culture3.jpg" alt="">
+                            </div>
+                            <div class="cul_r">
+                                <img src="img/b1-1.png" alt="">
+                                <a href="javascript:;">书画</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cul_l">
+                                <img src="img/culture5.jpg" alt="">
+                            </div>
+                            <div class="cul_r">
+                                <img src="img/b1-1.png" alt="">
+                                <a href="javascript:;">文化</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cul_l">
+                                <img src="img/culture1.jpg" alt="">
+                            </div>
+                            <div class="cul_r">
+                                <img src="img/b1-1.png" alt="">
+                                <a href="javascript:;">人物</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cul_l">
+                                <img src="img/culture4.jpg" alt="">
+                            </div>
+                            <div class="cul_r">
+                                <img src="img/b1-1.png" alt="">
+                                <a href="javascript:;">展览</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer_wrap">
+            <div class="qr_code">
+                <img src="./img/footer_big_code.jpg" alt="">
+            </div>
+            <div class="visit">
+                <span>网站访问量</span>
+                <ul>
+                    <li id="7">0</li>
+                    <li id="6">0</li>
+                    <li id="5">0</li>
+                    <li id="4">0</li>
+                    <li id="3">0</li>
+                    <li id="2">0</li>
+                    <li id="1">0</li>
+                    <li id="0">0</li>
+                </ul>
+            </div>
+            <div class="link">
+                <ul>
+                    <li><a href="javascript:;">网站地图</a></li>
+                    <li><a href="javascript:;">相关链接</a></li>
+                    <li><a href="javascript:;">影像授权</a></li>
+                    <li><a href="javascript:;">隐私政策</a></li>
+                    <li><a href="javascript:;">版权声明</a></li>
+                    <li><a href="javascript:;">常见问题</a></li>
+                    <li><a href="javascript:;">联系我们</a></li>
+                    <li><a href="javascript:;">关于我们</a></li>
+                </ul>
+            </div>
+            <div class="com">
+                <p>© 2001- 现在 故宫博物院 　京ICP备05067311号-1 网站建设： 北京分形科技</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // 封装底部计数函数
+        function footerNumber() {
+            if ($('footer').offset().top - $('body,html').scrollTop() <= $(window).height()) {
+                console.log('123');
+                var num = 0;
+                window.setInterval(function () {
+                    num = parseInt(num + parseInt(53565189 / 600));
+                    if (num >= 53565189) {
+                        num = 53565189;
+                    }
+                    $('#0').text(num % 10);
+                    $('#1').text((num % 100 - num % 10) / 10);
+                    $('#2').text((num % 1000 - num % 100) / 100);
+                    $('#3').text((num % 10000 - num % 1000) / 1000);
+                    $('#4').text((num % 100000 - num % 10000) / 10000);
+                    $('#5').text((num % 1000000 - num % 100000) / 100000);
+                    $('#6').text((num % 10000000 - num % 1000000) / 1000000);
+                    $('#7').text((num % 100000000 - num % 10000000) / 10000000);
+                }, 1);
+            }
+        }
+        $(window).scroll(function () {
+            if ($('#7').text() != 0) {
+                return;
+            }
+            footerNumber();
+        });
+        footerNumber();
+    </script>
+
+    <script src="./js/nav_white.js"></script>
+    <script src="./js/explore.js"></script>
+    <script src="./js/animate.js"></script>
+    <script>
+        function _drag() {
+            zeroModal.show({
+                title: '宫廷历史',
+                content: '明朝（1368—1644年）和清朝（1644—1911年），是中国封建王朝史上最后两个朝代。两朝宫廷，既指是明清帝王使用的皇宫，也是明清两朝最高统治核心的代名词。明清宫廷五百多年的历史，作为整个明清史的一部分，以对帝后活动，包括等级制度、权力斗争、宗教祭祀、饮食服饰等问题的研究，向人们展示这五百多年来明清帝后多姿多彩又冷酷残忍的生活画卷，同时，揭示了最高统治者统治权术、言行起居等对国家民族兴衰和社会生活走向的影响。',
+                dragHandle: 'container',
+                ok: true
+            });
+        }
+
+        function _drag1() {
+            zeroModal.show({
+                title: '文物医院',
+                content: '文物保护修复学科与医学相比，有着许多相似性。医学关注的是人的健康，文物保护修复则是负责文物的延年益寿。中国文物保护修复传统手工技艺犹如中医学，上千年来医治着文物的病害。我们有责任挖掘这些传统手工技艺的科学道理，并传承光大。同时，文物保护修复工作具有很强的科学性，亦是多学科交叉渗透形成的一门科学，包含人文社会科学、自然科学和工程技术三大领域。它需要像100多年前医学引入科学实验室方法一样应用现代分析检测设备和技术，借鉴当今其他学科完善的理论构架来建起自身的科学体系。',
+                dragHandle: 'container',
+                ok: true
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>故宫动态 / 故宫博物院青少网站</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/youth_tour.css">
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./js/link_youth.js"></script>
+    <style>
+        .sousuokuang {
+            padding: 40px 0;
+            background-color: white;
+            display: none;
+        }
+
+        .header {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+        }
+
+        .ssk {
+            width: 600px;
+            padding: 3px;
+            background-color: brown;
+            border-radius: 20px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .ssk input {
+            width: 500px;
+            height: 36px;
+            line-height: 36px;
+            border-radius: 20px;
+            padding-left: 15px;
+            float: left;
+        }
+
+        .ssk a {
+            display: block;
+            width: 60px;
+            height: 36px;
+            background-color: brown;
+            background: url('./navimg/icon.png') no-repeat -58px -64px;
+            float: left;
+            cursor: pointer;
+        }
+
+        .nav {
+            width: 990px;
+            height: 112px;
+            line-height: 56px;
+            margin: 0 auto;
+            background: url('./navimg/topnavbg.png') no-repeat top;
+            position: relative;
+        }
+
+        .nav .logo {
+            display: block;
+            width: 73px;
+            height: 94px;
+            background: url('./navimg/logo.png') no-repeat top;
+            margin: 0 auto;
+            z-index: 1;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .nav>ul {
+            position: absolute;
+            left: 94px;
+            top: 12px;
+        }
+
+        .nav>ul>li {
+            float: left;
+            margin: 0 15px;
+        }
+
+        .nav>ul>li a:hover {
+            color: red;
+        }
+
+        .nav>ul>li:nth-child(4) {
+            margin: 0 140px;
+        }
+
+        .nav .search {
+            display: block;
+            width: 18px;
+            height: 18px;
+            background: url('./navimg/icon.png') no-repeat 0 -73px;
+            margin: 20px 7px;
+        }
+
+        .nav .search:hover {
+            background-position: -27px -74px;
+        }
+
+        .three {
+            position: relative;
+        }
+
+        .four {
+            position: relative;
+        }
+
+        .bottom_list {
+            width: 170px;
+            box-shadow: 0px 0px 5px #666;
+            background-color: #fff;
+            position: absolute;
+            left: -60px;
+            top: 50px;
+            display: none;
+        }
+
+        .bottom_list1 {
+            width: 170px;
+            box-shadow: 0px 0px 5px #666;
+            background-color: #fff;
+            position: absolute;
+            left: -47px;
+            top: 50px;
+        }
+
+        .bottom_list i {
+            display: block;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid #ccc;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -20px;
+
+        }
+
+        .bottom_list i b {
+            display: block;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid #fff;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-48%);
+            top: -6px;
+
+        }
+
+        .bottom_list li {
+            height: 42px;
+            line-height: 42px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .nav .lidang {
+            display: block;
+            width: 59px;
+            height: 107px;
+            background: url('./navimg/bell.png') no-repeat;
+            position: absolute;
+            right: 40px;
+            top: 50px;
+            animation: abc 1s linear 1s infinite;
+            transform-origin: top center;
+        }
+
+        @keyframes abc {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(10deg);
+            }
+
+            50% {
+                transform: rotate(0deg);
+            }
+
+            75% {
+                transform: rotate(-10deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header" id="header_top">
+        <div class="sousuokuang">
+            <div class="ssk">
+                <input type="text" placeholder="站内搜索">
+                <a href="#"></a>
+            </div>
+        </div>
+        <div class="nav">       
+            <a href="#" class="logo"></a>
+            <ul>
+                <li id="li1"><a href="javascript:;">首页</a></li>
+                <li id="li2"><a href="javascript:;">故宫动态</a></li>
+                <li id="li3"><a href="javascript:;">我要逛故宫</a></li>
+                <li>&nbsp;</li>
+                <li class="three">
+                    <a href="#">上书房</a>
+                    <ul class="bottom_list bottom_list0">
+                        <i><b></b></i>
+                        <li id="li4"><a href="javascript:;">紫禁学堂</a></li>
+                        <li id="li5"><a href="javascript:;">故宫藏宝</a></li>
+                        <li id="li6"><a href="javascript:;">故宫小百科</a></li>
+                    </ul>
+                        
+                </li>
+                <li class="four">
+                    <a href="#">故宫大冒险</a>
+                    <ul class="bottom_list bottom_list1">
+                        <i><b></b></i>
+                        <li><a href="javascript:;">微剧场</a></li>
+                        <li><a href="javascript:;">游戏区</a></li>
+                        <li><a href="javascript:;">收藏馆</a></li>
+                        <li id="li7"><a href="javascript:;">精彩壁纸</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" title="站内搜索" class="search"></a></li>
+            </ul>
+            <a href="#" class="lidang"></a>
+        </div>
+    </div>
+    <!-- 内容 -->
+    <div class="content">
+        <div class="wrap">
+            <div class="article">
+                <div class="article_content">
+                    <ul>
+                        <li class="clearfix">
+                            <div class="time">
+                                <h1>16</h1>
+                                <p>2019.07</p>
+                            </div>
+                            <div class="text">
+                                <h4>“良渚与古代中国——玉器显示的五千年文明展”在故宫博物院开幕</h4>
+                                <p>2019年7月16日，“良渚与古代中国——玉器显示的五千年文明展”开幕式在故宫博物院武英殿举行。文化和旅游部党组成员、国家文物局局长刘玉珠出席活动并发表讲话，杭州市余杭区委
+                                </p>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="time">
+                                <h1>15</h1>
+                                <p>2019.07</p>
+                            </div>
+                            <div class="text">
+                                <h4>“天下龙泉——龙泉青瓷与全球化”展开幕</h4>
+                                <p>2019年7月15日，“天下龙泉——龙泉青瓷与全球化”展览在故宫博物院斋宫开幕。本次展览由故宫博物院、浙江省博物馆、丽水市人民政府联合主办，龙湖集团对本次展览给予大力支持。
+                                </p>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="time">
+                                <h1>10</h1>
+                                <p>2019.07</p>
+                            </div>
+                            <div class="text">
+                                <h4>“2019年暑假知识课堂”开始报名啦！</h4>
+                                <p>孩子开心、大人羡慕的暑假到来了，故宫经典教育项目“故宫知识课堂”又将与各位中小学生们见面啦！今年的故宫暑假知识课堂，有哪些新看点呢？· 持续时间长达6周，周周都有课！·
+                                    每周2天时间，每天2场课程
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 导航栏js代码 -->
+    <script>
+        $('.three').hover(function () {
+            $(this).find('ul').show();
+        }, function () {
+            $(this).find('ul').hide();
+        });
+        $('.four').hover(function () {
+            $(this).find('ul').show();
+        }, function () {
+            $(this).find('ul').hide();
+        });
+    </script>
+</body>
+
+</html>

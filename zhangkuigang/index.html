@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>紫禁学堂 / 故宫博物院青少网站</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        .sousuokuang {
+            padding: 40px 0;
+            background-color: white;
+            display: none;
+        }
+
+        .header {
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+        }
+
+        .ssk {
+            width: 600px;
+            padding: 3px;
+            background-color: brown;
+            border-radius: 20px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .ssk input {
+            width: 500px;
+            height: 36px;
+            line-height: 36px;
+            border-radius: 20px;
+            padding-left: 15px;
+            float: left;
+        }
+
+        .ssk a {
+            display: block;
+            width: 60px;
+            height: 36px;
+            background-color: brown;
+            background: url('./navimg/icon.png') no-repeat -58px -64px;
+            float: left;
+            cursor: pointer;
+        }
+
+        .nav {
+            width: 990px;
+            height: 112px;
+            line-height: 56px;
+            margin: 0 auto;
+            background: url('./navimg/topnavbg.png') no-repeat top;
+            position: relative;
+        }
+
+        .nav .logo {
+            display: block;
+            width: 73px;
+            height: 94px;
+            background: url('./navimg/logo.png') no-repeat top;
+            margin: 0 auto;
+            z-index: 1;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .nav>ul {
+            position: absolute;
+            left: 94px;
+            top: 12px;
+        }
+
+        .nav>ul>li {
+            float: left;
+            margin: 0 15px;
+        }
+
+        .nav>ul>li a:hover {
+            color: red;
+        }
+
+        .nav>ul>li:nth-child(4) {
+            margin: 0 140px;
+        }
+
+        .nav .search {
+            display: block;
+            width: 18px;
+            height: 18px;
+            background: url('./navimg/icon.png') no-repeat 0 -73px;
+            margin: 20px 7px;
+        }
+
+        .nav .search:hover {
+            background-position: -27px -74px;
+        }
+
+        .three {
+            position: relative;
+        }
+
+        .four {
+            position: relative;
+        }
+
+        .bottom_list {
+            width: 170px;
+            box-shadow: 0px 0px 5px #666;
+            background-color: #fff;
+            position: absolute;
+            left: -60px;
+            top: 50px;
+            display: none;
+        }
+
+        .bottom_list1 {
+            width: 170px;
+            box-shadow: 0px 0px 5px #666;
+            background-color: #fff;
+            position: absolute;
+            left: -47px;
+            top: 50px;
+        }
+
+        .bottom_list i {
+            display: block;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid #ccc;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -20px;
+
+        }
+
+        .bottom_list i b {
+            display: block;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid #fff;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-48%);
+            top: -6px;
+
+        }
+
+        .bottom_list li {
+            height: 42px;
+            line-height: 42px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .nav .lidang {
+            display: block;
+            width: 59px;
+            height: 107px;
+            background: url('./navimg/bell.png') no-repeat;
+            position: absolute;
+            right: 40px;
+            top: 50px;
+            animation: abc 1s linear 1s infinite;
+            transform-origin: top center;
+        }
+
+        @keyframes abc {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(10deg);
+            }
+
+            50% {
+                transform: rotate(0deg);
+            }
+
+            75% {
+                transform: rotate(-10deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header" id="header_top">
+        <div class="sousuokuang">
+            <div class="ssk">
+                <input type="text" placeholder="站内搜索">
+                <a href="#"></a>
+            </div>
+        </div>
+        <div class="nav">       
+            <a href="#" class="logo"></a>
+            <ul>
+                <li id="li1"><a href="javascript:;">首页</a></li>
+                <li id="li2"><a href="javascript:;">故宫动态</a></li>
+                <li id="li3"><a href="javascript:;">我要逛故宫</a></li>
+                <li>&nbsp;</li>
+                <li class="three">
+                    <a href="#">上书房</a>
+                    <ul class="bottom_list bottom_list0">
+                        <i><b></b></i>
+                        <li id="li4"><a href="javascript:;">紫禁学堂</a></li>
+                        <li id="li5"><a href="javascript:;">故宫藏宝</a></li>
+                        <li id="li6"><a href="javascript:;">故宫小百科</a></li>
+                    </ul>
+                        
+                </li>
+                <li class="four">
+                    <a href="#">故宫大冒险</a>
+                    <ul class="bottom_list bottom_list1">
+                        <i><b></b></i>
+                        <li><a href="javascript:;">微剧场</a></li>
+                        <li><a href="javascript:;">游戏区</a></li>
+                        <li><a href="javascript:;">收藏馆</a></li>
+                        <li id="li7"><a href="javascript:;">精彩壁纸</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" title="站内搜索" class="search"></a></li>
+            </ul>
+            <a href="#" class="lidang"></a>
+        </div>
+    </div>
+    <!-- 轮播图区域 -->
+    <div class="topbg">
+        <div class="w">
+            <div class="list_box">
+                <ul class="list">
+
+                    <li>
+                        <a href="javascript:;">
+                            <img src="./images/p-4/1.png" alt="">
+                            <img src="./images/p-4/4.png" alt="" class="img_44">
+                            <img src="./images/p-4/2.png" alt="" class="img_42">
+                            <img src="./images/p-4/3.png" alt="" class="img_43">
+                            <img src="./images/p-4/5.png" alt="" class="img_45">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="./images/p-3/2.png" alt="">
+                            <img src="./images/p-3/3.png" alt="" class="img_33">
+                            <img src="./images/p-3/4.png" alt="" class="img_34">
+                            <img src="./images/p-3/5.png" alt="" class="img_35">
+                            <img src="./images/p-3/6.png" alt="" class="img_36">
+                            <img src="./images/p-3/1.png" alt="" class="img_31">
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="./images/p-2/2.png" alt="">
+                            <img src="./images/p-2/3.png" alt="" class="img_23">
+                            <img src="./images/p-2/1.png" alt="" class="img_21">
+                            <img src="./images/p-2/4.png" alt="" class="img_24">
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="./images/p-1/6.png" alt="">
+                            <img src="./images/p-1/2.png" alt="" class="img_12">
+                            <img src="./images/p-1/1.png" alt="" class="img_11">
+                            <img src="./images/p-1/4.png" alt="" class="img_14">
+                            <img src="./images/p-1/3.png" alt="" class="img_13">
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="./images/p-4/1.png" alt="">
+                            <img src="./images/p-4/4.png" alt="" class="img_444">
+                            <img src="./images/p-4/2.png" alt="" class="img_422">
+                            <img src="./images/p-4/3.png" alt="" class="img_433">
+                            <img src="./images/p-4/5.png" alt="" class="img_455">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dotts clearfix">
+                <span class="dot1 pub0 dot_active"></span>
+                <span class="dot2 pub0"></span>
+                <span class="dot3 pub0"></span>
+                <span class="dot4 pub0"></span>
+            </div>
+        </div>
+    </div>
+    <!-- 紫禁学堂 -->
+    <div class="contant">
+        <!-- 标题 -->
+        <div class="title w"><img src="./images/title.png" alt=""></div>
+        <!-- 故事们 -->
+        <div class="tale w">
+            <ul class="clearfix">
+                <li>
+                    <a href="javascript:;">
+                        <span class="pub"><img src="./images/pimg-20.png" alt=""></span>
+                        <p>皇帝御膳大揭秘</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pub"><img src="./images/pimg-19.png" alt=""></span>
+                        <p>天下第一行书——《兰亭集序》</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pub"><img src="./images/pimg-18.png" alt=""></span>
+                        <p>猪年谈猪</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pub"><img src="./images/pimg-17.png" alt=""></span>
+                        <p>神奇动物在故宫</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pub"><img src="./images/pimg-16.png" alt=""></span>
+                        <p>皇帝的祛暑神器</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pub"><img src="./images/pimg-15.png" alt=""></span>
+                        <p>紫禁城里过春节</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pub"><img src="./images/pimg-4.png" alt=""></span>
+                        <p>郑和下西洋</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pub"><img src="./images/pimg-0.png" alt=""></span>
+                        <p>紫禁城的入门须知</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pub"><img src="./images/pimg-1.png" alt=""></span>
+                        <p>乾隆皇帝的超级大书</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pub"><img src="./images/pimg-2.png" alt=""></span>
+                        <p>皇帝过把农民瘾</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pub"><img src="./images/pimg-3.png" alt=""></span>
+                        <p>皇帝太后闹联欢</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pub"><img src="./images/pimg-5.png" alt=""></span>
+                        <p>祥瑞图大搜索</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pub"><img src="./images/pimg-6.png" alt=""></span>
+                        <p>落难的龙椅</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pub"><img src="./images/pimg-7.png" alt=""></span>
+                        <p>神秘的正大光明匾</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pub"><img src="./images/pimg-8.png" alt=""></span>
+                        <p>屋脊上的神秘小兽</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pub"><img src="./images/pimg-9.png" alt=""></span>
+                        <p>把苏州搬进宫</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pub"><img src="./images/pimg-10.png" alt=""></span>
+                        <p>紫禁城里的运动会</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pub"><img src="./images/pimg-11.png" alt=""></span>
+                        <p>皇帝的书房</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pub"><img src="./images/pimg-14.png" alt=""></span>
+                        <p>紫禁城里说暖气</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pub"><img src="./images/pimg-12.png" alt=""></span>
+                        <p>故宫中的皇帝</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="pub"><img src="./images/pimg-13.png" alt=""></span>
+                        <p>皇子们的生活</p>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- 动画 -->
+        <div class="animate">
+            <!-- 人物背景 -->
+            <div class="person"></div>
+            <!-- 黄袍 -->
+            <div class="cloth">
+                <img src="./images/cloth.png" alt="">
+            </div>
+            <!-- 云朵 -->
+            <div class="cloud2"></div>
+            <div class="cloud1"></div>
+            <div class="cloud6"></div>
+            <div class="cloud5"></div>
+            <div class="cloud4"></div>
+            <div class="cloud3"></div>
+        </div>
+        <!-- 紫禁学堂尾部 -->
+        <div class="contant_foot">
+        </div>
+    </div>
+    <!-- 旁边的小提示 -->
+    <div class="tips">
+        <a href="javascript:;"><img src="./images/licon.png" alt=""></a>
+        <!-- 旁边的小导航 -->
+        <div class="slide_nav">
+            <a href="javascript:;" class="top"></a>
+            <a href="javascript:;" class="center"></a>
+            <a href="javascript:;" class="bottom"></a>
+            <div class="erweima">
+                <img src="./images/2dcode.png" alt="">
+                <span class="sanjiaoda"></span>
+                <span class="sanjiaoxiao"></span>
+            </div>
+        </div>
+
+    </div>
+    <!-- 尾部 -->
+    <footer class="footer" style='position:relative;'>
+        <div class="mainwrap">
+            <div class="cr">
+                <div class="footerhouse"></div>
+                <div class="relink">故宫其他站点
+                    <ul>
+
+                        <li><a href="javascript:;">故宫官网</a></li>
+
+                        <li><a href="javascript:;">故宫出版社</a></li>
+
+                        <li><a href="javascript:;">中国古代书画研究系统</a></li>
+
+                        <li><a href="javascript:;">故宫商城</a></li>
+
+                        <li><a href="javascript:;">故宫博物院藏品总目</a></li>
+
+                        <li><a href="javascript:;">北京故宫文物保护基金会</a></li>
+
+                    </ul>
+
+                </div>
+                <div class="link"> · <a href="javascript:;" target="_blank">隐私政策</a> · <a
+                        href="//young.dpm.org.cn/about/contact" target="_blank">联系我们</a> · <a
+                        href="//young.dpm.org.cn/about/copyrights" target="_blank">版权声明</a> · </div>
+                <div class="copyrights">© 2001-2019 故宫博物院 京ICP备05067311号-1 网站建设：清石信息 </div>
+            </div>
+        </div>
+    </footer>
+    <script src="lib/jquery.min.js"></script>
+    <script src="./js/link_youth.js"></script>
+    <script src="./js/animate.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

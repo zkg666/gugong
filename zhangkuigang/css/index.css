@@ -1,0 +1,820 @@
+body{
+    overflow-x: hidden;
+}
+/* 轮播图区域 */
+.topbg{
+    background: url('../images/topbg.jpg') no-repeat;
+    height: 726px;
+    width: 100%;
+    background-position: center;
+    position: relative;
+    top: 0;
+}
+.active{
+    background-color: #f1eee7;
+}
+.topbg .list_box {
+    height: 598px;
+    width: 1200px;
+    overflow: hidden;
+    position: relative;
+    
+}
+.topbg .list_box li{
+    height: 598px;
+    width: 1200px;
+}
+.topbg .list_box li a{
+    display: block;
+    position: relative;
+}
+/* 第一个图片里的动画 -.-.-.-.-.-.-.-.-.-.-.-.-*/
+.img_44{
+    position: absolute;
+    top: 108px;
+    left: 143px; 
+}
+.img_444{
+    position: absolute;
+    top: 108px;
+    left: 143px; 
+}
+.aimg_44{
+    animation: img_44 0.8s linear;
+}
+@keyframes img_44{
+    0%{
+        visibility: hidden;
+        transform: rotateX(0);
+    }
+    50%{
+        visibility: hidden;
+        transform: rotateX(-90deg);
+    }
+    100%{
+        visibility: visible;
+        transform: rotateX(0);
+    }
+}
+.img_42{
+    position: absolute;
+    top: 0px;
+    left: 143px;
+}
+.img_422{
+    position: absolute;
+    top: 0px;
+    left: 143px;
+}
+.aimg_42{
+    animation: img_42 1s linear;
+}
+@keyframes img_42{
+    0%{
+        visibility: hidden;
+    }
+    60%{
+        visibility: hidden;
+        transform: translateY(-100px);
+        transform: scale(1,1);
+    }
+    90%{
+        visibility: visible;
+        transform: translateY(0px);
+        transform: scale(1,1.2);
+    }
+    100%{
+        visibility: visible;
+        transform: translateY(0px);
+        transform: scale(1,1);
+    }
+}
+
+.img_43{
+    position: absolute;
+    top: 409px;
+    right: 116px;
+    
+}
+.img_433{
+    position: absolute;
+    top: 409px;
+    right: 116px;
+    
+}
+.aimg_43{
+    animation: img_43 1.5s linear;
+}
+@keyframes img_43{
+    0%{
+        visibility: hidden;
+    }
+    70%{
+        visibility: hidden;
+        transform: scale(1,1);
+    }
+    90%{
+        visibility: visible;
+        transform: scale(1.2,1.2);
+    }
+    100%{
+        visibility: visible;
+        transform: scale(1,1);
+    }
+}
+.img_45{
+    position: absolute;
+    top: 128px;
+    left: 100px;  
+}
+.img_455{
+    position: absolute;
+    top: 128px;
+    left: 100px;  
+}
+.aimg_45{
+    animation: img_45 1.5s linear;
+}
+@keyframes img_45{
+    0%{
+        visibility: hidden;
+    }
+    70%{
+        visibility: hidden;
+        transform: rotateY(-90deg);
+    }
+    100%{
+        visibility: visible;
+        transform: rotateY(0);
+    }
+}
+
+
+/* 第二个图片的动画 -.-.-.-.-.-.-.-.-.-.-.-.-.-*/
+
+
+
+.img_33{
+    position: absolute;
+    top: 105px;
+    left: 520px;
+}
+.aimg_33{
+    animation: img_33 1.5s linear;
+}
+@keyframes img_33{
+    0%{
+        visibility: hidden;
+    }
+    80%{
+        visibility: hidden;
+        transform: rotateY(-90deg);
+    }
+    100%{
+        visibility: visible;
+        transform: rotateY(0);
+    }
+}
+.img_34{
+    position: absolute;
+    top: 44px;
+    left: 410px;
+}
+.aimg_34{
+    animation: img_34 1s linear;
+}
+@keyframes img_34{
+    0%{
+        visibility: hidden;
+    }
+    30%{
+        visibility: hidden;
+        transform: rotateY(90deg);
+    }
+    100%{
+        visibility: visible;
+        transform: rotateY(0);
+    }
+}
+.img_35{
+    position: absolute;
+    top: 116px;
+    left: 144px;  
+}
+.aimg_35{
+    animation: img_35 1s linear;
+}
+@keyframes img_35{
+    0%{
+        visibility: hidden;
+    }
+    70%{
+        visibility: hidden;
+        transform: scale(1,1);
+    }
+    90%{
+        visibility: visible;
+        transform: scale(1.2,1.2);
+    }
+    100%{
+        visibility: visible;
+        transform: scale(1,1);
+    }
+}
+.img_36{
+    position: absolute;
+    top: 334px;
+    right: 324px;
+    
+}
+.aimg_36{
+    animation: img_36 2.5s linear;
+}
+@keyframes img_36{
+    0%{
+        visibility: hidden;
+    }
+    80%{
+        visibility: hidden;
+        transform: translateX(500px);
+    }
+    100%{
+        visibility: visible;
+        transform: translateX(0px);
+    }
+}
+.img_31{
+    position: absolute;
+    top: 128px;
+    left: 150px;
+}
+.aimg_31{
+    animation: img_31 2s linear;
+}
+@keyframes img_31{
+    0%{
+        visibility: hidden;
+    }
+    80%{
+        visibility: hidden;
+        transform: translateX(500px);
+    }
+    100%{
+        visibility: visible;
+        transform: translateX(0px);
+    }
+}
+/* 第三张图的动画 */
+.img_23{
+    position: absolute;
+    top: 30px;
+    left: 108px;
+    
+}
+.aimg_23{
+    animation: img_23 1s linear;
+}
+@keyframes img_23{
+    0%{
+        visibility: hidden;
+        transform: translateY(-100px);
+    }
+    100%{
+        visibility: visible;
+        transform: translateY(0px);
+    }
+}
+.img_21{
+    position: absolute;
+    top: 128px;
+    left: 40px;
+    
+}
+.aimg_21{
+    animation: img_21 1s linear;
+}
+@keyframes img_21{
+    0%{
+        visibility: hidden;
+    }
+    80%{
+        visibility: hidden;
+        transform: translateX(500px);
+    }
+    100%{
+        visibility: visible;
+        transform: translateX(0px);
+    }
+}
+.img_24{
+    position: absolute;
+    top: 0px;
+    right: -35px;
+}
+.aimg_24{
+    animation: img_24 1s linear;
+}
+@keyframes img_24{
+    0%{
+        visibility: hidden;
+    }
+    70%{
+        visibility: hidden;
+        transform: scale(1,1);
+    }
+    90%{
+        visibility: visible;
+        transform: scale(1.2,1.2);
+    }
+    100%{
+        visibility: visible;
+        transform: scale(1,1);
+    }
+}
+
+
+
+/* 第四图的动画 */
+
+
+
+.img_12{
+    position: absolute;
+    top: 57px;
+    right: 87px;
+}
+.aimg_12{
+    animation: img_12 1s linear;
+}
+@keyframes img_12{
+    0%{
+        visibility: hidden;
+        transform: translateX(300px);
+    }
+    80%{
+        visibility: hidden;
+        transform: translateX(300px);
+    }
+    100%{
+        visibility: visible;
+        transform: translateX(0px);
+    }
+}
+.img_11{
+    position: absolute;
+    top: 57px;
+    left: 367px;
+    
+}
+.aimg_11{
+    animation: img_12 1s linear;
+}
+@keyframes img_11{
+    0%{
+        visibility: hidden;
+        transform: translateX(600px);
+    }
+    100%{
+        visibility: visible;
+        transform: translateX(0px);
+    }
+}
+.img_14{
+    position: absolute;
+    top: 128px;
+    left: 148px; 
+}
+.aimg_14{
+    animation: img_14 1s linear;
+}
+@keyframes img_14{
+    0%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+        transform: rotateY(-90deg);
+    }
+    100%{
+        visibility: visible;
+        transform: rotateY(0);
+    }
+}
+.img_13{
+    position: absolute;
+    top: 68px;
+    left: 440px;
+    
+}
+.aimg_13{
+    animation: img_13 0.5s linear;
+}
+@keyframes img_13{
+    0%{
+        visibility: hidden;
+    }
+    70%{
+        visibility: hidden;
+        transform: scale(1,1);
+    }
+    90%{
+        visibility: visible;
+        transform: scale(1,1.2);
+    }
+    100%{
+        visibility: visible;
+        transform: scale(1,1);
+    }
+}
+
+
+.topbg ul{
+    width: 1200px;
+    height: 7000px;
+    position: absolute;
+}
+.topbg .dotts {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.topbg .dotts .pub0{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    float: left;
+    margin: 30px 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.dot_active{
+    background-color: #007aff !important;
+}
+/* 主体部分标题 */
+.contant{
+    position: relative;
+    background: url('../images/bg1.jpg');
+    margin-top: 100px;
+}
+.title img{
+    position: absolute;
+    top: -168px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.contant .tale{
+    position: relative;
+}
+.contant .tale li{
+    width: 25%;
+    text-align: center;
+    float: left;
+    margin-bottom: 60px;
+}
+.contant .tale li a{
+    display: block;
+    margin: 0 20px; 
+}
+.contant .tale li a img{
+    width: 100%;
+}
+.contant .tale li:hover img{
+    animation: jelly 1s linear infinite;
+}
+.pub{
+    width: 260px;
+    height: 169px;
+    display: block;
+    margin-bottom: 20px;
+}
+/* 果冻抖动 */
+@keyframes jelly {
+    0% {
+      transform: scale(1, 1);
+    }
+  
+    30% {
+      transform: scale(1.25, 0.75);
+    }
+  
+    40% {
+      transform: scale(0.75, 1.25);
+    }
+  
+    50% {
+      transform: scale(1.15, 0.85);
+    }
+  
+    65% {
+      transform: scale(0.95, 1.05);
+    }
+  
+    75% {
+      transform: scale(1.05, 0.95);
+    }
+  
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+.contant .tale li a p{
+    font-size: 16px;
+    display: block;
+}
+
+/* 动画部分 */
+.animate{
+    margin-top: 100px;
+    background: url('../images/btmbg.png') no-repeat;
+    background-position: 0 100px;
+    width: 100%;
+    height: 403px;
+    position: relative;
+}
+.animate .person{
+    background: url('../images/btm.png') no-repeat top center;
+    width: 100%;
+    height: 403px;
+    position: relative;
+    top: 0px;
+    z-index: 10;
+}
+.animate .cloth{
+    position: absolute;
+    top: 20px;
+    left: 718px;
+    z-index: 5;
+}
+
+.cloud2{
+    background: url('../images/cloud-2.png') no-repeat;
+    height: 126px;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    left: -200px;
+    z-index: 1;
+    animation: cloud2 60s linear infinite;
+    
+}
+.cloud4{
+    background: url('../images/cloud-4.png') no-repeat;
+    height: 75px;
+    width: 148px;
+    position: absolute;
+    top: 288px;
+    left: -148px;
+    z-index: 11;
+    animation: cloud2 30s linear 1s infinite;
+    
+}
+.cloud1{
+    background: url('../images/cloud-1.png') no-repeat;
+    height: 75px;
+    width: 148px;
+    position: absolute;
+    top: 60px;
+    left: 575px;
+    z-index: 6;
+    animation: cloud1 20s linear infinite;
+}
+.cloud6{
+    background: url('../images/cloud-6.png') no-repeat;
+    height: 78px;
+    width: 114px;
+    position: absolute;
+    top: 76px;
+    left: -114px;
+    z-index: 11;
+    animation: cloud2 20s linear 1s infinite;
+}
+.cloud5{
+    background: url('../images/cloud-5.png') no-repeat;
+    height: 46px;
+    width: 67px;
+    position: absolute;
+    top: 240px;
+    left: 50px;
+    z-index: 11;
+    animation: cloud5 10s linear infinite;
+}
+.cloud3{
+    background: url('../images/cloud-3.png') no-repeat;
+    height: 88px;
+    width: 174px;
+    position: absolute;
+    top: 150px;
+    right: -174px;
+    z-index: 11;
+    animation: cloud3 20s linear infinite;
+}
+
+@keyframes cloud3{
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(-1920px);
+    }
+}
+@keyframes cloud2{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(1920px);
+    }
+}
+@keyframes cloud5{
+    0%{
+        transform: translateX(0) rotateY(180deg);
+    }
+    48%{
+        transform: translateX(300px) rotateY(180deg);
+    }
+    50%{
+        transform: translateX(300px) rotateY(0deg);
+    }
+    98%{
+        transform: translateX(0px) rotateY(0deg);
+    }
+    100%{
+        transform: translateX(0px) rotateY(180deg);
+    }
+}
+@keyframes cloud1{
+    0%{
+        transform: translateX(0) rotateY(0);
+    }
+    48%{
+        transform: translateX(500px) rotateY(0);
+    }
+    50%{
+        transform: translateX(500px) rotateY(180deg);
+    }
+    98%{
+        transform: translateX(0px) rotateY(180deg);
+    }
+    100%{
+        transform: translateX(0px) rotateY(0);
+    }
+}
+/* 紫禁学堂尾部 */
+.contant_foot{
+    background: url('../images/bottom.png') no-repeat;
+    background-color: #fceb8e;
+    height: 138px;
+    width: 100%;
+    /* position: absolute; */
+    bottom: 10px;
+}
+/* 旁边的小提示 */
+.tips{
+    position: fixed;
+    right: 18px;
+    bottom: 20px;
+    z-index: 100;
+}
+/* 旁边的小导航 */
+.slide_nav{
+    z-index: 100;
+    margin-left: 100px;
+    margin-top: 42px
+}
+.slide_nav a:hover{
+    opacity: 1;
+}
+.slide_nav .top{
+    display:none;
+    height: 63px;
+    width: 63px;
+    background: url('../images/uptop.png') no-repeat;
+    background-position: 0 -94px;
+    opacity: 0.5;
+}
+.slide_nav .center{
+    display: block;
+    height: 63px;
+    width: 63px;
+    background: url('../images/uptop.png') no-repeat;
+    background-position: 0 -163px;
+    opacity: 0.5;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.slide_nav .bottom{
+    display: block;
+    height: 74px;
+    width: 63px;
+    background: url('../images/uptop.png') no-repeat;
+    background-position: 0 -232px;
+    opacity: 0.5;
+}
+/* 二维码 */
+.erweima{
+    width: 400px;
+    height: 200px;
+    padding: 20px 10px;
+    background-color:#fff;
+    border: 0.5px solid #ccc;
+    border-radius: 10px 10px 10px 10px;
+    position: fixed;
+    right: 125px;
+    bottom: 22px;
+    display: none; 
+    cursor: pointer;
+}
+.active{
+    display: block;
+}
+.erweima img{
+    widows: 260px;
+    height: 180px;
+}
+.erweima .sanjiaoda{
+    width: 0;
+    height: 0;
+    border-left: 13px solid #ccc; 
+    border-right: 13px solid transparent; 
+    border-top: 13px solid transparent; 
+    border-bottom: 13px solid transparent; 
+    position: absolute;
+    right: -26px;
+    top:46%;
+}
+.erweima .sanjiaoxiao{
+    width: 0;
+    height: 0;
+    border-left: 12px solid #fff; 
+    border-right: 12px solid transparent; 
+    border-top: 12px solid transparent; 
+    border-bottom: 12px solid transparent; 
+    position: absolute;
+    right: -23px;
+    top:111px;
+}
+
+/* 底部 */
+.footer {
+    background: #960300 url('../images/bottom1.png') no-repeat center top;
+    padding: 60px 0 0 0;
+    font-size: 12px;
+}
+.mainwrap {
+    width: 1200px;
+    margin: auto;
+}
+.footer .cr {
+    padding: 0px 0 20px 100px;
+    line-height: 24px;
+    background: url('../images/icon.png') no-repeat -279px top;
+    position: relative;
+    width: 890px;
+    margin: auto;
+}
+.footer .cr .footerhouse {
+    background: url('../images/bottomhouse.png') no-repeat;
+    width: 248px;
+    height: 250px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.footer .cr .relink {
+    background: #A81B1A url('../images/icon.png') 106px -315px;
+    padding:3px 13px 4px 11px;
+    width: 100px;
+    color: #e8918f;
+    margin-bottom: 5px;
+    position: relative;
+    cursor: pointer;
+    font-size: 12px;
+}
+.footer .cr .relink ul {
+    position: absolute;
+    background-color: #A81B1A;
+    line-height: 40px;
+    width: 180px;
+    left: 0;
+    bottom: 30px;
+    display: none;
+}
+.footer .cr .relink ul a {
+    display: block;
+    text-indent: 10px;
+    color: #fff;
+    font-size: 12px;
+}
+.footer .cr .relink ul a:hover{
+    background: chocolate;
+}
+.footer .cr .link {
+    color: #d1b97e;
+}
+.footer .cr .link a {
+    color: #d1b97e;
+}
+.footer .cr .copyrights {
+    color: #d2615f;
+}

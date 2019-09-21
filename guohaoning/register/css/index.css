@@ -1,0 +1,430 @@
+
+
+
+.box0 {
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    background-color: rgb(107, 74, 4);
+}
+.box1 {
+    width: 100%;
+}
+.w {
+    margin: 0 auto;
+}
+.box2 {
+    height: 70px;
+}
+.box2 a {
+    padding: 0 10px;
+    line-height: 50px;
+}
+.all {
+    height: 240px;
+    border-bottom: 1px solid #ccc;
+}
+.box3 p{
+    text-align: center;
+    font-size: 26px;
+    color: #474747;
+}
+.box4 {
+     width: 810px;
+     margin: 30px auto;
+     font-size: 14px;
+     color: #070707;
+     line-height: 1.7;
+}
+.wrap {
+    height: 500px;
+    padding: 60px 0 0px;
+}
+.box5 p{
+    text-align: center;
+    font-size: 26px;
+    color: #474747;
+    line-height: 1.2;
+}
+.box6 {
+    height: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.input-1 {
+    display: flex;
+    margin-left: 200px;
+    margin-top: 30px;   
+}
+.input-1 input{
+    height: 40px;
+    width: 350px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.input-1 p {
+    line-height: 40px;
+    margin-left: 20px;
+}
+.input-2 {
+   display: flex;
+   margin-left: 200px;
+   margin-top: 15px;
+}
+.input-2 input {
+    height: 40px;
+    width: 350px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    box-sizing: border-box;
+    
+}
+.input-2 p {
+    line-height: 40px;
+    margin-left: 20px;
+}
+.input-3 {
+    margin-left: 200px;
+    margin-top: 15px;
+    position: relative;
+}
+.input-3 input{
+    border: 1px solid #ccc;
+    height: 40px;
+    width: 350px; 
+    padding-left: 10px;
+    box-sizing: border-box; 
+}
+.input-3 span {
+    margin-left: 16px;
+}
+
+.input-4 {
+    margin-left: 200px;
+    margin-top: 15px;
+    position: relative;
+
+}
+.input-4 input{
+    border: 1px solid #ccc;
+    height: 40px;
+    width: 350px; 
+    padding-left: 10px;
+    box-sizing: border-box; 
+}
+.input-4 span {
+    margin-left: 16px;
+}
+
+.input-5 {
+    margin-left: 200px;
+    margin-top: 15px;
+    position: relative;
+
+}
+.input-5 input{
+    border: 1px solid #ccc;
+    height: 40px;
+    width: 350px; 
+    padding-left: 10px;
+    box-sizing: border-box; 
+}
+.input-5 span {
+    margin-left: 16px;
+}
+
+.input-6 {
+    margin-left: 200px;
+    margin-top: 15px;
+    position: relative;
+
+}
+.input-6 input{
+    border: 1px solid #ccc;
+    height: 40px;
+    width: 350px; 
+    padding-left: 10px;
+    box-sizing: border-box; 
+}
+.input-6 span {
+    margin-left: 16px;
+}
+
+.input-10 {
+    width: 1000px;
+    height: 100px;
+    margin:  20px auto;
+}
+.n1{
+    height: 17px;
+    width: 17px;
+    position: absolute;
+    left: 280px;
+    top: 357px;
+   
+}
+.p1 {
+        font-size: 14px;
+        color: #474747;
+        cursor: pointer;
+        padding-left: 315px;
+        padding-top: 20px;
+        line-height: 1.7;
+        margin-right: 27px;
+        margin-left: -130px;
+        float: left;
+}
+.n2{
+    height: 17px;
+    width: 17px;
+    position: absolute;
+    left: 534px;
+    top: 357px;
+   
+}
+.p2 {
+        font-size: 14px;
+        color: #474747;
+        cursor: pointer;
+        padding-left: 160px;
+        padding-top: 20px;
+        line-height: 1.7;
+        margin-right: 27px;
+        margin-left: -124px;
+        float: left;
+}
+.n3{
+    height: 17px;
+    width: 17px;
+    position: absolute;
+    left: 280px;
+    top: 389px;
+   
+}
+.p3 {
+        font-size: 14px;
+        color: #474747;
+        cursor: pointer;
+        padding-left: 160px;
+        padding-top: 10px;
+        line-height: 1.7;
+        margin-right: 27px;
+        margin-left: 15px;
+        float: left;
+}
+
+
+.wrap1 {
+    padding: 60px 0 0;
+    border-bottom: solid 1px #e6e6e6;
+    height: 450px;
+    position: relative;
+}
+.z-1 p{
+    text-align: center;
+    font-size: 26px;
+    color: #474747;
+    line-height: 1.2;
+}
+.z-2 {
+     
+     height: 40px;
+     width: 70%;
+     line-height:40px;
+     position: absolute;
+     left: 200px;
+     top: 120px;
+}
+.z-2 input {
+    width: 350px;
+    height: 40px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    float: left;
+}
+.z-2 span {
+    float: left;
+    padding-left: 20px;
+    
+}
+.z-2 p {
+    float: left;
+    padding-left: 60px;
+    box-sizing: border-box;
+
+}
+.z-2 .r-1 {
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    right: 353px;
+    top: 10px;
+}
+.z-2 .r-2 {
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    right: 300px;
+    top: 10px;
+}
+.z-3 {
+    height: 40px;
+    width: 70%;
+    line-height: 40px;
+    position: absolute;
+    left: 200px;
+    top: 180px;
+}
+.z-3 span {
+    margin-left: 15px;
+}
+.z-3 input {
+    border: 1px solid #ccc;
+    width: 350px;
+    height: 40px;
+    padding-left: 10px;
+    
+}
+.z-3 input:nth-child(3) {
+    border: 1px solid #ccc;
+    width: 350px;
+    height: 40px;
+    padding-left: 10px;
+    margin-left: 35px;
+}
+.z-4 span {
+    position: absolute;
+    left: 383px;
+    top: 12px;
+}
+.z-4 {
+    position: absolute;
+    left: 200px;
+    top: 250px;
+}
+.z-4 input {
+    float: left;
+    width: 100px;
+    height: 40px;
+    margin-right: 28px;
+    border: 1px solid #ccc;
+}
+.z-4 input:nth-child(5) {
+    width: 363px;
+    height: 40px;
+    margin-left: 36px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.z-4 span:nth-child(6) {
+      margin-left: 425px;
+}
+.z-5 {
+    height: 40px;
+    width: 788px;
+    border: 1px solid #ccc;
+    position: absolute;
+    left: 200px;
+    top: 310px;
+}
+.z-5 input {
+    height: 40px;
+    width: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.z-6 {
+    height: 40px;
+    width: 70%;
+    line-height: 40px;
+    position: absolute;
+    left: 200px;
+    top: 368px;
+}
+.z-6 span {
+    margin-left: 15px;
+}
+.z-6 input {
+    border: 1px solid #ccc;
+    width: 350px;
+    height: 40px;
+    padding-left: 10px;
+    
+}
+.z-6 input:nth-child(3) {
+    border: 1px solid #ccc;
+    width: 350px;
+    height: 40px;
+    padding-left: 10px;
+    margin-left: 35px;
+}
+.z-3 {
+    height: 40px;
+    width: 70%;
+    line-height: 40px;
+    position: absolute;
+    left: 200px;
+    top: 180px;
+}
+.z-7 {
+    width: 100%;
+}
+.z-7 span {
+    margin-left: 15px;
+    position: absolute;
+    left: 566px;
+    top: 436px;
+}
+.z-7 input {
+    border: 1px solid #ccc;
+    width: 350px;
+    height: 40px;
+    padding-left: 10px;
+    position: absolute;
+    left: 200px;
+    top: 425px;
+}
+.w-1 {
+    height: 135px;
+    width: 100%;
+    position: relative;
+   
+}
+.w-2 {
+    position: absolute;
+    left:525px;
+    top: 50px;
+    cursor: pointer;
+}
+.w-2 .z-p {
+    position: absolute;
+    top: 10px; 
+    color: rgb(156, 110, 11);
+    font-size: 16px;
+    display: block;
+    width: 158px;
+    text-align: center;
+  
+}
+ .x-p {
+    width: 56px;
+    float: left;
+    position: absolute;
+    left:705px;
+    top: 60px;
+}
+.w-1 a {
+    display: block;
+    float: left;
+    position: absolute;
+    left:765px;
+    top: 60px;
+}
+.d-1 {
+    height: 200px;
+    width: 100%;
+    background-color: #ccc;
+}

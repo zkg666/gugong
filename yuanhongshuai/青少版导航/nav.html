@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="base.css">
+    <style>
+        .sousuokuang{
+            padding: 40px 0;
+            background-color: red;
+            display: none;
+        }
+        .ssk{
+            width: 600px;
+            padding: 2px;
+            background-color: brown;
+            border-radius: 20px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .ssk input{
+            width: 500px;
+            height: 36px;
+            line-height: 36px;
+            border-radius: 20px;
+            padding-left: 15px;
+            float: left;
+        }
+        .ssk a{
+            display: block;
+            width: 60px;
+            height: 36px;
+            background-color: brown;
+            background: url('./navimg/icon.png') no-repeat -58px -64px;
+            float: left;
+            cursor: pointer;
+        }
+       .nav{
+           width: 990px;
+           height: 112px;
+           line-height: 56px;
+           margin: 0 auto;
+           background:url('./navimg/topnavbg.png') no-repeat top;
+           position: relative;
+       }
+       .nav .logo{
+           display: block;
+           width: 73px;
+           height: 94px;
+           background: url('./navimg/logo.png') no-repeat top;
+           margin: 0 auto;
+           z-index: 1;
+       }
+       .nav ul{
+           position: absolute;
+           left: 94px;
+           top: 12px;
+       }
+       .nav li{
+           float: left;
+           margin: 0 15px;
+       }
+       .nav ul li:nth-child(4){
+           margin: 0 140px;
+       }
+       .nav .search{
+           display: block;
+           width: 18px;
+           height: 18px;
+           background: url('./navimg/icon.png') no-repeat 0 -73px;
+           margin: 20px 7px;
+       }
+       .nav .lidang{
+           display: block;
+           width: 59px;
+           height: 107px;
+           background: url('./navimg/bell.png') no-repeat;
+           position: absolute;
+           right: 40px;
+           top: 50px;
+           animation: abc 1s linear 1s infinite; 
+           transform-origin: top center;         
+       }
+       @keyframes abc{
+           0%{
+               transform: rotate(0deg);
+           }
+           25%{
+               transform: rotate(10deg);
+           }
+           50%{
+               transform: rotate(0deg);
+           }
+           75%{
+               transform: rotate(-10deg);
+           }
+           100%{
+               transform: rotate(0deg);
+           }
+       }
+    </style>
+</head>
+<body>
+    <!-- <div class="w"> -->
+        <div class="sousuokuang">
+            <div class="ssk">
+                <input type="text" placeholder="站内搜索">
+                <a href="#"></a>
+            </div>
+        </div>
+        <div class="nav">       
+                <a href="#" class="logo"></a>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">故宫动态</a></li>
+                    <li><a href="#">我要逛故宫</a></li>
+                    <li>&nbsp;</li>
+                    <li><a href="#">上书房</a></li>
+                    <li><a href="#">故宫大冒险</a></li>
+                    <li><a href="#" title="站内搜索"  class="search"></a></li>
+                </ul>
+                <a href="#" class="lidang"></a>      
+        </div>
+    <!-- </div> -->
+
+    <script>
+      var btn=document.querySelector('.nav ul li:nth-child(7) a');
+      var search=document.querySelector('.sousuokuang');
+      var flag=true;
+      (function(){
+        btn.onclick=function(){   
+        if(flag){
+            search.style.display='block';
+            flag=false; 
+        }else{
+            search.style.display='none';
+            flag=true;
+        }
+      }
+      })();
+      
+      
+    </script>
+</body>
+</html>

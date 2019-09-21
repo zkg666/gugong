@@ -1,0 +1,529 @@
+/* 头部区域 */
+.sousuokuang {
+    padding: 40px 0;
+    background-color: white;
+    display: none;
+}
+
+.header {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+}
+
+.ssk {
+    width: 600px;
+    padding: 3px;
+    background-color: brown;
+    border-radius: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.ssk input {
+    width: 500px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 20px;
+    padding-left: 15px;
+    float: left;
+}
+
+.ssk a {
+    display: block;
+    width: 60px;
+    height: 36px;
+    background-color: brown;
+    background: url('../navimg/icon.png') no-repeat -58px -64px;
+    float: left;
+    cursor: pointer;
+}
+
+.nav {
+    width: 990px;
+    height: 112px;
+    line-height: 56px;
+    margin: 0 auto;
+    background: url('../navimg/topnavbg.png') no-repeat top;
+    position: relative;
+}
+
+.nav .logo {
+    display: block;
+    width: 73px;
+    height: 94px;
+    background: url('../navimg/logo.png') no-repeat top;
+    margin: 0 auto;
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav>ul {
+    position: absolute;
+    left: 94px;
+    top: 12px;
+}
+
+.nav>ul>li {
+    float: left;
+    margin: 0 15px;
+}
+
+.nav>ul>li a:hover {
+    color: red;
+}
+
+.nav>ul>li:nth-child(4) {
+    margin: 0 140px;
+}
+
+.nav .search {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url('../navimg/icon.png') no-repeat 0px -73px;
+    margin: 20px 7px;
+}
+
+.nav .search:hover {
+    background-position: -27px -74px;
+}
+
+.three {
+    position: relative;
+}
+
+.four {
+    position: relative;
+}
+
+.bottom_list {
+    width: 170px;
+    box-shadow: 0px 0px 5px #666;
+    background-color: #fff;
+    position: absolute;
+    left: -60px;
+    top: 50px;
+    display: none;
+}
+
+.bottom_list1 {
+    width: 170px;
+    box-shadow: 0px 0px 5px #666;
+    background-color: #fff;
+    position: absolute;
+    left: -47px;
+    top: 50px;
+}
+
+.bottom_list i {
+    display: block;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid #ccc;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+
+}
+
+.bottom_list i b {
+    display: block;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid #fff;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-48%);
+    top: -6px;
+
+}
+
+.bottom_list li {
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.nav .lidang {
+    display: block;
+    width: 59px;
+    height: 107px;
+    background: url('../navimg/bell.png') no-repeat;
+    position: absolute;
+    right: 40px;
+    top: 50px;
+    animation: abc 1s linear 1s infinite;
+    transform-origin: top center;
+}
+
+@keyframes abc {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+
+/* 背景图区域 */
+.bgi {
+    height: 447px;
+    width: 100%;
+    background: url("../img/visittitlebg.jpg") no-repeat center top;
+}
+
+.bgi1 {
+    width: 100%;
+    height: 327px;
+    background: url("../img/visittitlebg.png")no-repeat center bottom;
+    margin: auto;
+    padding-top: 120px;
+    margin-bottom: 50px;
+}
+
+.bgi2 {
+    height: 61px;
+    width: 1120px;
+    background: url("../img/visittabbgline.png")no-repeat center bottom;
+    margin: auto;
+    margin-top: 270px;
+    position: relative;
+}
+
+.bgi2 ul {
+    width: 81%;
+    margin: auto;
+    position: absolute;
+    top: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bgi2 ul li {
+    background-image: url("../img/visittabbg.png");
+    background-repeat: no-repeat;
+    width: 171px;
+    height: 60px;
+    float: left;
+    margin: auto 3px;
+    text-align: center;
+}
+
+.bg_selected {
+    background-position: -4px -61px;
+}
+
+
+.bgi2 ul li:nth-child(1):hover a {
+    background-position: 23px -59px;
+}
+.bgi2 ul li:nth-child(2):hover a {
+    background-position: -156px -59px;
+}
+.bgi2 ul li:nth-child(3):hover a {
+    background-position: -339px -59px;
+}
+.bgi2 ul li:nth-child(4):hover a {
+    background-position: -509px -59px;
+}
+.bgi2 ul li:nth-child(5):hover a {
+    background-position: -687px -59px;
+}
+
+.n1 {
+    background-position: 23px -59px !important;
+}
+.n2 {
+    background-position: -156px -59px !important;
+}
+.n3 {
+    background-position: -339px -59px !important;
+}
+.n4 {
+    background-position: -509px -59px !important;
+}
+.n5{
+    background-position: -687px -59px !important;
+}
+
+.bgi2 ul li a {
+    background: url("../img/visittxt.png")no-repeat;
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-position: 23px 12px;
+    transition: all 200ms linear;
+}
+.bgi2 ul li:nth-child(2) a {
+    background-position: -156px 12px;
+    transition: all 200ms linear;
+} 
+.bgi2 ul li:nth-child(3) a {
+    background-position: -339px 12px;
+    transition: all 200ms linear;
+} 
+.bgi2 ul li:nth-child(4) a {
+    background-position: -509px 12px;
+    transition: all 200ms linear;
+} 
+.bgi2 ul li:nth-child(5) a {
+    background-position: -687px 12px;
+    transition: all 200ms linear;
+} 
+
+/* 侧边固定图 */
+.c-1 {
+    bottom: 35px;
+    position: fixed;
+    right: 20px;
+    z-index: 300;
+}
+
+.c-1 a {
+    background: url("../img/licon.png")no-repeat;
+    height: 190px;
+    width: 186px;
+    display: block;
+
+}
+
+.c-1 ul {
+    width: 70px;
+    float: right;
+}
+
+.c-1 ul li {
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    background: url("../img/uptop.png")no-repeat;
+    background-position: 0 -85px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.c-1 ul li:nth-child(2) {
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    background: url("../img/uptop.png")no-repeat;
+    background-position: 0 -156px;
+    opacity: 0.7;
+
+}
+
+.c-1 ul li:nth-child(3) {
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    background: url("../img/uptop.png")no-repeat;
+    background-position: 0 -226px;
+    opacity: 0.7;
+}
+
+.c-1 ul li:hover {
+    opacity: 1;
+}
+
+.w img {
+    width: 1000px;
+    display: block;
+    margin: 50px auto;
+    cursor: pointer;
+}
+
+.pub {
+    display: none;
+}
+
+.wrap {
+    width: 1000px;
+    height: 1688px;
+    margin: 80px auto;
+}
+
+.bt {
+    height: 56px;
+    width: 208px;
+    background-image: url("../img/biaoti_03.png");
+    background-repeat: no-repeat;
+    background-position: 0px -118px;
+    margin: 0 auto;
+}
+
+.wrap .uls {
+    height: 70px;
+}
+
+.wrap .uls li {
+    float: left;
+    font-size: 18px;
+    margin-left: 25px;
+    margin-top: 20px;
+    background-image: url("../img/red.png");
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 10px;
+}
+
+.wrap .uls li a:hover {
+    color: #000;
+}
+
+.bb {
+    height: 1700px;
+    width: 1000px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bb img {
+    width: 95%;
+    opacity: 0.5;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.bb img:hover {
+    transform: scale(1.06);
+    transition: all 1s linear;
+
+}
+.bb img:hover {
+    opacity: 1;
+}
+
+.bb ul {
+    width: 6000px;
+    position: absolute;
+}
+
+.bb ul li {
+    float: left;
+    width:1000px;
+}
+
+
+
+
+
+
+/* 底部区域 */
+
+.bottom_bg {
+    width: 100%;
+    background: url('../img/bottom_bg.png') no-repeat;
+    height: 100px;
+  }
+  footer {
+    background: #960300 url(../img/youth_footer_bg.png) no-repeat center top;
+    height: 161px;
+    padding-top: 60px;
+    box-sizing: border-box;
+  }
+  footer .footer_wrap {
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+  }
+  footer .footer_wrap .footer_content {
+    width: 990px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0px 0 20px 100px;
+    box-sizing: border-box;
+    background: url(../img/footer_spirite.png) no-repeat -279px top;
+    position: relative;
+  }
+  footer .footer_wrap .footer_content .footer_selection {
+    width: 115px;
+    height: 28px;
+    background: #a81b18 url(../img/footer_spirite.png) 87px -317px;
+    padding: 2px 5px 2px 10px;
+    width: 100px;
+    color: #e8918f;
+    margin-bottom: 5px;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 23px;
+  }
+  footer .footer_wrap .footer_content .footer_selection .footer_list {
+    position: absolute;
+    background-color: #C30;
+    line-height: 40px;
+    width: 180px;
+    left: 0;
+    bottom: 28px;
+    display: none;
+  }
+  footer .footer_wrap .footer_content .footer_selection .footer_list ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  footer .footer_wrap .footer_content .footer_selection .footer_list ul li {
+    flex: 1;
+    padding: 0 10px 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  footer .footer_wrap .footer_content .footer_selection .footer_list ul li a {
+    color: #fff;
+  }
+  footer .footer_wrap .footer_content .footer_selection .footer_list ul li:hover {
+    background: #bc9d45;
+  }
+  footer .footer_wrap .footer_content .footer_selection:hover {
+    background: #cc3300 url(../img/footer_spirite.png) 87px -317px;
+  }
+  footer .footer_wrap .footer_content .footer_selection:hover .footer_list {
+    display: block;
+  }
+  footer .footer_wrap .footer_content ul li {
+    float: left;
+    margin-right: 10px;
+  }
+  footer .footer_wrap .footer_content ul li a {
+    font-size: 12px;
+    color: #d1b97e;
+  }
+  footer .footer_wrap .footer_content ul li a:hover {
+    color: #ffcc00;
+  }
+  footer .footer_wrap .footer_content p {
+    margin-top: 10px;
+    color: #d2615f;
+    font-size: 12px;
+  }
+  footer .footer_wrap .footer_content .footer_house {
+    background: url(../img/footer_house.png) no-repeat;
+    width: 248px;
+    height: 250px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }

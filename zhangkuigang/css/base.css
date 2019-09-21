@@ -1,0 +1,42 @@
+body,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,dt,dd,p{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #5d5e5b;
+    font-size: 15px;
+    font-family: "微软雅黑";
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+img,input{
+    /* 去除边框 */
+    border: 0 none;
+    /* 去除轮廓线 */
+    outline-style: none;
+    padding: 0;
+    /* 去除图片底部3像素空白 */
+    vertical-align: middle;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+.clearfix{
+    zoom: 1;
+}
+.w{
+    width: 1200px;
+    margin: 0 auto;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}

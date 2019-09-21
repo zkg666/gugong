@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css_nav/nav_white.css">
+    <link rel="stylesheet" href="./css_nav/base.css">
+    <script src="./lib/jquery-3.4.1.js"></script>
+    <script src="./js/link.js"></script>
+    <style>
+        .errorInput {
+            border: 1px solid red !important;
+        }
+
+        .correctInput {
+            border: 1px solid green !important;
+        }
+
+        footer {
+            margin-top: 21px;
+            width: 100%;
+            height: 119px;
+            background-color: #272727;
+            padding-top: 21px;
+            padding-bottom: 18.9px;
+            box-sizing: border-box;
+        }
+
+        footer .footer_wrap {
+            width: 1100.4px;
+            height: 88.2px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        footer .footer_wrap .qr_code {
+            position: absolute;
+            cursor: pointer;
+            right: 252px;
+            top: 25.2px;
+            width: 26.6px;
+            height: 26.6px;
+            background: url('./img/footer_ico_code.png') no-repeat;
+            background-size: contain;
+        }
+
+        footer .footer_wrap .qr_code img {
+            transform: scale(0.7);
+            position: absolute;
+            top: -380px;
+            right: -127px;
+            z-index: 10;
+            display: none;
+        }
+
+        footer .footer_wrap .qr_code:hover img {
+            display: block;
+        }
+
+        footer .footer_wrap .qr_code::after {
+            content: '';
+            animation: footer_move 0.5s infinite alternate;
+            position: absolute;
+            right: -9.8px;
+            top: 17.5px;
+            display: block;
+            width: 18.2px;
+            height: 18.2px;
+            background: url('./img/footer_ico_hand.png') no-repeat;
+            background-size: contain;
+        }
+
+        @keyframes footer_move {
+            from {
+                right: -9.8px;
+                top: 17.5px;
+            }
+
+            to {
+                right: -11.9px;
+                top: 23.1px;
+            }
+        }
+
+        footer .footer_wrap .visit {
+            width: 100%;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        footer .footer_wrap .visit span {
+            color: #fff;
+            font-size: 9.8px;
+            line-height: 19.6px;
+            margin-right: 14px;
+        }
+
+        footer .footer_wrap .visit ul li {
+            width: 14px;
+            height: 19.6px;
+            background-color: #404040;
+            float: left;
+            color: #fff;
+            margin-right: 7px;
+            text-align: center;
+            line-height: 19.6px;
+            font-size: 9.8px;
+        }
+
+        footer .footer_wrap .link {
+            margin-top: 14px;
+            width: 100%;
+        }
+
+        footer .footer_wrap .link ul {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer .footer_wrap .link ul li {
+            margin-right: 7px;
+        }
+
+        footer .footer_wrap .link ul li a {
+            color: #fff;
+            font-size: 9.8px;
+        }
+
+        footer .footer_wrap .link ul li a:hover {
+            color: #909090;
+        }
+
+        footer .footer_wrap .com {
+            margin-top: 14px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer .footer_wrap .com p {
+            color: #fff;
+            font-size: 9.8px;
+        }
+
+        .warning{
+            position: absolute;
+            left: 380px;
+            top:10px;
+        }
+
+        .tips{
+            position: absolute;
+            top: 110px;
+            left: 541px;
+            color: #a72626;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="w">
+            <nav>
+                <img src="./img_nav/logo_red.png" alt="LOGO" class="left logo">
+                <ul id="ul_tr">
+                    <li id="li1"><a href="javascript:;">首页</a>
+                        <div id="tr1"></div>
+                    </li>
+                    <li id="li2"><a href="javascript:;">导览</a>
+                        <div id="tr2"></div>
+                    </li>
+                    <li id="li3"><a href="javascript:;">展览</a>
+                        <div id="tr3"></div>
+                    </li>
+                    <li id="li4"><a href="javascript:;">教育</a>
+                        <div id="tr4"></div>
+                    </li>
+                    <li id="li5"><a href="javascript:;">探索</a>
+                        <div id="tr5"></div>
+                    </li>
+                    <li id="li6"><a href="javascript:;">学术</a>
+                        <div id="tr6"></div>
+                    </li>
+                    <li id="li7"><a href="javascript:;">文创</a>
+                        <div id="tr7"></div>
+                    </li>
+                    <li id="li8"><a href="javascript:;">关于</a>
+                        <div id="tr8"></div>
+                    </li>
+                </ul>
+                <div class="tools">
+                    <span class="img btn" id="login_icon">
+                        <img src="./img_nav/login.png" alt="" id="login">
+                        <div id="login_box">
+                            <a href="javascript:;">登录</a>
+                            <a href="javascript:;">注册</a>
+                        </div>
+                    </span>
+                    <span class="public" id="line">|</span>
+                    <span class="zhong btn" id="zhong_icon">
+                        <img src="./img_nav/zhong.png" alt="" id="zhong">
+                        <div id="zhong_box">
+                            <a href="javascript:;">EN</a>
+                            <a href="javascript:;">青少年版</a>
+                        </div>
+                    </span>
+                </div>
+                <div class="menu" id="menu_btn">
+                    <img src="./img_nav/menu.png" alt="" id="menu">
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="nav_child" id="nav_child">
+        <div class="nav_child2 public" id="box2">
+            <ul class="clearfix" id="ul2">
+                <li><a href="javascript:;">开放时间</a></li>
+                <li><a href="javascript:;">票务服务</a></li>
+                <li><a href="javascript:;">交通路线</a></li>
+                <li><a href="javascript:;">游览须知</a></li>
+                <li><a href="javascript:;">全景故宫</a></li>
+            </ul>
+        </div>
+        <div class="nav_child3 public" id="box3">
+            <ul class="clearfix" id="ul3">
+                <li><a href="javascript:;">近期展览</a></li>
+                <li><a href="javascript:;">专馆</a></li>
+                <li><a href="javascript:;">原状陈列</a></li>
+                <li><a href="javascript:;">赴外展览</a></li>
+            </ul>
+        </div>
+        <div class="nav_child4 public" id="box4">
+            <ul class="clearfix" id="ul4">
+                <li><a href="javascript:;">教育新闻</a></li>
+                <li><a href="javascript:;">故宫博物院教育中心</a></li>
+                <li><a href="javascript:;">国际博协培训中心</a></li>
+                <li><a href="javascript:;">故宫志愿者</a></li>
+            </ul>
+        </div>
+        <div class="nav_child5 public" id="box5">
+            <ul class="clearfix" id="ul5">
+                <li><a href="javascript:;">建筑</a></li>
+                <li><a href="javascript:;">藏品</a></li>
+                <li><a href="javascript:;">古籍</a></li>
+                <li><a href="javascript:;">宫廷历史</a></li>
+                <li><a href="javascript:;">文化医院</a></li>
+                <li><a href="javascript:;">文化专题</a></li>
+                <li><a href="javascript:;">文化医院</a></li>
+                <li><a href="javascript:;">名画记</a></li>
+                <li><a href="javascript:;">数字多宝阁</a></li>
+                <li><a href="javascript:;">数字文物库</a></li>
+
+            </ul>
+        </div>
+        <div class="nav_child6 public" id="box6">
+            <ul class="clearfix" id="ul6">
+                <li><a href="javascript:;">学术活动</a></li>
+                <li><a href="javascript:;">专家名录</a></li>
+                <li><a href="javascript:;">故宫研究院</a></li>
+                <li><a href="javascript:;">故宫学院</a></li>
+                <li><a href="javascript:;">其他学术机构</a></li>
+                <li><a href="javascript:;">故宫博物院院刊</a></li>
+            </ul>
+        </div>
+        <div class="nav_child7 public" id="box7">
+            <ul class="clearfix" id="ul7">
+                <li><a href="javascript:;">故宫出版</a></li>
+                <li><a href="javascript:;">文创产品</a></li>
+                <li><a href="javascript:;">故宫壁纸</a></li>
+                <li><a href="javascript:;">故宫APP</a></li>
+                <li><a href="javascript:;">故宫游戏</a></li>
+            </ul>
+        </div>
+        <div class="nav_child8 public" id="box8">
+            <ul class="clearfix" id="ul8">
+                <li><a href="javascript:;">总说</a></li>
+                <li><a href="javascript:;">领导</a></li>
+                <li><a href="javascript:;">咨询</a></li>
+                <li><a href="javascript:;">院史编年</a></li>
+                <li><a href="javascript:;">景仁榜</a></li>
+                <li><a href="javascript:;">机构设置</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="nav_list" id="nav_list">
+        <div class="close" id="close"></div>
+        <div class="nav_table clearfix">
+            <div>
+                <h1>导览</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>开票时间</a>
+                <a>票务服务</a>
+                <a>交通路线</a>
+                <a>游览须知</a>
+                <a>全景故宫</a>
+            </div>
+            <div>
+                <h1>展览</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>近期展览</a>
+                <a>专馆</a>
+                <a>原状陈列</a>
+                <a>赴外展览</a>
+            </div>
+            <div>
+                <h1>教育</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>教育新闻</a>
+                <a>故宫博物院教育中心</a>
+                <a>国际博协培训中心</a>
+                <a>故宫志愿者</a>
+            </div>
+            <div>
+                <h1>探索</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>建筑</a>
+                <a>藏品</a>
+                <a>古籍</a>
+                <a>宫廷历史</a>
+                <a>文物医院</a>
+                <a>文化专题</a>
+                <a>名画记</a>
+                <a>数字多宝阁</a>
+                <a>数字文物库</a>
+
+            </div>
+            <div>
+                <h1>学术</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>学术活动</a>
+                <a>专家名录</a>
+                <a>故宫研究院</a>
+                <a>其他学术机构</a>
+                <a>故宫博物院院刊</a>
+            </div>
+            <div>
+                <h1>文创</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>故宫出版</a>
+                <a>文创产品</a>
+                <a>故宫壁纸</a>
+                <a>故宫APP</a>
+                <a>故宫游戏</a>
+            </div>
+            <div>
+                <h1>关于</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>总说</a>
+                <a>领导</a>
+                <a>咨询</a>
+                <a>院史编年</a>
+                <a>景仁榜</a>
+                <a>机构设置</a>
+            </div>
+        </div>
+    </div>
+    <div class="box1">
+        <!-- 版心区域 -->
+        <div class="w">
+            <!-- 登录区域 -->
+            <div class="box2">
+                <a href="#">首页</a>
+                <span>»</span>
+                <a href="#">注册</a>
+            </div>
+            <!-- 故宫博物院使用条款区域 -->
+            <div class="all">
+                <div class="box3">
+                    <p>【成为故宫会员，感受故宫的庄严与肃静】</p>
+                </div>
+                <div class="box4">
+                    <p>
+                        欢迎您来到“我的博物馆”，在这里注册之后即可成为故宫博物院的网络会员，享受故宫网站为您提供的一系列服务，包括：
+                    </p>
+                    <p>
+                        （一）在故宫网站建立“我的博物馆”，定制自己喜爱的版块、栏目和内容，搭建完全属于自己的个性博物馆网站;
+                    </p>
+                    <p>
+                        （二）订阅免费的故宫博物院电子报，了解院内最新展览消息和其他资讯；
+                    </p>
+                    <p>
+                        （三）参与故宫网站的在线调查，让故宫博物院为您提供更好的服务；
+                    </p>
+                    <p>
+                        您所填的个人材料受到故宫博物院网站的保护。（阅读《故宫博物院使用条款》）
+                    </p>
+                </div>
+            </div>
+
+            <!-- 基本信息区域 -->
+            <div class="wrap">
+                <div class="box5">
+                    <p>【基本信息】</p>
+                </div>
+                <div class="box6">
+                    <div class="input-1">
+                        <input type="text" placeholder="用户名">
+                        <p>
+                            <span style="color: red">*</span><i>用户名可包含大写、小写英文字母，数字，长度为2至10位</i>
+                        </p>
+                    </div>
+                    <div class="input-2">
+                        <input type="password" placeholder="密码">
+                        <p>
+                            <span style="color: red">*</span> <i>密码可包含大写、小写英文字母，数字，长度为6至16位</i>
+                        </p>
+                    </div>
+                    <div class="input-3">
+                        <input type="password" placeholder="确认密码">
+                        <div class="warning"></div>
+                        <span style="color: red">*</span>
+                    </div>
+                    <div class="input-4">
+                        <input type="text" placeholder="手机号码">
+                        <div class="warning"></div>
+                        <span style="color: red">*</span>
+                    </div>
+                    <div class="input-5">
+                        <input type="text" placeholder="邮箱地址">
+                        <div class="warning"></div>                        
+                        <span style="color: red">*</span>
+                    </div>
+                    <div class="input-6">
+                        <input type="text" placeholder="确认邮箱地址">
+                        <div class="warning"></div>                        
+                        <span style="color: red">*</span>
+                    </div>
+                    <div class="input-10">
+                        <input type="checkbox" class="n1">
+                        <p class="p1">订阅免费的故宫博物院电子报</p>
+                        <input type="checkbox" class="n2">
+                        <p class="p2">
+                            <span style="color: red">
+                                *
+                            </span>
+                            同意《故宫博物院网站隐私政策》（若不同意，将不能注册）
+                        </p>
+
+                        <input type="checkbox" class="n3">
+                        <p class="p3">
+                            <span style="color: red">
+                                *
+                            </span>
+                            同意《故宫博物院网站会员注册协议》（若不同意，将不能注册）
+                        </p>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <!-- 完成注册 -->
+            <div class="w-1">
+                <div class="tips">注册成功，正在前往登录页面...</div>
+                <div class="w-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="158" height="40"
+                        style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); left: 0px;">
+                        <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël</desc>
+                        <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs>
+                        <path fill="none" stroke="#9e7a4a"
+                            d="M0,5L5,5L5,0L153,0L153,5L158,5L158,35L153,35L153,40L5,40L5,35L0,35L0,5" stroke-width="2"
+                            stroke-dasharray="1000,1000"
+                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-width: 2; stroke-dashoffset: 0px; stroke-dasharray: 500, 500;">
+                        </path>
+                    </svg>
+                    <p class="z-p">完成注册</p>
+
+                </div>
+
+
+                <p class="x-p">已注册？</p>
+
+                <a href="#" id="gogogo">请登录</a>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <div class="footer_wrap">
+            <div class="qr_code">
+                <img src="./img/footer_big_code.jpg" alt="">
+            </div>
+            <div class="visit">
+                <span>网站访问量</span>
+                <ul>
+                    <li id="7">0</li>
+                    <li id="6">0</li>
+                    <li id="5">0</li>
+                    <li id="4">0</li>
+                    <li id="3">0</li>
+                    <li id="2">0</li>
+                    <li id="1">0</li>
+                    <li id="0">0</li>
+                </ul>
+            </div>
+            <div class="link">
+                <ul>
+                    <li><a href="javascript:;">网站地图</a></li>
+                    <li><a href="javascript:;">相关链接</a></li>
+                    <li><a href="javascript:;">影像授权</a></li>
+                    <li><a href="javascript:;">隐私政策</a></li>
+                    <li><a href="javascript:;">版权声明</a></li>
+                    <li><a href="javascript:;">常见问题</a></li>
+                    <li><a href="javascript:;">联系我们</a></li>
+                    <li><a href="javascript:;">关于我们</a></li>
+                </ul>
+            </div>
+            <div class="com">
+                <p>© 2001- 现在 故宫博物院 　京ICP备05067311号-1 网站建设： 北京分形科技</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // 封装底部计数函数
+        function footerNumber() {
+            if ($('footer').offset().top - $('body,html').scrollTop() <= $(window).height()) {
+                var num = 0;
+                window.setInterval(function () {
+                    num = parseInt(num + parseInt(53565189 / 600));
+                    if (num >= 53565189) {
+                        num = 53565189;
+                    }
+                    $('#0').text(num % 10);
+                    $('#1').text((num % 100 - num % 10) / 10);
+                    $('#2').text((num % 1000 - num % 100) / 100);
+                    $('#3').text((num % 10000 - num % 1000) / 1000);
+                    $('#4').text((num % 100000 - num % 10000) / 10000);
+                    $('#5').text((num % 1000000 - num % 100000) / 100000);
+                    $('#6').text((num % 10000000 - num % 1000000) / 1000000);
+                    $('#7').text((num % 100000000 - num % 10000000) / 10000000);
+                }, 1);
+            }
+        }
+        $(window).scroll(function () {
+            if ($('#7').text() != 0) {
+                return;
+            }
+            footerNumber();
+        });
+        footerNumber();
+    </script>
+    <script src="./js_nav/nav_white.js"></script>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

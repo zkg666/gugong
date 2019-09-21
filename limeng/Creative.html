@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文创-故宫博物馆</title>
+    <link rel="icon" href="./favicon.ico">
+    <!-- 引入css文件 -->
+    <link rel="stylesheet" href="./css_nav/base.css">
+    <link rel="stylesheet" href="./lib/animate.css">
+    <link rel="stylesheet" href="./css_nav/nav_white.css">
+    <link rel="stylesheet" href="./css_footer/css_footer.css">
+    <link rel="stylesheet" href="./css/fashionfoucs.css">
+    <link rel="stylesheet" href="./css/Creative.css">
+    <!-- 引入js文件 -->
+    <script src="./lib/jquery-3.4.1.js"></script>
+    <script src="./js/jquery.plugin.min.js"></script>
+    <script src="./js/Creative.js"></script>
+    <script src="./js/link.js"></script>
+    <style>
+        .snowfall-flakes {
+            animation: sakura 1s linear 0s infinite;
+        }
+
+        @keyframes sakura {
+            0% {
+                transform: rotate3d(0, 0, 0, 0deg);
+            }
+
+            25% {
+                transform: rotate3d(1, 1, 0, 60deg);
+            }
+
+            50% {
+                transform: rotate3d(1, 1, 0, 0deg);
+            }
+
+            75% {
+                transform: rotate3d(1, 0, 0, 60deg);
+            }
+
+            100% {
+                transform: rotate3d(1, 0, 0, 0deg);
+            }
+        }
+
+        footer {
+            margin-top: 21px;
+            width: 100%;
+            height: 119px;
+            background-color: #272727;
+            padding-top: 21px;
+            padding-bottom: 18.9px;
+            box-sizing: border-box;
+        }
+
+        footer .footer_wrap {
+            width: 1100.4px;
+            height: 88.2px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        footer .footer_wrap .qr_code {
+            position: absolute;
+            cursor: pointer;
+            right: 252px;
+            top: 25.2px;
+            width: 26.6px;
+            height: 26.6px;
+            background: url('./img/footer_ico_code.png') no-repeat;
+            background-size: contain;
+        }
+
+        footer .footer_wrap .qr_code img {
+            transform: scale(0.7);
+            position: absolute;
+            top: -380px;
+            right: -127px;
+            z-index: 10;
+            display: none;
+        }
+
+        footer .footer_wrap .qr_code:hover img {
+            display: block;
+        }
+
+        footer .footer_wrap .qr_code::after {
+            content: '';
+            animation: footer_move 0.5s infinite alternate;
+            position: absolute;
+            right: -9.8px;
+            top: 17.5px;
+            display: block;
+            width: 18.2px;
+            height: 18.2px;
+            background: url('./img/footer_ico_hand.png') no-repeat;
+            background-size: contain;
+        }
+
+        @keyframes footer_move {
+            from {
+                right: -9.8px;
+                top: 17.5px;
+            }
+
+            to {
+                right: -11.9px;
+                top: 23.1px;
+            }
+        }
+
+        footer .footer_wrap .visit {
+            width: 100%;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        footer .footer_wrap .visit span {
+            color: #fff;
+            font-size: 9.8px;
+            line-height: 19.6px;
+            margin-right: 14px;
+        }
+
+        footer .footer_wrap .visit ul li {
+            width: 14px;
+            height: 19.6px;
+            background-color: #404040;
+            float: left;
+            color: #fff;
+            margin-right: 7px;
+            text-align: center;
+            line-height: 19.6px;
+            font-size: 9.8px;
+        }
+
+        footer .footer_wrap .link {
+            margin-top: 14px;
+            width: 100%;
+        }
+
+        footer .footer_wrap .link ul {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer .footer_wrap .link ul li {
+            margin-right: 7px;
+        }
+
+        footer .footer_wrap .link ul li a {
+            color: #fff;
+            font-size: 9.8px;
+        }
+
+        footer .footer_wrap .link ul li a:hover {
+            color: #909090;
+        }
+
+        footer .footer_wrap .com {
+            margin-top: 14px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer .footer_wrap .com p {
+            color: #fff;
+            font-size: 9.8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="w">
+            <nav>
+                <img src="./img_nav/logo_red.png" alt="LOGO" class="left logo">
+                <ul id="ul_tr">
+                    <li id="li1"><a href="javascript:;">首页</a>
+                        <div id="tr1"></div>
+                    </li>
+                    <li id="li2"><a href="javascript:;">导览</a>
+                        <div id="tr2"></div>
+                    </li>
+                    <li id="li3"><a href="javascript:;">展览</a>
+                        <div id="tr3"></div>
+                    </li>
+                    <li id="li4"><a href="javascript:;">教育</a>
+                        <div id="tr4"></div>
+                    </li>
+                    <li id="li5"><a href="javascript:;">探索</a>
+                        <div id="tr5"></div>
+                    </li>
+                    <li id="li6"><a href="javascript:;">学术</a>
+                        <div id="tr6"></div>
+                    </li>
+                    <li id="li7"><a href="javascript:;">文创</a>
+                        <div id="tr7"></div>
+                    </li>
+                    <li id="li8"><a href="javascript:;">关于</a>
+                        <div id="tr8"></div>
+                    </li>
+                </ul>
+                <div class="tools">
+                    <span class="img btn" id="login_icon">
+                        <img src="./img_nav/login.png" alt="" id="login">
+                        <div id="login_box">
+                            <a href="javascript:;">登录</a>
+                            <a href="javascript:;">注册</a>
+                        </div>
+                    </span>
+                    <span class="public" id="line">|</span>
+                    <span class="zhong btn" id="zhong_icon">
+                        <img src="./img_nav/zhong.png" alt="" id="zhong">
+                        <div id="zhong_box">
+                            <a href="javascript:;">EN</a>
+                            <a href="javascript:;">青少年版</a>
+                        </div>
+                    </span>
+                </div>
+                <div class="menu" id="menu_btn">
+                    <img src="./img_nav/menu.png" alt="" id="menu">
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="nav_child" id="nav_child">
+        <div class="nav_child2 public" id="box2">
+            <ul class="clearfix" id="ul2">
+                <li><a href="javascript:;">开放时间</a></li>
+                <li><a href="javascript:;">票务服务</a></li>
+                <li><a href="javascript:;">交通路线</a></li>
+                <li><a href="javascript:;">游览须知</a></li>
+                <li><a href="javascript:;">全景故宫</a></li>
+            </ul>
+        </div>
+        <div class="nav_child3 public" id="box3">
+            <ul class="clearfix" id="ul3">
+                <li><a href="javascript:;">近期展览</a></li>
+                <li><a href="javascript:;">专馆</a></li>
+                <li><a href="javascript:;">原状陈列</a></li>
+                <li><a href="javascript:;">赴外展览</a></li>
+            </ul>
+        </div>
+        <div class="nav_child4 public" id="box4">
+            <ul class="clearfix" id="ul4">
+                <li><a href="javascript:;">教育新闻</a></li>
+                <li><a href="javascript:;">故宫博物院教育中心</a></li>
+                <li><a href="javascript:;">国际博协培训中心</a></li>
+                <li><a href="javascript:;">故宫志愿者</a></li>
+            </ul>
+        </div>
+        <div class="nav_child5 public" id="box5">
+            <ul class="clearfix" id="ul5">
+                <li><a href="javascript:;">建筑</a></li>
+                <li><a href="javascript:;">藏品</a></li>
+                <li><a href="javascript:;">古籍</a></li>
+                <li><a href="javascript:;">宫廷历史</a></li>
+                <li><a href="javascript:;">文化医院</a></li>
+                <li><a href="javascript:;">文化专题</a></li>
+                <li><a href="javascript:;">文化医院</a></li>
+                <li><a href="javascript:;">名画记</a></li>
+                <li><a href="javascript:;">数字多宝阁</a></li>
+                <li><a href="javascript:;">数字文物库</a></li>
+
+            </ul>
+        </div>
+        <div class="nav_child6 public" id="box6">
+            <ul class="clearfix" id="ul6">
+                <li><a href="javascript:;">学术活动</a></li>
+                <li><a href="javascript:;">专家名录</a></li>
+                <li><a href="javascript:;">故宫研究院</a></li>
+                <li><a href="javascript:;">故宫学院</a></li>
+                <li><a href="javascript:;">其他学术机构</a></li>
+                <li><a href="javascript:;">故宫博物院院刊</a></li>
+            </ul>
+        </div>
+        <div class="nav_child7 public" id="box7">
+            <ul class="clearfix" id="ul7">
+                <li><a href="javascript:;">故宫出版</a></li>
+                <li><a href="javascript:;">文创产品</a></li>
+                <li><a href="javascript:;">故宫壁纸</a></li>
+                <li><a href="javascript:;">故宫APP</a></li>
+                <li><a href="javascript:;">故宫游戏</a></li>
+            </ul>
+        </div>
+        <div class="nav_child8 public" id="box8">
+            <ul class="clearfix" id="ul8">
+                <li><a href="javascript:;">总说</a></li>
+                <li><a href="javascript:;">领导</a></li>
+                <li><a href="javascript:;">咨询</a></li>
+                <li><a href="javascript:;">院史编年</a></li>
+                <li><a href="javascript:;">景仁榜</a></li>
+                <li><a href="javascript:;">机构设置</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="nav_list" id="nav_list">
+        <div class="close" id="close"></div>
+        <div class="nav_table clearfix">
+            <div>
+                <h1>导览</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>开票时间</a>
+                <a>票务服务</a>
+                <a>交通路线</a>
+                <a>游览须知</a>
+                <a>全景故宫</a>
+            </div>
+            <div>
+                <h1>展览</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>近期展览</a>
+                <a>专馆</a>
+                <a>原状陈列</a>
+                <a>赴外展览</a>
+            </div>
+            <div>
+                <h1>教育</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>教育新闻</a>
+                <a>故宫博物院教育中心</a>
+                <a>国际博协培训中心</a>
+                <a>故宫志愿者</a>
+            </div>
+            <div>
+                <h1>探索</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>建筑</a>
+                <a>藏品</a>
+                <a>古籍</a>
+                <a>宫廷历史</a>
+                <a>文物医院</a>
+                <a>文化专题</a>
+                <a>名画记</a>
+                <a>数字多宝阁</a>
+                <a>数字文物库</a>
+
+            </div>
+            <div>
+                <h1>学术</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>学术活动</a>
+                <a>专家名录</a>
+                <a>故宫研究院</a>
+                <a>其他学术机构</a>
+                <a>故宫博物院院刊</a>
+            </div>
+            <div>
+                <h1>文创</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>故宫出版</a>
+                <a>文创产品</a>
+                <a>故宫壁纸</a>
+                <a>故宫APP</a>
+                <a>故宫游戏</a>
+            </div>
+            <div>
+                <h1>关于</h1>
+                <span><img src="./img_nav/nav_liststyle.png" alt=""></span>
+                <span><img src="./img_nav/nav_dot.png" alt=""></span>
+                <a>总说</a>
+                <a>领导</a>
+                <a>咨询</a>
+                <a>院史编年</a>
+                <a>景仁榜</a>
+                <a>机构设置</a>
+            </div>
+        </div>
+    </div>
+    <script src="./js_nav/nav_white.js"></script>
+    <!-- 以上是通用导航栏区域 -->
+    <img src="./images/banner.png" alt="" class="banner">
+    <!-- 以上是banner图片区域 -->
+    <div class="content">
+        <div class="ct_top"></div>
+        <!-- 以上是是页眉区域，由一个有页眉背景图的盒子构成 -->
+        <div class="ct_center">
+            <div class="bookstore">
+                <!-- 以上是一个书架 -->
+                <div class="books wow bounceInLeft" data-wow-duration="1.5s" data-wow-delay='0.7s'
+                    data-wow-offset="150">
+                    <img src="./images/book1.png" alt="" id="book1">
+                    <img src="./images/book3.png" alt="" id="book2">
+                    <img src="./images/book2.png" alt="" id="book3">
+                </div>
+                <!-- 左侧三本书对应右侧的描述 -->
+                <div class="right_db wow bounceInRight" data-wow-duration="1.5s" data-wow-delay='0.7s'
+                    data-wow-offset="150">
+                    <!-- 此处调用了函数创建了3个描述信息 -->
+                </div>
+            </div>
+            <!-- 以上是图书商店区域 -->
+            <div class="item_01">
+                <div class="left_itm wow bounceInLeft" data-wow-duration="1.5s" data-wow-delay='0.7s'
+                    data-wow-offset="150">
+                    <!-- 此处调用了函数创建了3个商品 -->
+                </div>
+                <div class="right_item">
+                    <div class="pct wow bounceInRight" data-wow-duration="1.5s" data-wow-delay='0.7s'
+                        data-wow-offset="150">
+                        <img src="./images/picture01.png" alt="">
+                        <img src="./images/picture02.png" alt="">
+                        <img src="./images/picture03.png" alt="">
+                    </div>
+                </div>
+                <div class="icn wow bounceInDown" data-wow-duration="1.5s" data-wow-delay='0.7s' data-wow-offset="150">
+                    <img src="./images/icon1.png" alt="">
+                    <img src="./images/icon2.png" alt="">
+                    <img src="./images/icon3.png" alt="">
+                </div>
+                <div class="itm_bg"></div>
+            </div>
+            <div class="item_02">
+                <div class="bg_it2"></div>
+                <div class="icon_it2 wow bounceInDown" data-wow-duration="1.5s" data-wow-delay='0.5s'
+                    data-wow-offset="50"></div>
+                <div class="ptcs_it2">
+                    <div class="pub i1">
+                        <img src="./images/i1.png" alt="">
+                        <a href=""></a>
+                    </div>
+                    <div class="pub i2">
+                        <img src="./images/i2.png" alt="">
+                        <a href=""></a>
+                    </div>
+                    <div class="pub i3">
+                        <img src="./images/i3.png" alt="">
+                        <a href=""></a>
+                    </div>
+                    <div class="pub i4">
+                        <img src="./images/i4.png" alt="">
+                        <a href=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item_03">
+                <div class="text"></div>
+                <div class="imglist clearfix">
+                    <div class="item3_1">
+                        <a href="https://pinyin.sogou.com/skins/detail/view/info/575204?f=achome_p" target="_blank"></a>
+                        <img src="./images/item3_1.jpg">
+                    </div>
+                    <div class="item3_1">
+                        <a href="https://pinyin.sogou.com/skins/detail/view/info/575204?f=achome_p" target="_blank"></a>
+                        <img src="./images/item3_2.jpg">
+                    </div>
+                    <div class="item3_1">
+                        <a href="https://pinyin.sogou.com/skins/detail/view/info/575204?f=achome_p" target="_blank"></a>
+                        <img src="./images/item3_3.jpg">
+                    </div>
+                </div>
+                <div class="gif1">
+                    <img src="./images/gif1.gif" alt="" class="wow rollIn" data-wow-duration="0.7s"
+                        data-wow-delay='0.5s' data-wow-offset="150">
+                </div>
+                <div class="png2 wow shake" data-wow-duration="1.5s" data-wow-delay='0.5s' data-wow-offset="50">
+                    <img src="./images/png2.png" alt="">
+                </div>
+            </div>
+            <div class="item_04">
+                <div class="tetb"></div>
+                <div class="caricatures clearfix">
+                    <div class="caricature_left">
+                        <img src="./images/caricature_left.png" alt="">
+                    </div>
+                    <div class="caricature">
+                        <img src="./images/caricature1.jpg" alt="">
+                        <div class="mask_div"></div>
+                        <div class="tit1">第十一话 约定难现·上</div>
+                    </div>
+                    <div class="caricature">
+                        <img src="./images/caricature2.jpg" alt="">
+                        <div class="mask_div"></div>
+                        <div class="tit1">第十话 乐山轰炸·下</div>
+                    </div>
+                    <div class="caricature">
+                        <img src="./images/caricature3.jpg" alt="">
+                        <div class="mask_div"></div>
+                        <div class="tit1">第九话 乐山轰炸·上</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item_game">
+                <div class="ttt"></div>
+                <div class="game_bg"></div>
+                <div class="game_right wow bounceInRight" data-wow-duration="1.5s" data-wow-delay='0.5s'
+                    data-wow-offset="50">
+                    <img src="./images/game_right.png" alt="">
+                </div>
+                <div class="game_left">
+                    <img src="./images/game_left.png" alt="">
+                </div>
+            </div>
+            <div id="banner">
+                <ul id="banner_img">
+                    <li class="item1">
+                        <div class="wrapper">
+                            <div class="ad_txt describe">
+                                <div class="textTitle">
+                                    <span class="hl"></span>
+                                    <h1>皇帝的一天</h1>
+                                    <span class="hr"></span>
+                                </div>
+                                <p>紫禁城高高的宫墙后面，昔日的天子究竟过着怎样的生活呢？这是一本故宫博物院官方出品，专为孩子们讲过去的未来“书”。乾清门外的小狮子将带你角色扮演，深入清宫，了解皇帝一天的衣食起居和工作娱乐，还有更多文物卡片和霸气成就等你来收集！
+                                </p>
+                            </div>
+                            <div class="ad_img"><img src="./images/p1.jpeg"></div>
+                        </div>
+                    </li>
+                    <li class="item2">
+                        <div class="wrapper">
+                            <div class="ad_txt describe">
+                                <div class="textTitle">
+                                    <span class="hl"></span>
+                                    <h1>胤禛美人图</h1>
+                                    <span class="hr"></span>
+                                </div>
+                                <p>故宫博物院出品的首个应用，让您指尖轻触，从十二幅美人屏风画像一窥清朝盛世华丽优雅的宫廷生活。</p>
+                            </div>
+                            <div class="ad_img"><img src="./images/p2.jpeg"></div>
+                        </div>
+                    </li>
+                    <li class="item3">
+                        <div class="wrapper">
+                            <div class="ad_txt describe">
+                                <div class="textTitle">
+                                    <span class="hl"></span>
+                                    <h1>紫禁城祥瑞</h1>
+                                    <span class="hr"></span>
+                                </div>
+                                <p>
+                                    故宫博物院官方出品，2014年清新发布！
+                                    <br>
+                                    独家揭秘紫禁城里的祥瑞符号，带您领略宫廷珍宝上的皇家文化。
+                                </p>
+                            </div>
+                            <div class="ad_img"><img src="./images/p3.jpeg"></div>
+                        </div>
+                    </li>
+                    <li class="item4">
+                        <div class="wrapper">
+                            <div class="ad_txt describe">
+                                <div class="textTitle">
+                                    <span class="hl"></span>
+                                    <h1>韩熙载夜宴图</h1>
+                                    <span class="hr"></span>
+                                </div>
+                                <p>南唐末年，朝廷重臣韩熙载为避免陷入政治的泥潭，故意沉溺于夜宴笙歌、不问世事。后主李煜心生疑问，派宫廷画师顾闳中深夜潜入韩府，目识心记，画下了不朽名作《夜宴图》。根据这幅院藏珍品，故宫博物院集两岸三地学者及艺术家之心力，历时两年，以专业的学术资料、丰富的媒体内容及创新的交互美学，精心研发了《韩熙载夜宴图》App。
+                                </p>
+                            </div>
+                            <div class="ad_img"><img src="./images/p4.jpeg"></div>
+                        </div>
+                    </li>
+                    <li class="item5">
+                        <div class="wrapper">
+                            <div class="ad_txt describe">
+                                <div class="textTitle">
+                                    <span class="hl"></span>
+                                    <h1>清代皇帝服饰</h1>
+                                    <span class="hr"></span>
+                                </div>
+                                <p>清帝冠服是中国数千年服饰文化史中不可或缺的一页，也是故宫博物院宫廷旧藏中的重要组成部分。故宫博物院精心打造的《清代皇帝服饰》iPad应用程序，邀您与清代皇帝冠服进行一次全方位的亲密接触！
+                                </p>
+                            </div>
+                            <div class="ad_img"><img src="./images/p5.jpeg"></div>
+                        </div>
+                    </li>
+                    <li class="item6">
+                        <div class="wrapper">
+                            <div class="ad_txt describe">
+                                <div class="textTitle">
+                                    <span class="hl"></span>
+                                    <h1>故宫陶瓷馆</h1>
+                                    <span class="hr"></span>
+                                </div>
+                                <p>故宫博物院官方出品，基于iPhone系列手机制作的《故宫陶瓷馆》APP，它以“时间轴”为骨架，串联起文华殿陶瓷馆在陈的全部藏品，每件藏品都有清晰的图片和专家撰写的介绍，更有8件精品可以水平360°水平环绕欣赏！把“故宫陶瓷馆”装进口袋里，随时随地看展览，长知识！
+                                </p>
+                            </div>
+                            <div class="ad_img"><img src="./images/p6.jpeg"></div>
+                        </div>
+                    </li>
+                    <li class="item7">
+                        <div class="wrapper">
+                            <div class="ad_txt describe">
+                                <div class="textTitle">
+                                    <span class="hl"></span>
+                                    <h1>每日故宫</h1>
+                                    <span class="hr"></span>
+                                </div>
+                                <p>每日甄选一款馆藏珍品，邀您同游宋元山水，共访禁城别苑，探寻皇家日常那些令人惊叹的细节，感受传世珍品不竭的历史生命。</p>
+                            </div>
+                            <div class="ad_img"><img src="./images/p7.jpeg"></div>
+                        </div>
+                    </li>
+                </ul>
+                <div id="banner_ctr">
+                    <!-- <div id="drag_ctr"></div> -->
+                    <ul>
+                        <li><img src="./images/li1.png" alt=""></li>
+                        <li><img src="./images/li2.png" alt=""></li>
+                        <li><img src="./images/li3.png" alt=""></li>
+                        <li><img src="./images/li4.png" alt=""></li>
+                        <li><img src="./images/li5.png" alt=""></li>
+                        <li><img src="./images/li6.png" alt=""></li>
+                        <li><img src="./images/li7.png" alt=""></li>
+                        <!-- <li><img src="./images/li8.png" alt=""></li> -->
+                    </ul>
+                    <!-- <div id="drag_arrow"></div> -->
+                </div>
+                <div class="bar_bg">
+                </div>
+            </div>
+            <!--引入的轮播图-->
+        </div>
+        <!-- 以上是内容区域 -->
+        <div class="ct_bottom"></div>
+        <!-- 以上是页尾部分 -->
+    </div>
+    <!-- 以上是内容区域 -->
+    <footer>
+        <div class="footer_wrap">
+            <div class="qr_code">
+                <img src="./img/footer_big_code.jpg" alt="">
+            </div>
+            <div class="visit">
+                <span>网站访问量</span>
+                <ul>
+                    <li id="7">0</li>
+                    <li id="6">0</li>
+                    <li id="5">0</li>
+                    <li id="4">0</li>
+                    <li id="3">0</li>
+                    <li id="2">0</li>
+                    <li id="1">0</li>
+                    <li id="0">0</li>
+                </ul>
+            </div>
+            <div class="link">
+                <ul>
+                    <li><a href="javascript:;">网站地图</a></li>
+                    <li><a href="javascript:;">相关链接</a></li>
+                    <li><a href="javascript:;">影像授权</a></li>
+                    <li><a href="javascript:;">隐私政策</a></li>
+                    <li><a href="javascript:;">版权声明</a></li>
+                    <li><a href="javascript:;">常见问题</a></li>
+                    <li><a href="javascript:;">联系我们</a></li>
+                    <li><a href="javascript:;">关于我们</a></li>
+                </ul>
+            </div>
+            <div class="com">
+                <p>© 2001- 现在 故宫博物院 　京ICP备05067311号-1 网站建设： 北京分形科技</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // 封装底部计数函数
+        function footerNumber() {
+            if ($('footer').offset().top - $('body,html').scrollTop() <= $(window).height()) {
+                console.log('123');
+                var num = 0;
+                window.setInterval(function () {
+                    num = parseInt(num + parseInt(53565189 / 600));
+                    if (num >= 53565189) {
+                        num = 53565189;
+                    }
+                    $('#0').text(num % 10);
+                    $('#1').text((num % 100 - num % 10) / 10);
+                    $('#2').text((num % 1000 - num % 100) / 100);
+                    $('#3').text((num % 10000 - num % 1000) / 1000);
+                    $('#4').text((num % 100000 - num % 10000) / 10000);
+                    $('#5').text((num % 1000000 - num % 100000) / 100000);
+                    $('#6').text((num % 10000000 - num % 1000000) / 1000000);
+                    $('#7').text((num % 100000000 - num % 10000000) / 10000000);
+                }, 1);
+            }
+        }
+        $(window).scroll(function () {
+            if ($('#7').text() != 0) {
+                return;
+            }
+            footerNumber();
+        });
+        footerNumber();
+    </script>
+    <!-- 以上是通用底部区域 -->
+    <script>
+        // ----------------------------------------------文字区域
+        var str1 = '博物馆无形资产的保护与研究';
+        var str2 =
+            '中国传统书画装裱修复技术，距今已有1700多年的历史。历史上遗留下来的珍贵书法、绘画等能幸存到今天，在很大程度是经过装裱的缘故。新中国成立后，国家文物局将全国书画装裱修复高手请到故宫博物院，专门负责装裱修复故宫收藏的书画文物，为故宫博物院和全国博物馆培养了一批传统装裱修复技术的专业人员。 ';
+        var str3 = '发现故宫的60个细节';
+        var str4 =
+            '本书是以一种别样的思路来介绍故宫的掌上宝典，图书分为60个主题，长短适中，5分钟就能学到一个小知识。这本书的作者曾把自己定位为紫禁城宫殿屋顶上的一颗“小瓦钉”，一是寓意一种踏实认真的奉献精神，另一原因则完全出于对博大精深的中国艺术文化的敬畏。';
+        var str5 = '雍正 谜一样的天子 第一辑';
+        var str6 =
+            '《雍正·谜一样的天子(第1辑):帝后耕织》为胤禛作雍亲王时绘制，接续宋代以来的耕织图传统，耕图、织图各23开。较为独特的是各开均以雍亲王或其福晋的形象入画，颇有意趣。除了46开内容完整的耕织图外，另有若干与画面重复而未题写诗句者，不知何故。';
+        var arr = [
+            [str1, str2],
+            [str3, str4],
+            [str5, str6]
+        ];
+        // ----------------------------------------------
+        //循环遍历创建三个描述信息
+        for (var i = 0; i < 3; i++) {
+            var describe = 'db' + (i + 1);
+            var str1 = arr[i][0];
+            var str2 = arr[i][1];
+            $('.right_db').append(createDescribe(describe, str1, str2));
+            $('#' + describe).append('<li class="right_bg"></li>')
+        }
+        $('.right_db').append(createButton(3), createLink(2));
+        $('.btn_bom a').eq(0).text('更多故宫刊物');
+        $('.btn_bom a').eq(1).text('故宫出版旗舰店');
+        $('.right_db .btn_top a').eq(0).addClass('active');
+        // ----------------------------------------------
+        // 设置书架的动画效果
+        // ----------------------------------------------
+
+        $('.right_db .btn_top a').click(function () {
+            var index = $(this).index();
+            $(this).siblings().removeClass('active');
+            $('.bookstore .describe').stop().removeClass('moveLeft').fadeOut();
+            $('.books img').stop().removeClass('moveRight').fadeOut(0);
+            $('.bookstore .describe').eq(index).stop().addClass('moveLeft').fadeIn(300);
+            $('.books img').eq(index).stop().addClass('moveRight').fadeIn(300);
+            $(this).addClass('active');
+        });
+        // 在对应js文件封装轮播效果
+        //设置轮播效果
+        getCarousel('.right_db .btn_top a', 3, 4000);
+        // 点击按钮切换显示图片和描述
+        // ----------------------------------------------文字区域
+        var str1 = '吉字茶具';
+        var str2 =
+            '吉字茶具的设计参考故宫博物院藏甜白釉暗花缠枝莲托八吉祥纹碗。茶具糅合薄胎、彩绘等高难度制瓷手法，胎薄如玉，茶色外透。单杯以古彩画法绘制葫芦形“吉”字，盖碗及杯底则绘有缠枝莲纹，暖心的设计传递了“福在眼前”、“福禄双至”的美好祝福。 ';
+        var str3 = '福禄有余•收纳盒';
+        var str4 =
+            '“福禄有余•收纳盒”灵感源自故宫藏玳瑁边嵌牙松鹤柏鹿挂屏、印彩鲤鱼海水纹布。收纳盒被特别设计成圆润饱满的粮仓造型，融合了禄（鹿）余（鱼）元素，寓意福禄有余，也与其收纳功能相互呼应。希望通过这件可爱的产品为大家的生活带来一份别具趣味的祝福。 ';
+        var str5 = '虎虎生威便签纸砖';
+        var str6 =
+            '本品设计灵感源于红色五毒纹妆花纱裱片。“五毒”意为五种于端午开始孳生的“毒虫”，常为蝎子、蛇、蜈蚣、壁虎和蟾蜍。古人认为“虎食五毒”，因而常将五毒与老虎、艾草等组合，祈愿阖家平安、诸事兴旺。设计师用鲜明活泼的配色呈现文物中可爱而又不失霸气的老虎形象，结合具有传统节庆特色的卡通版五毒、艾草，趣味十足。';
+        var arr = [
+            [str1, str2],
+            [str3, str4],
+            [str5, str6]
+        ];
+        // ----------------------------------------------
+        //循环遍历创建三个描述信息
+        for (var i = 0; i < 3; i++) {
+            var describe = 'itm' + (i + 1);
+            var str1 = arr[i][0];
+            var str2 = arr[i][1];
+            $('.left_itm').append(createDescribe(describe, str1, str2));
+            if (i == 0) {
+                $('.left_itm .describe').eq(0).show();
+            }
+        }
+        $('.left_itm').append(createButton(3), createLink(4));
+        $('.left_itm .btn_bom a').eq(0).text('故宫博物院文创旗舰店');
+        $('.left_itm .btn_bom a').eq(1).text('故宫博物院文创馆');
+        $('.left_itm .btn_bom a').eq(2).text('故宫淘宝');
+        $('.left_itm .btn_bom a').eq(3).text('故宫文创旗舰店');
+        $('.left_itm .btn_top a').eq(0).addClass('active');
+        //设置按钮的点击事件
+        $('.left_itm .btn_top a').click(function () {
+            var index = $(this).index();
+            $(this).siblings().removeClass('active');
+            $('.left_itm .describe').stop().removeClass('moveRight').fadeOut();
+            $('.icn').children().stop().removeClass('moveDown').fadeOut();
+            $('.icn').children().eq(index).stop().addClass('moveDown').fadeIn(300);
+            $('.pct').children().stop().removeClass('moveLeft').fadeOut();
+            $('.pct img').eq(index).stop().addClass('moveLeft').fadeIn(300);
+            $('.left_itm .describe').eq(index).stop().addClass('moveRight').fadeIn(300);
+            $(this).addClass('active');
+        });
+        //设置第二个轮播效果
+        getCarousel('.left_itm .btn_top a', 3, 4000);
+        // ----------------------------------------------文字区域
+        var str1 = '缤纷你的移动生活';
+        var str2 = '把故宫装进口袋';
+        // ----------------------------------------------
+        $('.ptcs_it2').append(createDescribe('#item2_db', str1, str2));
+        $('.ptcs_it2 ul').append(createLink(1));
+        $('.ptcs_it2 .btn_bom a').eq(0).text('更多故宫壁纸');
+        // ----------------------------------------------文字区域
+        var str1 = '故宫输入法皮肤';
+        var str2 = '更多精彩皮肤、表情等你来发现';
+        // ----------------------------------------------
+        $('.item_03 .text').append(createDescribe('#item3_db', str1, str2));
+        $('.item_03 .text ul').append(createLink(1));
+        $('.item_03 .text .btn_bom a').eq(0).text('更多故宫皮肤');
+        // ----------------------------------------------文字区域
+        var str1 = '故宫回声';
+        var str2 = '一座宫一群人，13491箱文物，为了避免战火而辗转万里。离家是为了回家。';
+        // ----------------------------------------------
+        $('.tetb').append(createDescribe('#item4_db', str1, str2));
+        $('.tetb ul').append(createLink(1));
+        $('.tetb .btn_bom a').eq(0).text('更多故宫动漫');
+        // ----------------------------------------------文字区域
+        var str1 = '太和殿的脊兽';
+        var str2 = '太和殿屋脊上的脊兽顺序都乱了请把他们放在正确的位置';
+        // ----------------------------------------------
+        $('.item_game').append(createDescribe('#item4_db', str1, str2));
+        $('.item_game ul').append(createLink(1));
+        $('.item_game .btn_bom a').eq(0).text('更多故宫动漫');
+        //以上利用封装的函数进行几个文字部分的创建
+    </script>
+    <script language="javascript">
+        $(function () {
+            var i = 4;
+            $(window).bind("scroll", function (event) {
+                //滚动条到网页头部的 高度，兼容ie,ff,chrome
+                var top = document.documentElement.scrollTop + document.body.scrollTop;
+                //网页的高度
+                var textheight = $(document).height();
+                // 网页高度-top-当前窗口高度
+                if (textheight - top - $(window).height() <= 100) {
+                    if (i >= 100) {
+                        return;
+                    }
+                    $('#div1').css("height", "+=100");
+                    i++;
+                    //可以根据实际情况，获取动态数据加载 到 div1中
+                    $('<div>' + i + '</div>').appendTo($('#div1'));
+                }
+            });
+        });
+    </script>
+    <!-- 引入轮播图插件js文件 -->
+    <script src="./lib/wow1.13.js"></script>
+    <!-- 引入了类似懒加载的动态图随滚动条加载的WOW.js -->
+    <script src="./js/fashionfoucs.js"></script>
+    <script src="./lib/snowfall.jquery.min.js"></script>
+    <!-- 花瓣效果插件 -->
+    <script>
+        wow = new WOW({
+            boxClass: 'wow', // 默认属性名
+            animateClass: 'animated', // 默认触发的动画类(包含在animate css中)
+            offset: 0, // 为所有添加wow的元素设置 data-wow-delay属性 的默认值
+            mobile: true, // 是否在移动设备中开启动画
+            live: true // 持续监测页面中是否插入新的wow元素
+        });
+        wow.init();
+    </script>
+    <script>
+        //花瓣效果
+        $(document).snowfall('clear');
+        $(document).snowfall({
+            image: "./images/autumn1.png",
+            flakeCount: 30,
+            minSpeed: 1,
+            minSize: 30,
+            maxSize: 50,
+        });
+        $(document).snowfall({
+            image: "./images/autumn1.png",
+            flakeCount: 30,
+            minSpeed: 1,
+            minSize: 30,
+            maxSize: 50,
+        });
+        $(document).snowfall({
+            image: "./images/autumn2.png",
+            flakeCount: 30,
+            minSpeed: 1,
+            minSize: 30,
+            maxSize: 50,
+        });
+        $(document).snowfall({
+            image: "./images/autumn2.png",
+            flakeCount: 30,
+            minSpeed: 1,
+            minSize: 30,
+            maxSize: 50,
+        });
+    </script>
+</body>
+
+</html>

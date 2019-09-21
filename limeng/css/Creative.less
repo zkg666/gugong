@@ -1,0 +1,649 @@
+// 函数创建的类对应的样式
+.describe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    .textTitle {
+        margin-bottom: 50px;
+        display: flex;
+        height: 40px;
+        width: 500px;
+        h1 {
+            color: #b2261a;
+            height: 100%;
+            line-height: 40px;
+            padding:  0 10px;
+
+        }
+        .hl{
+            line-height: 40px;
+            display: block;
+            width: 22px;
+            height: 100%;
+            background: url('../images/game7.png') no-repeat;
+            background-position: 0 5px;
+        }
+        .hr{
+            line-height: 40px;
+            display: block;
+            width: 22px;
+            height: 100%;
+            background: url('../images/game8.png') no-repeat;
+            background-position: 0 5px;
+        }
+    }
+    p {
+        text-indent: 2em;
+        color:#707070;
+    }
+}
+//图片公共样式
+.btn_top {
+    position: absolute;
+    width: 100%;
+    top: 250px;
+    left:0;
+    display: flex;
+    flex-wrap: wrap;
+    a {
+        margin-right: 15px;
+        display: block;
+        width: 27px;
+        height: 25px;
+        background: url('../images/game25.png') no-repeat left center;
+        
+    }
+    .active {
+        background-position: right center;
+    }
+}
+.btn_bom {
+    position: absolute;
+    top: 330px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    a {
+        margin-bottom: 15px;
+        margin-right: 15px;
+        text-align: center;
+        line-height: 48px;
+        display: block;
+        width: 252px;
+        height: 48px;
+        background: url('../images/game10.png') no-repeat left center;
+    }
+}
+body {
+    background: url('../images/game1.jpg');
+}
+.header {
+    background-color: #fff;
+}
+.banner {
+    width: 100%;  
+}
+.content {
+    img {
+        border: 0;
+        outline: 0;
+        vertical-align: middle;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    //内容图片的公共样式
+    width: 1230px;
+    margin: 0 auto;
+    .ct_top {
+        width: 100%;
+        height: 73px;
+        background: url('../images/game2.png');
+    }
+    .ct_center{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        background: url('../images/game6.png');
+        .bookstore {
+            height: 420px;
+            width: 1110px;
+            margin: 20px auto;
+            // background-color: #ccc;
+            display: flex;
+            .books {
+                height: 413px;
+                width: 342px;
+                margin-right: 110px;
+                position: relative;
+                // transform: rotateY(30deg);
+                transform-style: preserve-3d;
+                img {
+                    position: absolute;
+                    width: 342px;
+                    height: 413px;
+                    display: none;
+                }
+                #book1 {
+                    display: block;
+                }
+            }
+            .right_db {
+                position: absolute;
+                height: 410px;
+                left: 480px;
+                top: 0;
+                width: 550px;
+                margin-top: 50px;
+                #db1 {
+                    display: block;
+                }
+                .right_bg {
+                    width: 189px;
+                    height: 268px;
+                    background: url(../images/game24.png) no-repeat center;
+                    position: absolute;
+                    right:-197px;
+                    top:-65px;
+                }
+                
+            }
+
+        }
+        .item_01{
+            height: 535px;
+            width: 1110px;
+            margin: 0 auto;
+            padding-top: 105px;
+            margin-bottom: 110px;
+            // background-color: #ccc;
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            .left_itm {
+                margin-top: 85px;
+                position: relative;
+                left: 0;
+                top: 0;
+                width: 520px;
+                height: 400px;
+                // background-color: #ccc;
+                .textTitle {
+                   padding-right: 100px;
+                   h1 {
+                    color:#263d6f;
+                    }
+                }
+                .btn {
+                    width: 555px;
+                }
+                .btn_bom {
+                    width: 555px;
+                }
+            }
+            .right_item {
+                position: relative;
+                margin-top: 60px;
+                width: 480px;
+                height: 430px;
+                .pct {
+                    position: absolute;
+                    right: 0;
+                    width: 472px;
+                    height: 426px;
+                    img { 
+                        width: 100%;
+                        position: absolute;
+                        top: 0;
+                        z-index: 3;
+                        padding-top: 110px;
+                        display: none;
+                    }
+                    :first-child {
+                        display: block;
+                    }
+                }
+            }
+            .icn {
+                img {
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    z-index: 3;
+                }
+                height: 753px;
+                width: 369px;
+                position: absolute;
+                right: -60px;
+                top: 20px;
+                :first-child {
+                    display: block;
+                }
+            }
+            .itm_bg {
+                width: 188px;
+                height: 328px;
+                background: url(../images/game13-1.png) no-repeat center;
+                position: absolute;
+                right: 370px;
+                top: 165px;
+            }
+        }
+        .item_02{
+            position: relative;
+            height: 570px;
+            .icon_it2 {
+                background: url('../images/game14.png') no-repeat;
+                width: 416px;
+                height: 482px;
+                position: absolute;
+                top: 10px;
+            }
+            .bg_it2 {
+                background: url(../images/game14-1.png) no-repeat;
+                width: 290px;
+                height: 252px;
+                position: absolute;
+                top: 10px;
+                left: 135px;
+            }
+            .ptcs_it2 {
+                height: 570px;
+                width: 833px;
+                position: absolute;
+                top: 0;
+                left: 315px;
+                ul {
+                    text-align: center;
+                    display: block;
+                    width: 350px;
+                    left: 500px;
+                    top: 60px;
+                    p {
+                        text-indent: 0;
+
+                    }
+                    .textTitle{
+                        h1 {
+                            color: #5c1417;
+                        }
+                        margin-left: 20px;
+                        margin-bottom: 10px;
+                    }
+                    .btn_bom{
+                        top: 100px;
+                        margin-left: 50px;
+                    }
+                }
+                .pub {
+                    width: 271px;
+                    height: 315px;
+                    position: absolute;
+                    a {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: block;
+                        width: 271px;
+                        height: 315px;
+                        opacity: 0;
+                        background: url('../images/game15.png') no-repeat center;
+                    }
+                }
+                .pub:hover  a {
+                    opacity: 0.7;
+
+
+                }
+                .ptcs_it2>a {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: url(../images/game15.png) no-repeat center;
+                    opacity: 0;
+                }
+                img {
+                    border: 0;
+                    outline: 0;
+                    vertical-align: middle;
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+                .i1 {
+                    top: 0;
+                    left: 140px;
+                }
+                .i2 {
+                    top: 245px;
+                    left: 0;
+                }
+                .i3 {
+                    top: 245px;
+                    left: 280px;
+                }
+                .i4 {
+                    top: 245px;
+                    left: 560px;
+                }
+            }
+        }
+        .item_03{
+            background: url(../images/game43.png) no-repeat left top;
+            min-height: 523px;
+            width: 1225px;
+            margin-left: -60px;
+            margin-bottom: 70px;
+            position: relative;
+            right: -60px;
+            top: 50px;
+            .text {
+                width: 510px;
+                height: 200.8px;
+                padding-left: 460px;
+                padding-top: 90px;
+                ul {
+                    text-align: center;
+                    display: block;
+                    width: 350px;
+                    left: 445px;
+                    top: 120px;
+                    p {
+                        text-indent: 0;
+                    }
+                    .textTitle{
+                        h1 {
+                            color: #415f69;
+                        }
+                        margin-left: 35px;
+                        margin-bottom: 10px;
+                    }
+                    .btn_bom{
+                        top: 100px;
+                        margin-left: 50px;
+                    }
+                }
+            }
+            .imglist {
+                padding: 12px;
+                margin: 0 46px;
+                margin-top: 70px;
+                z-index: 6;
+                position: relative;
+                .item3_1 {
+                    float: left;
+                    width: 364px;
+                    height: 248px;
+                    overflow: hidden;
+                    // margin-left: 8px;
+                    position: relative;
+                    
+                    a {
+                        position: absolute;
+                        display: block;
+                        width: 364px;
+                        height: 248px;
+                        background: url('../images/game44.png') no-repeat center;
+                        opacity: 0;
+                    }
+                }
+                .item3_1:hover a{
+                    opacity: 0.5;
+                    background-color: #000;
+                }
+            }
+            .gif1 {
+                width: 250px;
+                height: 250px;
+                overflow: hidden;
+                position: absolute;
+                top: 80px;
+                left: 90px;
+            }
+            .png2 {
+                width: 200px;
+                height: 200px;
+                overflow: hidden;
+                position: absolute;
+                top: 241px;
+                right: 106px;
+            }
+        }
+        .item_04{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-bottom: 56px;
+            height: 533.6px;
+            margin-left: 60px;
+            .tetb {
+                height: 188.6px;
+                width: 100%;
+                position: relative;
+                ul {
+                    text-align: center;
+                    display: block;
+                    width: 512px;
+                    left: 445px;
+                    top: 60px;
+                    p {
+                        text-indent: 0;
+                        position: absolute;
+                        left: -130px;
+                    }
+                    .textTitle{
+                        h1 {
+                            color: #9b4e50;
+                        }
+                        margin-left: 35px;
+                        margin-bottom: 10px;
+                    }
+                    .btn_bom{
+                        top: 100px;
+                        margin-left: 8px;
+                    }
+                }
+            }
+            .caricatures {
+                display: flex;
+                flex-wrap: wrap;
+                width: 102%;
+                margin-top: -85px;
+                .caricature_left {
+                    width: 499px;
+                    height: 430px;
+                    margin-left: -50px;
+                }
+                .caricature {
+                    width: 212px;
+                    height: 307px;
+                    /* border: 5px solid #fff; */
+                    margin-top: 121px;
+                    margin-left: 10px;
+                    position: relative;
+                    img {
+                        width: 100%;
+                    }
+                    .mask_div {
+                        background: rgba(0,0,0,0.5);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        // opacity: 1;
+                        // transition: opacity 0.8s ease;
+                        // visibility: visible;
+                       
+                    }
+                    .mask_div:hover {
+                        background: rgba(0,0,0,0);
+                        cursor: pointer;
+                        // display: none;
+                    }
+
+                    :last-child {
+                        position: absolute;
+                        left: 5px;
+                        right: 5px;
+                        bottom: 25px;
+                        font-size: 16px;
+                        color: #fff;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .item_game {
+            margin-left: 60px;
+            width: 100%;
+            position: relative;
+            height: 550px;
+            margin-bottom: 30px;
+            ul {
+                text-align: center;
+                display: block;
+                width: 300px;
+                left: 35px;
+                top: 80px;
+                p {
+                    text-indent: 0;
+                    margin-left: 20px;
+                    margin-top:20px;
+                }
+                .textTitle{
+                    h1 {
+                        color: #8c6038;;
+                        text-align: center;
+                    }
+                    margin-left: 35px;
+                    margin-bottom: 30px;
+                }
+                .btn_bom{
+                    top: 200px;
+                    left: -12px;
+                    margin-left: 50px;
+                }
+            }
+            .game_right {
+                position: absolute;
+                width: 907px;
+                height: 518px;
+                top: 0;
+                right:0;
+            }
+            .game_bg {
+                width: 291px;
+                height: 179px;
+                position: absolute;
+                background: url(../images/game.png) no-repeat;
+                left: 590px;
+                top: 0;
+            }
+            .game_left {
+                width: 237px;
+                height: 102px;
+                position: absolute;
+                bottom: 70px;
+                left: 0;
+                cursor: pointer;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        #banner {
+            .wrapper{
+                .describe{
+                    .textTitle{
+                        margin-bottom: 70px;
+                    }
+                    h1 {
+                        color: #8c6038;
+                    }
+                    width: 550px;
+                }
+            } 
+            #banner_ctr {
+                width: 670px;
+                right: 80px;
+                ul {
+                    width: 100%;
+                    li {
+                        width: 95px;
+                        height: 95px;
+                    }
+                }
+            }
+        }
+    }
+    .ct_bottom{
+        width: 100%;
+        height: 73px;
+        background: url('../images/game3.png');
+        margin-bottom: 100px;
+    }
+}
+#banner {
+    .describe {
+        z-index: 999;
+    }
+    .bar_bg {
+        background:url('../images/game22.png');
+        position: absolute;
+        bottom: -25px;
+        right: -4px;
+        width: 481px;
+        height: 364px;
+        z-index: 0;
+    }
+}
+// 这里放各种动画效果
+@keyframes moveRight {
+    0% {
+        left: -300px;
+    }
+    100%{
+        left: 0;
+    }
+}
+@keyframes moveLeft {
+    0% {
+        left: 300px;
+    }
+    100%{
+        left: 0;
+    }
+}
+@keyframes movfeDown {
+    0% {
+        top:0;
+    }
+    100%{
+        top: 300px;
+    }
+}
+@keyframes moveDown {
+    0% {
+        top:-300px;
+    }
+    100%{
+        top:0 ;
+    }
+}
+.moveRight {
+    animation: moveRight 0.9s linear forwards ;
+}
+.moveLeft {
+    animation: moveLeft 0.9s linear forwards ;
+}
+.moveDown {
+    animation: moveDown 0.9s linear forwards ;
+}
+.moveUp {
+    animation: moveUp 0.9s linear forwards ;
+}

@@ -1,0 +1,413 @@
+
+/* 首页 学术 */
+.nav2{
+    height: 50px;
+    line-height: 50px;
+}
+.nav2 a{
+    margin: 0 10px;
+}
+
+/* ********************************************************** */
+/* 视频区域 */
+.mp4{
+    width: 100%;
+    height: 500px;
+    background: url('img/guoqi.jpg') no-repeat left;
+    background-size: 35% 100%;
+    margin-bottom: 30px;
+    position: relative;
+}
+video{
+    display: block;
+    width: 55%;
+    height: 500px;
+    margin: 0 auto;
+}
+.mp4 div{
+    width: 100%;
+    height: 100%;
+    background: url('img/guoqi.jpg') no-repeat right;
+    background-size: 35% 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+/* ********************************************************** */
+/* 内容区域 */
+.content{
+    position: relative;
+}
+/* ############################ */
+/* 学术活动标题 */
+.title{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.title h2{
+    margin-bottom: 20px;
+    text-align: center;
+    height: 35px;
+}
+.title img{
+    height: 35px;  
+    /* margin-top: -10px; */
+}
+.title a{
+    font-size: 30px;
+    color: #474747;
+    margin: 10px;
+}
+
+/* ################################# */
+/* 学术活动内容区域 */
+.mulu{
+    /* overflow: hidden; */
+    margin-bottom: 25px;
+    position: relative;
+}
+/* 学术活动左侧图片 */
+.lb_img{
+    float: left;
+    width: 436px;
+    height: 406px;
+    position: relative;
+    overflow: hidden;
+}
+.lb_img ul{
+    width: 2616px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+}
+.lb_img li{
+    float: left;
+    width: 436px;
+    height: 100%;
+}
+.lb_img img{
+    width: 100%;
+    height: 100%;
+}
+/* 左侧图片按钮 */
+.buttn{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.buttn a{
+    float: left;
+    display: block;
+    width: 30px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: rgba(0, 0, 0, .5);
+    color: white;
+    font-size: 20px;
+}
+.buttn a:first-child{
+    float: right;
+}
+/* ##################################### */
+/* 学术活动右侧新闻区域 */
+.list{
+    width: 702px;
+    height: 316px;
+    float: left;
+    background: url('img/beijing.jpg') repeat;
+    padding: 45px 60px;
+    color: white;
+    margin-bottom: 30px;
+}
+.list li{
+    color: white;
+    line-height: 55px;
+    font-size: 16px;    
+}
+.list a{
+    color: white;
+}
+.list a:hover{
+    color: #E8C699 ; 
+    cursor: pointer; 
+}
+.list li span:first-child{
+    font-size: 18px;
+}
+
+/* 右上角 更多 的字样 */
+.gd{
+    line-height: 13px;
+    width: 1px;
+    font-size: 14px;   
+    position: absolute;
+    top: 35px;
+    right: 50px;
+    color: white;
+    padding: 10px 17px;
+}
+.gd i{
+    width: 48px;
+    height: 48px;
+    background: url('./img/more.png') no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.gd i:hover{
+     transform: rotate(-180deg);
+     transition: all 0.5s linear;
+}
+
+/* ***************************************************************************** */
+.box1{
+    width: 100%;
+    overflow: hidden;
+}
+/* ################################### */
+/* 专家名录 */
+.zhuanjia{
+    width: 410px;
+    float: left;
+}
+/* 专家人名列表 */
+.renming{
+    width: 100%;
+    height: 508px;
+    text-align: center;
+    background: url('img/beijing.jpg') ;
+    position: relative;
+}
+.renming h4{
+    display: block;
+    margin-bottom: 25px;
+    padding-top: 25px;
+    box-sizing: border-box;
+    color: white;
+}
+.renming .list2{
+    position: relative;
+}
+.renming ul{
+    padding: 0 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.renming li{
+    float: left;
+    width: 57px;
+    font-size: 14px;
+    text-align: left;
+    padding: 6px 0 6px 20px;
+    background: url('img/learning-icon.png') no-repeat left center;
+}
+.renming li a{
+    color: white;
+}
+.renming li a:hover{
+    color: #E8C699;
+}
+/* 下边切换人名按钮 */
+.btns{
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+}
+.btns a:first-child{
+    display: inline-block;
+    width: 15px;
+    height: 24px;
+    vertical-align: middle;
+    background: url('img/learning-icon1.png') no-repeat;
+    margin: 0 15px;
+}
+.btns a:last-child{
+    display: inline-block;
+    width: 15px;
+    height: 24px;
+    vertical-align: middle;
+    background: url('img/learning-icon1.png') no-repeat right center;
+    margin: 0 15px;
+}
+.btns span{
+    color: white;
+}
+/* ############################################ */
+/* 故宫研究院 */
+.yanjiuyuan{
+    width: 828px;
+    height: 508px;
+    float: left;
+    margin-left: 20px;
+
+}
+/* 关于故宫研究院*/
+.item1{
+    width: 50%;
+    height: 50%;
+    background: url('img/learning-pic4 .jpg');
+    float: left;
+    padding: 10px 35px;
+    box-sizing: border-box;
+}
+.yanjiuyuan .items h2{
+    margin: 15px 0;
+    color: white;
+}
+.yanjiuyuan .items p{
+    font-size: 14px;
+    color: white;
+}
+.link{
+    font-size: 14px;
+    color: white;
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    display: block;
+    position: relative;
+    margin-top: 20px;
+}
+/* 机构建设 */
+.item2{
+    width: 50%;
+    height: 50%;
+    background: url('img/learning-pic5.jpg');
+    float: left;
+    padding: 10px 35px;
+    box-sizing: border-box;
+}
+/* 科研成果 */
+.item3{
+    width: 100%;
+    height: 50%;
+    background: url('img/learning-pic6.jpg');
+    float: left; 
+    padding: 10px 35px;
+    box-sizing: border-box;
+}
+/* ********************************************************************************* */
+.box2{
+    /* display: flex; */
+    width: 100%;
+    margin-top: 30px;
+    overflow: hidden;
+}
+/* ################################### */
+/* 其他机构 */
+.qita{
+    width: 410px;
+    height: 526px;
+    float: left;
+}
+.qita  .img1 img{
+    width: 100%;
+}
+
+/* ##################################### */
+/* 故宫学院 */
+.xueyuan{
+    float: left;
+    width: 820px;
+    height: 526px;
+    margin-left: 20px;
+    
+}
+/* 左侧区域  @@@@@@@@@@@@@@@@@@@@ */
+.xueyuan .left{
+    float: left;
+    width: 50%;
+    height: 466px;
+    background: url('img/learning-pic10.jpg');
+    position: relative;
+}
+.xueyuan .left .left_img1{
+    width: 349px;
+    height: 305px;
+    background: url('img/s58537e20b272a.png') no-repeat;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.xueyuan .left .left_text{
+    padding: 50px;
+}
+.left_text h2,.left_text p{
+    color: white;
+}
+.left_text h2{
+    margin-bottom: 20px;
+}
+
+/* 故宫学院右侧区域 @@@@@@@@@@@@@@@@@@@@*/
+.xueyuan .right{
+    float: left;
+    width: 50%;
+    height: 470px;
+}
+/* 故宫学院右侧区域的上侧 */
+.xueyuan .right1{
+    width: 100%;
+    height: 300px;
+    background: url('img/learning-pic4 .jpg');
+    padding: 50px;
+    box-sizing: border-box;
+    position: relative;
+}
+.xueyuan .right1 h2{
+    margin-bottom: 20px;
+    color: white; 
+}
+.xueyuan .right1 li{
+    height: 33px;
+    line-height: 33px;
+    color: white;
+}
+.xueyuan .right1 li a{
+    color: white;
+}
+.xueyuan .right1 li a:hover{
+    color: #E8C699;
+}
+
+/* 故宫学院右侧区域的下侧 */
+.xueyuan .right2{
+    width: 100%;
+    height: 166px;
+}
+
+.xueyuan .right_l{
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    line-height: 166px;
+    background: url('img/learning-pic12.jpg');
+}
+.xueyuan .right_l h2{
+    color: white;
+}
+
+.xueyuan .right_r{
+    float: left;
+    width: 50%;
+    height: 100%;
+    line-height: 166px;
+    text-align: center;
+    background: url('img/learning-pic13.jpg');
+}
+.xueyuan .right_r h2{
+    color: white;
+}

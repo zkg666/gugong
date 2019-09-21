@@ -1,0 +1,127 @@
+/* banner */
+#banner {
+    width: 100%;
+    height: 595px;
+    overflow: hidden;
+    position: relative;
+}
+
+#banner .wrapper {
+    width: 986px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#banner_img {
+    display: block;
+    position: relative;
+}
+
+#banner_img li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 650px;
+    background-position: center;
+    background-size: cover;
+    display: none;
+}
+
+#banner_img li.item1 {
+    display: block;
+}
+
+#banner_img .ad_img {
+    position: absolute;
+    left: -20px;
+    top: 20px;
+    width: 280px;
+    height: 480px;
+}
+
+#banner_img .ad_txt {
+    display: block;
+    position: absolute;
+    left: 430px;
+    top: 50px;
+    color: #fff;
+    text-shadow: 1px 1px rgba(51, 51, 51, 0.3);
+}
+
+#banner_img .ad_txt a {
+    display: block;
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    margin-top: 10px;
+    background: #fff;
+    color: #666;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+#banner_ctr {
+    position: absolute;
+    width: 960px;
+    height: 122px;
+    right: 10px;
+    bottom: 150px;
+    z-index: 1;
+}
+
+#banner_ctr ul {
+    width: 960px;
+    height: 122px;
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+}
+
+#banner_ctr li {
+    display: block;
+    float: left;
+    width: 115px;
+    height: 122px;
+    cursor: pointer;
+}
+
+#banner #banner_ctr li.first-item {
+    background: #fff;
+    width: 20px;
+    -webkit-border-radius: 20px 0 0 20px;
+    -moz-border-radius: 20px 0 0 20px;
+    border-radius: 20px 0 0 20px;
+    cursor: default;
+}
+
+#banner #banner_ctr li.last-item {
+    background: #fff;
+    width: 20px;
+    -webkit-border-radius: 0 20px 20px 0;
+    -moz-border-radius: 0 20px 20px 0;
+    border-radius: 0 20px 20px 0;
+    cursor: default;
+}
+
+#banner #drag_ctr {
+    position: absolute;
+    top: -14px;
+    left: 20px;
+    width: 115px;
+    height: 156px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    bottom: 170px;
+    background: #0084cf;
+}
+
+#banner #drag_arrow {
+    position: absolute;
+    top: -14px;
+    left: 20px;
+    width: 115px;
+    height: 156px;
+}

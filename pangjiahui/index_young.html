@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页/故宫博物院青少年网站</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index_young.css">
+    <link rel="stylesheet" href="./css/footer_youth.css">
+    <link rel="icon" href="./img/favicon.ico">
+
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/link_youth.js"></script>
+
+    <!-- <base target="_blank"> -->
+
+
+
+    <style>
+        .sousuokuang {
+            padding: 40px 0;
+            background-color: white;
+            display: none;
+        }
+
+        .header {
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+        }
+
+        .ssk {
+            width: 600px;
+            padding: 3px;
+            background-color: brown;
+            border-radius: 20px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .ssk input {
+            width: 500px;
+            height: 36px;
+            line-height: 36px;
+            border-radius: 20px;
+            padding-left: 15px;
+            float: left;
+        }
+
+        .ssk a {
+            display: block;
+            width: 60px;
+            height: 36px;
+            background-color: brown;
+            background: url('./navimg/icon.png') no-repeat -58px -64px;
+            float: left;
+            cursor: pointer;
+            font-size: 16px;
+            color: #000;
+        }
+
+        .nav {
+            width: 990px;
+            height: 112px;
+            line-height: 56px;
+            margin: 0 auto;
+            background: url('./navimg/topnavbg.png') no-repeat top;
+            position: relative;
+        }
+
+        .nav .logo {
+            display: block;
+            width: 73px;
+            height: 94px;
+            background: url('./navimg/logo.png') no-repeat top;
+            margin: 0 auto;
+            z-index: 1;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .nav>ul {
+            position: absolute;
+            left: 94px;
+            top: 12px;
+        }
+
+        .nav>ul>li {
+            float: left;
+            margin: 0 15px;
+        }
+
+        .nav>ul>li a:hover {
+            color: red;
+        }
+
+        .nav>ul>li:nth-child(4) {
+            margin: 0 140px;
+        }
+
+        .nav .search {
+            display: block;
+            width: 18px;
+            height: 18px;
+            background: url('./navimg/icon.png') no-repeat 0 -73px;
+            margin: 20px 7px;
+        }
+
+        .nav .search:hover {
+            background-position: -27px -74px;
+        }
+
+        .three {
+            position: relative;
+        }
+
+        .four {
+            position: relative;
+        }
+
+        .bottom_list {
+            width: 170px;
+            box-shadow: 0px 0px 5px #666;
+            background-color: #fff;
+            position: absolute;
+            left: -60px;
+            top: 50px;
+            display: none;
+        }
+
+        .bottom_list1 {
+            width: 170px;
+            box-shadow: 0px 0px 5px #666;
+            background-color: #fff;
+            position: absolute;
+            left: -47px;
+            top: 50px;
+        }
+
+        .bottom_list i {
+            display: block;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid #ccc;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -20px;
+
+        }
+
+        .bottom_list i b {
+            display: block;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid #fff;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-48%);
+            top: -6px;
+
+        }
+
+        .bottom_list li {
+            height: 42px;
+            line-height: 42px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .nav .lidang {
+            display: block;
+            width: 59px;
+            height: 107px;
+            background: url('./navimg/bell.png') no-repeat;
+            position: absolute;
+            right: 40px;
+            top: 50px;
+            animation: abc 1s linear 1s infinite;
+            transform-origin: top center;
+        }
+
+        @keyframes abc {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(10deg);
+            }
+
+            50% {
+                transform: rotate(0deg);
+            }
+
+            75% {
+                transform: rotate(-10deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+
+
+
+
+
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header" id="header_top">
+        <div class="sousuokuang">
+            <div class="ssk">
+                <input type="text" placeholder="站内搜索">
+                <a href="#"></a>
+            </div>
+        </div>
+        <div class="nav">
+            <a href="#" class="logo"></a>
+            <ul>
+                <li id="li1"><a href="javascript:;">首页</a></li>
+                <li id="li2"><a href="javascript:;">故宫动态</a></li>
+                <li id="li3"><a href="javascript:;">我要逛故宫</a></li>
+                <li>&nbsp;</li>
+                <li class="three">
+                    <a href="#">上书房</a>
+                    <ul class="bottom_list bottom_list0">
+                        <i><b></b></i>
+                        <li id="li4"><a href="javascript:;">紫禁学堂</a></li>
+                        <li id="li5"><a href="javascript:;">故宫藏宝</a></li>
+                        <li id="li6"><a href="javascript:;">故宫小百科</a></li>
+                    </ul>
+
+                </li>
+                <li class="four">
+                    <a href="#">故宫大冒险</a>
+                    <ul class="bottom_list bottom_list1">
+                        <i><b></b></i>
+                        <li><a href="javascript:;">微剧场</a></li>
+                        <li><a href="javascript:;">游戏区</a></li>
+                        <li><a href="javascript:;">收藏馆</a></li>
+                        <li id="li7"><a href="">精彩壁纸</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" title="站内搜索" class="search"></a></li>
+            </ul>
+            <a href="#" class="lidang"></a>
+        </div>
+    </div>
+
+
+    <!-- 大背景图 -->
+    <div class="bg_box">
+        <a href="./index2.html" target="_blank" class="bg">
+            <img src="./img/bg.jpg" alt="">
+        </a>
+        <!-- 通过定位，显示到父盒子的下方 -->
+        <div class="small_bg">
+            <img src="./img/title_1.png" alt="">
+        </div>
+    </div>
+
+    <!-- 内容区域 -->
+    <div class="content w">
+        <!-- 列表内容 -->
+        <div class="list_content clearfix">
+            <ul>
+                <li class="line"></li>
+                <li class="list_txt">
+                    <em>2019.07.16</em>
+                    <br>
+                    <a href="./index2.html" target="_blank">“良渚与古代中国——玉器显示的五千年文明展”在故宫博物院开幕</a>
+                    <p>2019年7月6日，在阿塞拜疆举行的联合国教科文组织世界遗产委员会第43届会议上，中国世界文化遗产提名项目“良渚古城遗址”以符合世界遗产第3条和第4条标准，成功列入《世界遗产名录》，成为中国第55项世界遗产。“良渚与古代中国——玉器显示的五千年文明展”汇集了全国9个省市17家文博单位的260件（组）馆藏珍品，是良渚古城遗址申遗成功后首次隆重亮相。展览将持续到2019年10月20日。
+                    </p>
+                </li>
+                <li class="line"></li>
+                <li class="list_txt">
+                    <em>2019.07.15</em>
+                    <br>
+                    <a href="./index2.html" target="_blank">“天下龙泉——龙泉青瓷与全球化”展开幕</a>
+                    <p>本展览将分两阶段进行，第一阶段于2019年7月15日至2019年10月20日在故宫博物院斋宫、景仁宫举行，观众凭故宫博物院门票免费参观；第二阶段于2019年11月15日至2020年2月16日在浙江省博物馆举行。
+                    </p>
+                </li>
+                <li class="line"></li>
+                <li class="list_txt">
+                    <em>2019.07.10</em>
+                    <br>
+                    <a href="./index2.html" target="_blank">“2019年暑假知识课堂开始报名啦！</a>
+                    <p>报名时间：第一周活动7月11日上午10:00开始报名，报满即止。 自第一周起，每周四将在“故宫宣教”微信号发布下一周活动报名通知，请关注公众号及相关消息。
+                        报名链接：第一周活动报名，请点击链接<a href="https://weidian.com/item.html?itemID=2859190075&spider_token=3190">
+                            https://weidian.com/item.html?itemID=2859190075&spider_token=3190</a> </p>
+                </li>
+                <li class="line"></li>
+            </ul>
+        </div>
+
+        <!-- 小广告图片 -->
+        <div class="s_banner">
+            <img src="./img/taihedian.jpg" alt="">
+        </div>
+
+        <!-- 图片列表 -->
+        <div class="img_list">
+            <ul>
+                <li>
+                    <img src="./img/img_list1.png" alt="">
+                    <a href="#">紫禁学堂--皇室御膳大揭秘</a>
+                </li>
+                <li>
+                    <img src="./img/img_list2.png" alt="">
+                    <a href="#">天下第一行书——《兰亭集序》</a>
+                </li>
+                <li>
+                    <img src="./img/img_list3.png" alt="">
+                    <a href="#">紫禁学堂--猪年谈猪</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- 地图区域 -->
+    <div class="map">
+        <div class="map_top">
+            <div class="cover"></div>
+            <img src="./img/maptop.png" alt="">
+        </div>
+
+        <div class="map_content" id="map">
+            <!-- <img src="./img/map.jpg" alt=""> -->
+
+            <!-- 插件 -->
+            <div id="drag-container">
+                <div id="spin-container">
+                    <img src="./img/holiday1.png" alt="">
+                    <img src="./img/holiday2.png" alt="">
+                    <img src="./img/holiday3.png" alt="">
+                    <img src="./img/holiday4.png" alt="">
+                    <img src="./img/holiday5.png" alt="">
+                    <img src="./img/holiday2.png" alt="">
+                    <img src="./img/holiday4.png" alt="">
+
+
+
+
+
+
+                    <!-- <a target="_blank" href="images/pexels-photo-139829.jpeg">
+                      <img src="images/pexels-photo-139829.jpeg" alt="">
+                    </a>
+                   
+                    <video controls autoplay="autoplay" loop>
+                      <source src="" type="video/mp4">
+                    </video> -->
+
+                    <p>三组</p>
+                </div>
+                <div id="ground"></div>
+            </div>
+            <div id="music-container"></div>
+            <!-- 插件 -->
+
+
+
+            <!-- <div class="maps">
+                <div class="l1">
+                     <img src="./img/3_1.jpg" alt="">
+                     <img src="./img/3_2.jpg" alt="">
+                     <img src="./img/3_3.jpg" alt="">
+                     <img src="./img/3_4.jpg" alt="">
+                     <img src="./img/3_5.jpg" alt="">
+                     <img src="./img/3_6.jpg" alt="">
+                </div>
+                <div class="l1">
+                    <img src="./img/4_1.jpg" alt="">
+                    <img src="./img/4_2.jpg" alt="">
+                    <img src="./img/4_3.jpg" alt="">
+                    <img src="./img/4_4.jpg" alt="">
+                    <img src="./img/4_5.jpg" alt="">
+                    <img src="./img/4_6.jpg" alt="">
+                </div>
+                <div class="l1">
+                    <img src="./img/5_1.jpg" alt="">
+                    <img src="./img/5_2.jpg" alt="">
+                    <img src="./img/5_3.jpg" alt="">
+                    <div>5-4</div>
+                   
+                    <img src="./img/5_5.jpg" alt="">
+                    <img src="./img/5_6.jpg" alt="">
+                </div>
+                <div class="l1">
+                    <img src="./img/6_1.jpg" alt="">
+                    <img src="./img/6_2.jpg" alt="">
+                    <img src="./img/6_3.jpg" alt="">
+                    <img src="./img/6_4.jpg" alt="">
+                    <img src="./img/6_5.jpg" alt="">
+                    <img src="./img/6_6.jpg" alt="">
+                </div>
+            </div> -->
+        </div>
+
+        <div class="map_bottom">
+            <img src="./img/mapbottom.png" alt="">
+        </div>
+    </div>
+
+
+    <!-- 饕餮动画 -->
+    <div class="donghua_box">
+        <div class="w_box">
+            <!-- 小号故宫图片 -->
+            <div class="gugong"><img src="./img/gugong.png" alt=""></div>
+
+            <!-- 中心位置小饕餮图片 -->
+            <div class="tao_left" id="tao">
+            </div>
+
+
+            <!-- 饕餮周围图片 -->
+            <div class="zhouwei">
+                <img class="t1" src="./img/ty_6.png" alt="">
+                <img class="t2" src="./img/ty_7.png" alt="">
+                <img class="t3" src="./img/ty_8.png" alt="">
+                <img class="t4" src="./img/ty_9.png" alt="">
+                <img class="t5" src="./img/ty_10.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 故宫更多信息 背景图 -->
+    <div class="more">
+        <img src="./img/more.jpg" alt="">
+    </div>
+
+    <!-- 尾部区域 -->
+    <div class="w clearfix">
+        <div class="l_banner"><img src="./img/t1.png" alt=""></div>
+
+        <div class="l_imgs">
+            <ul class="clearfix">
+                <li>
+                    <img src="./img/app_0001.jpg" alt="">
+                    <p>紫禁城祥瑞PRO</p>
+                </li>
+                <li>
+                    <img src="./img/app_03 (1).jpg" alt="">
+                    <p>皇帝的一天</p>
+                </li>
+                <li>
+                    <img src="./img/app_3.png" alt="">
+                    <p>故宫展览</p>
+                </li>
+                <li>
+                    <img src="./img/app_05.jpg" alt="">
+                    <p>胤禛美人图</p>
+                </li>
+
+                <li>
+                    <img src="./img/app_07.jpg" alt="">
+                    <p>紫禁城祥瑞</p>
+                </li>
+                <li>
+                    <img src="./img/app_06.jpg" alt="">
+                    <p>韩熙载夜宴图</p>
+                </li>
+                <li>
+                    <img src="./img/app_7.png" alt="">
+                    <p>末代皇帝服饰</p>
+                </li>
+                <li>
+                    <img src="./img/app_08.png" alt="">
+                    <p>故宫陶瓷馆</p>
+                </li>
+                <li>
+                    <img src="./img/app_9.jpg" alt="">
+                    <p>每日故宫</p>
+                </li>
+
+            </ul>
+
+            <div class="xian">
+                <img src="./img/line2.jpg" alt="">
+            </div>
+
+            <!-- 尾部左侧三个小动画 -->
+
+            <!-- 左侧故宫文创 -->
+            <div class="lb_imgs">
+                <div class="lb_l">
+                    <img src="./img/t2.png" alt="">
+                </div>
+                <!-- 右侧三个小动画 -->
+                <div class="donghua_items">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="#">
+                                <div class="icon1">
+                                    <img src="./img/icon_1.png" alt="">
+                                </div>
+                                <span>故宫淘宝</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon1">
+                                    <img src="./img/icon_3.png" alt="">
+                                </div>
+                                <span>故宫出版旗舰店</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon1">
+                                    <img src="./img/icon_4.png" alt="">
+                                </div>
+                                <span>故宫文创旗舰店</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 右侧微信微博动画效果 -->
+        <div class="r_banner">
+            <img class="sao" src="./img/t3.png" alt="">
+
+            <div class="wei clearfix">
+                <p>
+                    <img src="./img/weibo.png" alt="">
+                    <div class="weibo weitu"></div>
+                </p>
+                <p>
+                    <img src="./img/weixin.png" alt="">
+                    <div class="weixin weitu"></div>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 定位侧边框 -->
+    <div class="tips">
+        <a href="javascript:;"><img src="./img/licon.png" alt=""></a>
+        <!-- 旁边的小导航 -->
+        <div class="slide_nav">
+            <a href="#header_top" class="top"></a>
+            <a href="javascript:;" class="center"></a>
+            <div class="erweima">
+                <img src="./img/2dcode.png" alt="">
+                <span class="sanjiaoda"></span>
+                <span class="sanjiaoxiao"></span></div>
+            <a href="javascript:;" class="bottom"></a>
+
+        </div>
+    </div>
+
+
+
+    <!-- 遮盖盒子 -->
+    <div class="cover_target">
+        <div class="close">关闭</div>
+        <div class="">
+            <div class="ya">
+                <img src="./img/cloud.png" alt="">
+                <!-- <div class="w p_txt">
+                       <span class="p_im"></span>
+                     <p>
+                        中国是礼仪之邦，对于皇室来说，礼仪更是随处可见。在现代社会，如果感觉肚子饿，你需要做什么呢？洗洗手，乖乖坐在餐桌旁等妈妈开饭。可是在皇室，吃饭要遵守许多规矩。上至皇帝下至妃嫔、贵人，每次吃饭都得按照礼仪流程来，这个流程叫作“赐食”或者“进食”。皇帝吃饭前，要先向皇太后进供食品菜肴，皇后、妃嫔、亲王、皇子吃饭前也要向皇帝进膳，用来表达尊敬长辈、忠君爱国的意思；而皇太后也要向皇帝赐食，表示关爱晚辈；皇帝吃完饭，还要将自己膳桌上的菜肴、饽饽、点心等赏赐给后妃皇子们。不过，大部分时候，这些流程都是由宫人替主子们安排好，主子们只要知晓同意就好了。
+                      </p>
+                      <br>
+                      <p>表完了心意，真是饥肠辘辘了，赶紧大快朵颐吧！别急，吃饭的过程才刚刚开始呢！御膳房有一个很有趣的职位，专职“背桌子”的太监。皇帝用膳前，背桌太监会把3张方桌拼在一起，然后铺上绣着金线的桌布。之后其他太监会手捧红色漆盒鱼贯而入，将各种菜肴、馒头、花卷、饽饽、米饭、糕点及羹汤，按规定在餐桌上摆好。古人认为银子可以试毒，所以皇帝落座后，还会有专门的侍膳太监用银牌挨个试菜，如果银牌没有变色，才能放心食用。</p>
+                      <br>
+                      <p>在电视剧里，我们常看到皇帝和后妃们一起用膳，其实大多数时间，他只能一个人吃饭。根据宫规，如果没有特别旨意，任何人都不能与皇帝同桌吃饭。而皇太后、皇后及妃嫔，也都只能在自己的宫内吃饭。</p> -->
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+    <!-- 底部背景图 -->
+    <div class="bottom_bg"></div>
+    <!-- 青少版底部内容 -->
+    <footer>
+        <div class="footer_wrap">
+            <div class="footer_content">
+                <div class="footer_selection">
+                    故宫其他站点
+                    <div class="footer_list">
+                        <ul>
+                            <li><a href="javascript:;">故宫官网</a></li>
+                            <li><a href="javascript:;">故宫出版社</a></li>
+                            <li><a href="javascript:;">中国古代书画研究系统</a></li>
+                            <li><a href="javascript:;">故宫商城</a></li>
+                            <li><a href="javascript:;">故宫博物院藏品总目</a></li>
+                            <li><a href="javascript:;">北京故宫文物保护基金会</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="clearfix">
+                    <li><a href="javascript:;">· 隐私政策</a></li>
+                    <li><a href="javascript:;">· 联系我们</a></li>
+                    <li><a href="javascript:;">· 版权声明</a></li>
+                </ul>
+                <p>© 2001-2019 故宫博物院 京ICP备05067311号-1 网站建设：清石信息</p>
+                <div class="footer_house"></div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- 顶部导航栏js部分 -->
+    <script>
+        var btn = document.querySelector('.nav ul li:nth-child(7) a');
+        var search = document.querySelector('.sousuokuang');
+        var flag = true;
+        (function () {
+            // btn.onclick = function () {
+            //     if (flag) {
+            //         search.style.display = 'block';
+            //         flag = false;
+            //     } else {
+            //         search.style.display = 'none';
+            //         flag = true;
+            //     }
+            // }
+            
+            // 2019-09-09 edit by dj
+            $(btn).click(function () {
+                if ($(search).css('display') == 'none') {
+                    $(search).slideDown();
+                } else {
+                    $(search).slideUp();
+                }
+            });
+
+        })();
+
+        //导航啦的下拉列表
+        var bottom_list0 = document.querySelector('.bottom_list0');
+        var bottom_list1 = document.querySelector('.bottom_list1');
+        var li1 = document.querySelector('.three');
+        var li2 = document.querySelector('.four');
+        //获取下拉菜单的li元素
+        var bottom_li = document.querySelectorAll('.bottom_list li');
+        // 鼠标进入显示
+        li1.onmouseenter = function () {
+            bottom_list0.style.display = 'block';
+            for (var i = 0; i < bottom_li.length; i++) {
+                bottom_li[i].onmouseenter = function () {
+                    this.className = 'active';
+                    this.children[0].style.color = 'red';
+                }
+                bottom_li[i].onmouseleave = function () {
+                    this.className = '';
+                    this.children[0].style.color = '';
+                }
+            }
+        }
+        //鼠标离开隐藏
+        li1.onmouseleave = function () {
+            bottom_list0.style.display = 'none';
+        }
+        // 鼠标进入显示
+        li2.onmouseenter = function () {
+            bottom_list1.style.display = 'block';
+            for (var i = 0; i < bottom_li.length; i++) {
+                bottom_li[i].onmouseenter = function () {
+                    this.className = 'active';
+                    this.children[0].style.color = 'red';
+                }
+                bottom_li[i].onmouseleave = function () {
+                    this.className = '';
+                    this.children[0].style.color = '';
+                }
+            }
+        }
+        //鼠标离开隐藏
+        li2.onmouseleave = function () {
+            bottom_list1.style.display = 'none';
+        }
+    </script>
+    <script src="./js/index.js"></script>
+
+
+</body>
+
+</html>

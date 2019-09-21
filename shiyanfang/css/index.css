@@ -1,0 +1,242 @@
+/*版心图*/
+
+.banner {
+    position: relative;
+    height: 666px;
+}
+.qh {
+    width: 100%;
+    height: 666px;
+}
+/* 大图片 */
+
+/* 图片定位 */
+
+.qh .tu {
+    width: 100%;
+    height: 666px;
+}
+.tu li {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+/* 图片100%显示 */
+
+.tu img {
+    width: 100%;
+    height: 100%;
+}
+/* 小图片 */
+
+.qh .dj {
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    bottom: 40px;
+}
+.dj li {
+    width: 16%;
+    float: left;
+    margin-right: 4%;
+}
+.dj img {
+    width: 100%;
+    border-radius: 10px;
+    /* height: 100%; */
+}
+/*风车*/
+
+/*切换图*/
+
+.banner .lbh .hb {
+    overflow: hidden;
+}
+.fc {
+    width: 240px;
+    height: 240px;
+    margin: 0 auto 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fc 10s linear infinite;
+}
+@keyframes fc {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.fc .hb {
+    width: 30px;
+    height: 60px;
+    border-radius: 0 180px 0px 180px;
+    position: absolute;
+    left: 120px;
+    top: 120px;
+    transform-origin: left top;
+}
+.fc .hb:nth-child(1) {
+    background: red;
+}
+.fc .hb:nth-child(2) {
+    background: orange;
+    transform: rotate(60deg);
+}
+.fc .hb:nth-child(3) {
+    background: yellow;
+    transform: rotate(120deg);
+}
+.fc .hb:nth-child(4) {
+    background: green;
+    transform: rotate(180deg);
+}
+.fc .hb:nth-child(5) {
+    background: blue;
+    transform: rotate(240deg);
+}
+.fc .hb:nth-child(6) {
+    background: purple;
+    transform: rotate(300deg);
+}
+.tc {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: auto;
+}
+/*发光*/
+
+.qing {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    left: 0;
+    top: 0;
+    transform-origin: left top;
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px 10px rgb(0, 255, 255) inset;
+    animation: scale 1s linear infinite;
+}
+.fg {
+    box-shadow: 0 0 100px 70px rgb(255, 255, 255);
+}
+@keyframes scale {
+    0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+.lbh {
+    position: relative;
+    overflow: hidden;
+}
+.lbh .left, .lbh .right {
+    position: absolute;
+    width: 250px;
+    height: 80px;
+}
+.lbh .left {
+    top: 60px;
+    left: 330px;
+    animation: Dong 1s linear 0s infinite alternate;
+}
+.lbh .right {
+    top: 60px;
+    right: 330px;
+    animation: dong 1s linear 0s infinite alternate;
+}
+.lbh .left img, .lbh .right img {
+    width: 100%;
+    height: 100%;
+}
+@keyframes dong {
+    0% {
+        transform: translate(50px);
+    }
+    60% {
+        transform: translate(100px);
+    }
+    100% {
+        transform: translate(0px);
+    }
+}
+@keyframes Dong {
+    0% {
+        transform: translate(-50px);
+    }
+    60% {
+        transform: translate(-100px);
+    }
+    100% {
+        transform: translate(0px);
+    }
+}
+.lbh .fc {
+    position: relative;
+    height: 240px;
+}
+.lbh .lbhtu {}
+.lbhtu {
+    width: 100%;
+}
+.lbhtu ul {
+    width: 100%;
+}
+.lbhtu ul li {
+    float: left;
+    width: 20%;
+    margin-left: 4%;
+    margin-bottom: 4%;
+}
+.lbhtu ul li img {
+    width: 100%;
+    border-radius: 10%;
+}
+.pub {
+    box-shadow: -5px -5px 20px 5px rgb(0, 225, 225);
+}
+.red {
+    box-shadow: 10px 10px 10px 10px red;
+}
+.orange {
+    box-shadow: 10px 10px 10px 10px orange;
+    transform: rotate(60deg);
+}
+.yellow {
+    box-shadow: 10px 10px 10px 10px yellow;
+}
+.green {
+    box-shadow: 10px 10px 10px 10px green;
+}
+.blue {
+    box-shadow: 10px 10px 10px 10px blue;
+}
+.purple {
+    box-shadow: 10px 10px 10px 10px purple;
+}
+.color {
+    animation: scale 1s linear infinite;
+}
+/* 预览辅助样式 */
+
+/*动态图*/
+
+/*.dt, .dt_tu {
+    height: 666px;
+}
+.dt .dt_tu img {
+    width: 100%;
+    height: 100%;
+}
+.dt_tu div {
+    width:
+}*/

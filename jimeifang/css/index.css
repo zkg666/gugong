@@ -1,0 +1,486 @@
+html,body{
+    width: 100%;
+    height: 100%;
+
+}
+/* 顶部背景图 */
+.box{
+    width:100%;
+    height: 715px;
+    background: url('../images/topbg.jpg') no-repeat top center; 
+    position: relative;
+}
+/* 顶部背景图上的老人 */
+.man{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-45%);
+    top: 60px;
+    animation: manchange 1.5s linear alternate infinite;
+}
+@keyframes manchange{
+    0%{
+        top:60px;
+    }
+    100%{
+        top: 40px;
+    }
+}
+/* 顶部背景图中的牌匾 */
+.banner{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-55%);
+    top: 360px;
+}
+/* 顶部背景图中的沙漏 */
+.hourglass{
+    position: absolute;
+    left: 25%;
+    top: 80px;
+    animation: hourglasschange 3s linear infinite;
+}
+@keyframes hourglasschange{
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* 背景图中的小鸟 */
+.bird{
+    position: absolute;
+    right: 150px;
+    top: 148px;
+    animation: birdchange 4s linear infinite alternate;
+}
+@keyframes birdchange{
+    0%{
+        right: 150px;
+        top: 148px;
+    }
+    5%{
+        right: 155px;
+        top: 145px; 
+    }
+    15%{
+        right: 160px;
+        top: 140px; 
+    }
+    25%{
+        right: 170px;
+        top: 130px;
+    }
+    35%{
+        right: 160px;
+        top: 140px;
+    }
+    45%{
+        right: 150px;
+        top: 148px;
+    }
+    65%{
+        right: 170px;
+        top: 130px;
+    }
+    75%{
+        right: 170px;
+        top: 148px;
+    }
+    85%{
+        right: 150px;
+        top: 130px;
+    }
+
+}
+/* 导航栏 */
+.box .nav1{
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.nav1 ul{
+    width: 1000px;
+    height: 40px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    bottom: 0; 
+    transform: translate(-50%);
+}
+.nav1 li{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 17px;
+    background-color: #EAE3D6;
+    margin-right: 10px;
+    border-radius: 30px
+}
+
+/* 图片内容区域 */
+.img_content{
+    width: 100%;
+    background: url('../images/bg.jpg') repeat-y top center; 
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+.img_content ul{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* 让图片在li中居中 */
+.img_content ul li img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);     
+}
+/* 给大图片设置宽高 */
+.fs_maximg img{
+    width: 410px;
+}
+/* 给内容区域设置动画 */
+.img_content ul li{
+    width: 231px;
+    height: 231px;
+    margin-right: 40px;
+    position: relative;
+}
+/* 设置最后几张li的大小 */
+.img_content ul li:nth-child(17){
+    width: 430px;
+    height: 430px;
+}
+.img_content ul li:nth-child(18){
+    width: 430px;
+    height: 430px;
+}
+.img_content ul li:nth-child(19){
+    width: 430px;
+    height: 430px;
+}
+
+/* 内容区域的动画效果 */
+@keyframes t_imgchange{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(-10deg);
+    }
+}
+/* 小图片的背景花边 */
+.fs_img{
+    float: left;
+    width: 231px;
+    height: 231px;
+    background: url("../images/ubg.png");
+    background-size: 231px 231px;  
+    animation: t_imgchange linear 4s infinite alternate;
+    
+}
+/* 鼠标进入小图片要显示的图片 */
+.fs_img .bot_img2{
+    display: none;
+}
+/* 大图片 */
+.fs_maximg{
+    width: 430px;
+    height: 430px;
+    background-image: url('../images/ubgl.png');
+    background-size: 430px 430px; 
+    animation: t_imgchange linear 4s infinite alternate;
+}
+.fs_maximg .bot_mimg2{
+    display: none;
+}
+/* 放文字的盒子 */
+.changediv{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 0;
+}
+.img_content .changediv:nth-child(17){
+    width: 430px;
+    height: 430px;
+}
+.img_content .changediv:nth-child(18){
+    width: 430px;
+    height: 430px;
+}
+.img_content .changediv:nth-child(19){
+    width: 430px;
+    height: 430px;
+}
+.changediv  h4{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+
+}
+.changediv p{
+    position: absolute;
+    left: 50%;
+    bottom: 30%;
+    transform: translateX(-50%);
+    background-color: red;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+/* 点击li 出现覆盖的盒子 */
+.cover{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0; 
+    display: none;
+    z-index: 2000;  
+}
+
+.cover .cover_box{
+    width: 80%;
+    height: 600px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 30px;
+    background-image: linear-gradient(
+        to bottom,
+        #999,
+        #ccc
+    );
+    overflow: hidden;
+    
+}
+/* 关闭标签a */
+.cover .close{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+/* 点击li出现的盒子的左半部分 */
+.cover .left_cbox{
+    width: 450px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 30px 0 0 30px;
+}
+
+.t_left{
+    border-radius: 30px 0 0 0;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(4,9,23,0.55);
+    position: relative;
+    padding: 50px;
+    box-sizing: border-box;
+}
+/* 向左滑动 */
+.t_left .left_btn{
+    width: 30px;
+    height: 50px;
+    background-color: rgba(4,9,23,0.55);
+    position: absolute;
+    right: -30px;
+    top: 0;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+.right_btn{
+    width: 30px;
+    height: 50px;
+    background-color: rgba(4,9,23,0.55);
+    position: absolute;
+    right: -30px;
+    top: 0;
+    color: #fff;
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+.t_left p{
+    color: #fff;
+    font-size: 30px;
+}
+.bot_left{
+    width: 100%;
+    height: 70%;
+    border-radius: 0 0 0 30px;
+    background-color: rgba(162,124,67,0.9);
+    padding: 30px 50px;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: #fff;
+    text-indent: 2em;
+    overflow-y: scroll;  
+}
+/* 设置滚动条的样式 */
+.bot_left::-webkit-scrollbar {
+    width:5px;
+    background-color: #fff;
+}
+/* 滚动条滑块 */
+.bot_left::-webkit-scrollbar-thumb {
+    background: rgba(119, 89, 43, 0.9);
+}
+
+ 
+/* 覆盖盒子里的textarea */
+.textarea1{
+    width: 100%;
+    height: 100%;
+    resize: none;
+    background-color: rgba(162,124,67,0.9);
+    border: none;
+}
+/* 右侧图片 */
+.right_cbox{
+    width: 620px;
+    height: 80%;
+    position: relative;
+    margin-top: 80px;
+}
+.right_cbox img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+
+/* 底部 */
+.bottom{
+    width: 100%;
+    height: 423px;
+    background: url('../images/btm.jpg') top center; 
+    position: relative;
+}
+/* 侧边 */
+.tips{
+    position: fixed;
+    right: 18px;
+    bottom: 20px;
+    z-index: 1000;
+}
+/* 旁边的小导航 */
+.slide_nav{
+    z-index: 1000;
+    margin-left: 100px;
+    margin-top: 42px;
+   
+}
+.slide_nav a:hover{
+    opacity: 1;
+}
+.slide_nav .top{
+    display:none;
+    height: 63px;
+    width: 63px;
+    background: url('../images/uptop.png') no-repeat;
+    background-position: 0 -94px;
+    opacity: 0.5;
+}
+.slide_nav .center{
+    display: block;
+    height: 63px;
+    width: 63px;
+    background: url('../images/uptop.png') no-repeat;
+    background-position: 0 -166px;
+    opacity: 0.5;
+    margin-top: 10px;
+    margin-bottom: 10px;
+   
+}
+.slide_nav .bottom{
+    display: block;
+    height: 74px;
+    width: 63px;
+    background: url('../images/uptop.png') no-repeat;
+    background-position: 0 -235px;
+    opacity: 0.5;
+}
+.erweima{
+    width: 400px;
+    height: 200px;
+    padding: 20px 10px;
+    background-color:#fff;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px 10px 10px 10px;
+    position: fixed;
+    right: 125px;
+    bottom: 30px;
+    display: none;
+    /* background: url('../images/2dcode.png') no-repeat; */
+}
+.erweima img{
+    /* width: 260px; */
+    width: 400px;
+    height: 180px;
+   
+}
+.erweima .sanjiaoda{
+    width: 0;
+    height: 0;
+    border-left: 13px solid #000; 
+    border-right: 13px solid transparent; 
+    border-top: 13px solid transparent; 
+    border-bottom: 13px solid transparent; 
+    position: absolute;
+    right: -27px;
+    top:50%;
+}
+.erweima .sanjiaoxiao{
+    width: 0;
+    height: 0;
+    border-left: 12px solid #fff; 
+    border-right: 12px solid transparent; 
+    border-top: 12px solid transparent; 
+    border-bottom: 12px solid transparent; 
+    position: absolute;
+    right: -24px;
+    top:121px;
+}
+.active1{
+    display: block;
+}
+.active{
+    background-color: #f1eee7;
+}
+
+
+
+

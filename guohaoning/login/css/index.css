@@ -1,0 +1,175 @@
+
+
+.box0 {
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    background-color: rgb(107, 74, 4);
+}
+.box1 {
+    width: 100%;
+    height: 100px;
+}
+.box.w {
+    margin: 0 auto;
+}
+.box2 {
+    height: 100px;
+    width: 100%;
+    line-height: 60px;
+}
+.box2 a {
+    color: rgb(216, 144, 77);
+    padding: 0 10px;
+}
+.box3 {
+    background-image: url(../img/bg17.jpg);
+    background-repeat:no-repeat;
+    background-position: -160px 0px;
+    height: 636px;   
+}
+.box4 {
+    margin: 0 auto;
+    height: 250px;
+    width: 572px;
+    padding-top:175px; 
+    box-sizing: border-box;
+}
+.box4 span {
+    color: #fff;
+    font-size: 30px;
+}
+.box4 span img {
+    height: 35px;
+}
+
+.box5 {
+    height: 40px;
+    width: 390px;
+    border: 1px solid #fff;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    position: relative;
+}
+input {
+    height: 40px;
+    width: 390px;
+    background-color:transparent;
+    color: #fff;
+    padding-left:10px;
+    box-sizing: border-box;
+}
+.box6 {
+    height: 40px;
+    width: 390px;
+    border: 1px solid #fff;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    position: relative;
+}
+.box7 {
+    height: 40px;
+    width: 265px;
+    border: 1px solid #fff;
+    margin: 0px auto 0px 479px;
+    position: relative;
+}
+.box7 input{
+    width: 265px;
+}
+.input-y {
+    height: 40px;
+    width: 100px;
+    border: 1px solid #ccc;
+    position: absolute;
+    left: 769px;
+    top: 114px;
+}
+.input-y img {
+    height: 40px;
+    width: 100px;
+    position: absolute;
+    left: 0px;
+}
+.all {
+    height: 160px;
+    position: relative;
+}
+.box8 {
+    height: 50px;
+    width: 100px;
+    border: 1px solid #ccc;
+    margin-top: 60px;
+    position: absolute;
+    left: 565px;
+}
+.box8 a {
+    color: #fff;
+    display: block;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+.box9 {
+    height: 40px;
+    width: 200px;
+    margin-top: 75px;
+    position: absolute;
+    left: 700px;
+}
+.box9 a{
+    color: #fff;
+}
+.two1 {
+   height: 196px;
+   width: 100%;
+   background-color:#272727;
+   margin-top: 50px;
+}
+
+
+.box10 {
+    text-align: center;
+    margin-top: 17px;
+    color: red;
+    display: none;
+}
+
+/* 遮罩层提示 */
+.big_cover {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(204,204,204,.9);
+}
+.close {
+    width: 80px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    color: orange;
+    font-weight: 700;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    
+}
+.tishi {
+    color: orangered;
+    font-size: 70px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0,-50%)
+}
+
+

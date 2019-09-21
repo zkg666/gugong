@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>故宫博物院</title>
+    <meta name="keywords" content="故宫博物院,故宫">
+    <meta name="description"
+        content="北京故宫博物院建立于1925年10月10日，位于北京故宫紫禁城内。是在明朝、清朝两代皇宫及其收藏的基础上建立起来的中国综合性博物馆，也是中国最大的古代文化艺术博物馆，其文物收藏主要来源于清代宫中旧藏，是第一批全国爱国主义教育示范基地。">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./lib/swiper.min.css">
+    <script src="./lib/jquery-3.4.1.js"></script>
+    <script src="./js/link.js"></script>
+</head>
+
+<body>
+    <!-- 导航栏部分开始 -->
+    <!-- 导航栏 -->
+    <nav>
+        <img src="./img/logo.png" alt="LOGO" class="left logo">
+        <ul id="ul_tr">
+            <li id="li1"><a href="javascript:;">首页</a>
+                <div id="tr1"></div>
+            </li>
+            <li id="li2"><a href="javascript:;">导览</a>
+                <div id="tr2"></div>
+            </li>
+            <li id="li3"><a href="javascript:;">展览</a>
+                <div id="tr3"></div>
+            </li>
+            <li id="li4"><a href="javascript:;">教育</a>
+                <div id="tr4"></div>
+            </li>
+            <li id="li5"><a href="javascript:;">探索</a>
+                <div id="tr5"></div>
+            </li>
+            <li id="li6"><a href="javascript:;">学术</a>
+                <div id="tr6"></div>
+            </li>
+            <li id="li7"><a href="javascript:;">文创</a>
+                <div id="tr7"></div>
+            </li>
+            <li id="li8"><a href="javascript:;">关于</a>
+                <div id="tr8"></div>
+            </li>
+        </ul>
+        <div class="tools">
+            <span class="img btn" id="login_icon">
+                <img src="./img/login.png" alt="" id="login">
+                <div id="login_box">
+                    <a href="javascript:;" id="denglu">登录</a>
+                    <a href="javascript:;" id="zhuce">注册</a>
+                </div>
+            </span>
+            <span class="zhong btn" id="zhong_icon">
+                <img src="./img/zhong.png" alt="" id="zhong">
+                <div id="zhong_box">
+                    <a href="javascript:;">EN</a>
+                    <a href="javascript:;" id="youth">青少年版</a>
+                </div>
+            </span>
+            <span class="menu" id="menu_btn">
+                <img src="./img/menu.png" alt="" id="menu">
+
+            </span>
+        </div>
+    </nav>
+    <!-- 导航栏下拉菜单 -->
+    <div class="nav_child" id="nav_child">
+        <div class="nav_child2 public" id="box2">
+            <ul class="clearfix" id="ul2">
+                <li><a href="javascript:;">开放时间</a></li>
+                <li><a href="javascript:;">票务服务</a></li>
+                <li><a href="javascript:;">交通路线</a></li>
+                <li><a href="javascript:;">游览须知</a></li>
+                <li><a href="javascript:;">全景故宫</a></li>
+            </ul>
+        </div>
+        <div class="nav_child3 public" id="box3">
+            <ul class="clearfix" id="ul3">
+                <li><a href="javascript:;">近期展览</a></li>
+                <li><a href="javascript:;">专馆</a></li>
+                <li><a href="javascript:;">原状陈列</a></li>
+                <li><a href="javascript:;">赴外展览</a></li>
+            </ul>
+        </div>
+        <div class="nav_child4 public" id="box4">
+            <ul class="clearfix" id="ul4">
+                <li><a href="javascript:;">教育新闻</a></li>
+                <li><a href="javascript:;">故宫博物院教育中心</a></li>
+                <li><a href="javascript:;">国际博协培训中心</a></li>
+                <li><a href="javascript:;">故宫志愿者</a></li>
+            </ul>
+        </div>
+        <div class="nav_child5 public" id="box5">
+            <ul class="clearfix" id="ul5">
+                <li><a href="javascript:;">建筑</a></li>
+                <li><a href="javascript:;">藏品</a></li>
+                <li><a href="javascript:;">古籍</a></li>
+                <li><a href="javascript:;">宫廷历史</a></li>
+                <li><a href="javascript:;">文化医院</a></li>
+                <li><a href="javascript:;">文化专题</a></li>
+                <li><a href="javascript:;">文化医院</a></li>
+                <li><a href="javascript:;">名画记</a></li>
+                <li><a href="javascript:;">数字多宝阁</a></li>
+                <li><a href="javascript:;">数字文物库</a></li>
+
+            </ul>
+        </div>
+        <div class="nav_child6 public" id="box6">
+            <ul class="clearfix" id="ul6">
+                <li><a href="javascript:;">学术活动</a></li>
+                <li><a href="javascript:;">专家名录</a></li>
+                <li><a href="javascript:;">故宫研究院</a></li>
+                <li><a href="javascript:;">故宫学院</a></li>
+                <li><a href="javascript:;">其他学术机构</a></li>
+                <li><a href="javascript:;">故宫博物院院刊</a></li>
+            </ul>
+        </div>
+        <div class="nav_child7 public" id="box7">
+            <ul class="clearfix" id="ul7">
+                <li><a href="javascript:;">故宫出版</a></li>
+                <li><a href="javascript:;">文创产品</a></li>
+                <li><a href="javascript:;">故宫壁纸</a></li>
+                <li><a href="javascript:;">故宫APP</a></li>
+                <li><a href="javascript:;">故宫游戏</a></li>
+            </ul>
+        </div>
+        <div class="nav_child8 public" id="box8">
+            <ul class="clearfix" id="ul8">
+                <li><a href="javascript:;">总说</a></li>
+                <li><a href="javascript:;">领导</a></li>
+                <li><a href="javascript:;">咨询</a></li>
+                <li><a href="javascript:;">院史编年</a></li>
+                <li><a href="javascript:;">景仁榜</a></li>
+                <li><a href="javascript:;">机构设置</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 导航栏菜单页面 -->
+    <div class="nav_list" id="nav_list">
+        <div class="close" id="close"></div>
+        <div class="nav_table clearfix">
+            <div>
+                <h1>导览</h1>
+                <span><img src="./img/nav_liststyle.png" alt=""></span>
+                <span><img src="./img/nav_dot.png" alt=""></span>
+                <a>开票时间</a>
+                <a>票务服务</a>
+                <a>交通路线</a>
+                <a>游览须知</a>
+                <a>全景故宫</a>
+            </div>
+            <div>
+                <h1>展览</h1>
+                <span><img src="./img/nav_liststyle.png" alt=""></span>
+                <span><img src="./img/nav_dot.png" alt=""></span>
+                <a>近期展览</a>
+                <a>专馆</a>
+                <a>原状陈列</a>
+                <a>赴外展览</a>
+            </div>
+            <div>
+                <h1>教育</h1>
+                <span><img src="./img/nav_liststyle.png" alt=""></span>
+                <span><img src="./img/nav_dot.png" alt=""></span>
+                <a>教育新闻</a>
+                <a>故宫博物院教育中心</a>
+                <a>国际博协培训中心</a>
+                <a>故宫志愿者</a>
+            </div>
+            <div>
+                <h1>探索</h1>
+                <span><img src="./img/nav_liststyle.png" alt=""></span>
+                <span><img src="./img/nav_dot.png" alt=""></span>
+                <a>建筑</a>
+                <a>藏品</a>
+                <a>古籍</a>
+                <a>宫廷历史</a>
+                <a>文物医院</a>
+                <a>文化专题</a>
+                <a>名画记</a>
+                <a>数字多宝阁</a>
+                <a>数字文物库</a>
+
+            </div>
+            <div>
+                <h1>学术</h1>
+                <span><img src="./img/nav_liststyle.png" alt=""></span>
+                <span><img src="./img/nav_dot.png" alt=""></span>
+                <a>学术活动</a>
+                <a>专家名录</a>
+                <a>故宫研究院</a>
+                <a>其他学术机构</a>
+                <a>故宫博物院院刊</a>
+            </div>
+            <div>
+                <h1>文创</h1>
+                <span><img src="./img/nav_liststyle.png" alt=""></span>
+                <span><img src="./img/nav_dot.png" alt=""></span>
+                <a>故宫出版</a>
+                <a>文创产品</a>
+                <a>故宫壁纸</a>
+                <a>故宫APP</a>
+                <a>故宫游戏</a>
+            </div>
+            <div>
+                <h1>关于</h1>
+                <span><img src="./img/nav_liststyle.png" alt=""></span>
+                <span><img src="./img/nav_dot.png" alt=""></span>
+                <a>总说</a>
+                <a>领导</a>
+                <a>咨询</a>
+                <a>院史编年</a>
+                <a>景仁榜</a>
+                <a>机构设置</a>
+            </div>
+        </div>
+    </div>
+    <!-- 导航栏部分结束 -->
+    <!-- 轮播图部分开始 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./img/bg1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/bg2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/bg3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/bg4.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/bg5.jpg" alt=""></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- 轮播图部分结束 -->
+    <!-- 页面内容部分开始 -->
+    <div class="w">
+        <!-- 页面上方部分 -->
+        <div class="top clearfix">
+            <!-- 左半部分 -->
+            <div class="left_box">
+                <!-- 上方盒子 -->
+                <div class="box1" id="animate1">
+                </div>
+                <!-- 下方盒子 -->
+                <div class="box2" id="animate2">
+                    <div class="left_b">
+                        <div class="top">
+                            <div class="title">
+                                <span class="img"><img src="./img/title_left.png" alt=""></span>
+                                <span class="word">故宫</span>
+                                <span class="dot"><img src="./img/title_dot.png" alt=""></span>
+                                <span class="word">资讯</span>
+                                <span class="img"><img src="./img/title_right.png" alt=""></span>
+                            </div>
+                            <ul class="content">
+                                <li class="clearfix">
+                                    <span><img src="./img/list_style.png" alt=""></span>
+                                    <a href="javascript:;">【展览】穆穆之仪：来自莫斯科克里姆林宫的俄罗斯宫廷典礼展”开幕</a>
+                                </li>
+                                <li class="clearfix">
+                                    <span><img src="./img/list_style.png" alt=""></span>
+                                    <a href="javascript:;">【严正声明】关于我院依法对“故宫博物院”享有名称权和对已注册商标的商标专用权的严正声明</a>
+                                </li>
+                            </ul>
+                            <div class="more">
+                                <a href="javascript:;">更多</a>
+                                <i></i>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="news">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:;">穆穆之仪：来自莫斯科克里姆林宫的俄罗斯宫廷典礼展”开幕</a>
+                                        <p><span>08 </span>/ 29</p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">“子鼠开新业，紫禁六百年” 2020年《故宫日历》发布会在故宫博物院举行</a>
+                                        <p><span>08 </span>/ 26</p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">哥伦比亚共和国总统参观故宫</a>
+                                        <p><span>08 </span>/ 14</p>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">故宫博物院将举办“须弥福寿——当扎什伦布寺遇上紫禁城”展</a>
+                                        <p><span>07 </span>/ 30</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right_b">
+                        <img src="./img/left_box2_img.jpg" alt="">
+                    </div>
+                </div>
+                <!-- 花瓶图片 -->
+                <div class="box3" id="animate3"><img src="./img/left_box2.png" alt=""></div>
+            </div>
+            <!-- 右半部分 -->
+            <div class="right_box">
+                <!-- 上方盒子 -->
+                <div class="right_box1">
+                    <div class="box1 public" id="animate4">
+                        <div class="item"><img src="./img/right_box1_item1.png" alt=""></div>
+                        <div class="content">
+                            <h3>在线预约订票</h3>
+                            <p>贴心的票务服务，让您<br>省时省力更省心</p>
+                        </div>
+                        <div class="rotate">
+                            <img src="./img/right_box1_rotate1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="box2 public" id="animate5">
+                        <div class="item"><img src="./img/right_box1_item2.png" alt=""></div>
+                        <div class="content">
+                            <h3>全景虚拟游览</h3>
+                            <p>随时随地，为您提供身<br>临其境的游览体验</p>
+                        </div>
+                        <div class="rotate">
+                            <img src="./img/right_box1_rotate2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="box3 public" id="animate6">
+                        <div class="item"><img src="./img/right_box1_item3.png" alt=""></div>
+                        <div class="content">
+                            <h3>博物馆活动</h3>
+                            <p>从故宫开始，感受历史<br>的魅力</p>
+                        </div>
+                        <div class="rotate">
+                            <img src="./img/right_box1_rotate3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- 下方盒子 -->
+                <div class="right_box2" id="animate7">
+                    <div class="top">
+                        <div class="title">
+                            <span class="img"><img src="./img/title_left.png" alt=""></span>
+                            <span class="word">时间</span>
+                            <span class="dot"><img src="./img/title_dot.png" alt=""></span>
+                            <span class="word">票务</span>
+                            <span class="img"><img src="./img/title_right.png" alt=""></span>
+                        </div>
+                        <div class="more">
+                            <a href="javascript:;">更多</a>
+                            <i></i>
+                        </div>
+                        <ul>
+                            <li id="word1">
+                                <h1>08:30</h1>
+                                <p>开始售票、开放进馆时间</p>
+                            </li>
+                            <li id="word2">
+                                <h1>16:00</h1>
+                                <p>止票时间（含钟表馆、珍宝箱）</p>
+                            </li>
+                            <li id="word3">
+                                <h1>16:10</h1>
+                                <p>停止入馆时间</p>
+                            </li>
+                            <li id="word4">
+                                <h1>17:00</h1>
+                                <p>闭馆时间</p>
+                            </li>
+                        </ul>
+                        <div class="ticket">
+                            <p>旺 季 门 票 | 每张门票为人民币60元（不包括珍宝馆、钟表馆）</p>
+                            <p>珍宝馆门票 | 每张门票为人民币10元 钟表馆门票 | 每张门票为人民币10元</p>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="title">
+                            <span class="img"><img src="./img/title_left.png" alt=""></span>
+                            <span class="word">开放</span>
+                            <span class="dot"><img src="./img/title_dot.png" alt=""></span>
+                            <span class="word">公告</span>
+                            <span class="img"><img src="./img/title_right.png" alt=""></span>
+                        </div>
+                        <div class="more">
+                            <a href="javascript:;">更多</a>
+                            <i></i>
+                        </div>
+                        <ul class="content">
+                            <li class="clearfix">
+                                <span><img src="./img/list_style.png" alt=""></span>
+                                <a href="javascript:;">故宫博物院于2018年6月开始实行除法定节假日外周一全年闭馆</a>
+                            </li>
+                            <li class="clearfix">
+                                <span><img src="./img/list_style.png" alt=""></span>
+                                <a href="javascript:;">故宫博物院实行全部网络购票</a>
+                            </li>
+                        </ul>
+                        <div class="news">
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">关于故宫博物院端门数字馆暂停开放的公告</a>
+                                    <p>2019 / 06 / 28</p>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">公告</a>
+                                    <p>2019 / 06 / 26</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 故宫藏品部分 -->
+        <div class="collect clearfix">
+            <div class="left_box">
+                <div class="title">
+                    <span class="img"><img src="./img/title_left.png" alt=""></span>
+                    <span class="word">故宫</span>
+                    <span class="dot"><img src="./img/title_dot.png" alt=""></span>
+                    <span class="word">藏品</span>
+                    <span class="img"><img src="./img/title_right.png" alt=""></span>
+                </div>
+                <div class="num clearfix">
+                    <p><i id="count">0</i><span><img src="./img/collect_left_box_item1.png" alt=""></span></p>
+                </div>
+                <div class="btn">
+                    <h4>藏品分类查询</h4>
+                </div>
+                <div class="svg">
+                    <a href="javascript:;" class="test1">数字文物库</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="140" height="40"
+                        style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); left: 127px;">
+                        <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël</desc>
+                        <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs>
+                        <path class="test2" fill="none" stroke="#ffffff"
+                            d="M0,5L5,5L5,0L135,0L135,5L140,5L140,35L135,35L135,40L5,40L5,35L0,35L0,5" stroke-width="2"
+                            stroke-dasharray="1000,1000"
+                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-width: 2; stroke-dashoffset: 0px; stroke-dasharray: 500, 500;transition: all 0.4s linear;">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+            <div class="right_box">
+                <div class="box">
+                    <img src="./img/collect_right_box_item1.jpg" alt="">
+                    <div class="mask">
+                        <div class="content">
+                            <p>斗彩三秋杯</p>
+                            <p>明成化</p>
+                            <p>高3.9厘米，口径6.9厘米，足径2.6厘米</p>
+                            <p>此杯造型轻灵娟秀，胎体薄如蝉翼，画意清新。特别是飞舞于花草间的彩蝶，欲落还飞，而蝶翅所施紫彩，色浓无光，为成化斗彩所仅有，也是后世仿品望尘莫及的。</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="./img/collect_right_box_item2.jpg" alt="">
+                    <div class="mask">
+                        <div class="content">
+                            <p>余省种秋花图轴</p>
+                            <p>清</p>
+                            <p>纵165.8厘米，横93.7厘米</p>
+                            <p>该画表现课童种秋花的情景。蜂蝶两三萦绕篱径的庭院中，有的童子种植，有的培土、浇水。整幅画面生动活泼，表现出太平盛世人们安居乐业的惬意生活。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="./img/collect_right_box_item3.jpg" alt="">
+                    <div class="mask">
+                        <div class="content">
+                            <p>傅抱石秋风红雨图轴</p>
+                            <p>近现代</p>
+                            <p>纵98.4cm，横49.3cm</p>
+                            <p>图中二文士对坐舟中，杯盏交流，秋风中的落叶仿佛飘落的红雨。此画构图不求满密，干净利索，取得了形简意赅的艺术效果。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 活动部分 -->
+        <div class="activity clearfix">
+            <div class="left_box">
+                <div class="title">
+                    <span class="img"><img src="./img/title_left.png" alt=""></span>
+                    <span class="word">博物馆活动</span>
+                    <span class="img"><img src="./img/title_right.png" alt=""></span>
+                </div>
+                <div class="content">
+                    <h3>关于举办国际博协培训中心2019年秋季培训班的通知</h3>
+                    <p>　　国际博物馆协会国际博物馆培训中心（ICOM-ITC）由故宫博物院与国际博协、国际博协中国国家委员...</p>
+                    <div class="svg">
+                        <a href="javascript:;" class="test1">更多</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="60" height="24"
+                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); left: 0px;">
+                            <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël</desc>
+                            <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs>
+                            <path class="test2" fill="none" stroke="#ffffff"
+                                d="M0,5L5,5L5,0L55,0L55,5L60,5L60,19L55,19L55,24L5,24L5,19L0,19L0,5" stroke-width="2"
+                                stroke-dasharray="1000,1000"
+                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-width: 2; stroke-dashoffset: 0px; stroke-dasharray: 500, 500;transition: all 0.4s linear;">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>2019年暑假知识课堂开始报名啦！</h3>
+                    <p>　　孩子开心、大人羡慕的暑假到来了，故宫经典教育项目“故宫知识课堂”又将与各位中小学生们见面啦！今年...</p>
+                    <div class="svg">
+                        <a href="javascript:;" class="test1">更多</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="60" height="24"
+                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); left: 0px;">
+                            <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël</desc>
+                            <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs>
+                            <path class="test2" fill="none" stroke="#ffffff"
+                                d="M0,5L5,5L5,0L55,0L55,5L60,5L60,19L55,19L55,24L5,24L5,19L0,19L0,5" stroke-width="2"
+                                stroke-dasharray="1000,1000"
+                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-width: 2; stroke-dashoffset: 0px; stroke-dasharray: 500, 500;transition: all 0.4s linear;">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>“故宫讲坛”第一百五十七讲讲座信息</h3>
+                    <p>讲座时间：2019年7月14日(周日)09:30-11:30讲座地点：故宫博物院兆祥所集合地...</p>
+                    <div class="svg">
+                        <a href="javascript:;" class="test1">更多</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="60" height="24"
+                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); left: 0px;">
+                            <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël</desc>
+                            <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs>
+                            <path class="test2" fill="none" stroke="#ffffff"
+                                d="M0,5L5,5L5,0L55,0L55,5L60,5L60,19L55,19L55,24L5,24L5,19L0,19L0,5" stroke-width="2"
+                                stroke-dasharray="1000,1000"
+                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-width: 2; stroke-dashoffset: 0px; stroke-dasharray: 500, 500;transition: all 0.4s linear;">
+                            </path>
+                        </svg>
+                        </svg>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>“故宫讲坛”第一百五十六讲讲座信息</h3>
+                    <p>讲座时间：2019年6月30日(周日)09:30-11:30讲座地点：故宫博物院兆祥所集合地...</p>
+                    <div class="svg">
+                        <a href="javascript:;" class="test1">更多</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="60" height="24"
+                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); left: 0px;">
+                            <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël</desc>
+                            <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs>
+                            <path class="test2" fill="none" stroke="#ffffff"
+                                d="M0,5L5,5L5,0L55,0L55,5L60,5L60,19L55,19L55,24L5,24L5,19L0,19L0,5" stroke-width="2"
+                                stroke-dasharray="1000,1000"
+                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-width: 2; stroke-dashoffset: 0px; stroke-dasharray: 500, 500;transition: all 0.4s linear;">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="right_box">
+                <img src="./img/activity_img.jpg" alt="">
+            </div>
+        </div>
+        <!-- 下方列表部分 -->
+        <div class="list clearfix">
+            <div class="blank1 public">
+                <div class="mask"></div>
+                <div class="img">
+                    <img src="./img/list_blank1_bg1.jpg" alt="">
+                    <i><img src="./img/list_blank1_item.jpg" alt=""></i>
+                </div>
+                <h4>图书馆</h4>
+            </div>
+            <div class="blank2 public">
+                <div class="mask"></div>
+                <div class="img">
+                    <img src="./img/list_blank2_bg1.jpg" alt="">
+                    <i><img src="./img/list_blank2_item.jpg" alt=""></i>
+                </div>
+                <h4>试听馆</h4>
+            </div>
+            <div class="blank3 public">
+                <div class="mask"></div>
+                <div class="img">
+                    <img src="./img/list_blank3_bg1.jpg" alt="">
+                    <i><img src="./img/list_blank3_item.jpg" alt=""></i>
+                </div>
+                <h4>数字文物库</h4>
+            </div>
+            <div class="blank4 public">
+                <div class="mask"></div>
+                <div class="img">
+                    <img src="./img/list_blank4_bg1.jpg" alt="">
+                    <i><img src="./img/list_blank4_item.jpg" alt=""></i>
+                </div>
+                <h4>全景故宫</h4>
+            </div>
+            <div class="blank5 public">
+                <div class="mask"></div>
+                <div class="img">
+                    <img src="./img/list_blank3_bg1.jpg" alt="">
+                    <i><img src="./img/list_blank5_item.jpg" alt=""></i>
+                </div>
+                <h4>V故宫</h4>
+            </div>
+        </div>
+    </div>
+    <!-- 页面内容部分结束 -->
+    <!-- 页脚部分 -->
+    <footer>
+        <div class="footer_wrap">
+            <div class="qr_code">
+                <img src="./img/footer_big_code.jpg" alt="">
+            </div>
+            <div class="visit">
+                <span>网站访问量</span>
+                <ul>
+                    <li id="7">0</li>
+                    <li id="6">0</li>
+                    <li id="5">0</li>
+                    <li id="4">0</li>
+                    <li id="3">0</li>
+                    <li id="2">0</li>
+                    <li id="1">0</li>
+                    <li id="0">0</li>
+                </ul>
+            </div>
+            <div class="link">
+                <ul>
+                    <li><a href="javascript:;">网站地图</a></li>
+                    <li><a href="javascript:;">相关链接</a></li>
+                    <li><a href="javascript:;">影像授权</a></li>
+                    <li><a href="javascript:;">隐私政策</a></li>
+                    <li><a href="javascript:;">版权声明</a></li>
+                    <li><a href="javascript:;">常见问题</a></li>
+                    <li><a href="javascript:;">联系我们</a></li>
+                    <li><a href="javascript:;">关于我们</a></li>
+                </ul>
+            </div>
+            <div class="com">
+                <p>© 2001- 现在 故宫博物院 　京ICP备05067311号-1 网站建设： 北京分形科技</p>
+            </div>
+        </div>
+    </footer>
+    <!-- 页脚部分结束 -->
+    <!-- sidebar部分开始 -->
+    <div class="sidebar">
+        <a href="javascript:;" id="sidebar_top"></a>
+        <ul>
+            <li class="skin">
+                <a href="javascript:;">肤</a>
+                <span class="change_skin">
+                    <span id="spring">春</span>
+                    <span id="summer">夏</span>
+                    <span id="autumn">秋</span>
+                    <span id="winter">冬</span>
+                    <span id="normal">常</span>
+                </span>
+            </li>
+            <li class="share">
+                <a href="javascript:;">享</a>
+                <span class="share_icons">
+                    <img src="./img/share-icon1.png" alt="">
+                    <img src="./img/share-icon2.png" alt="">
+                </span></li>
+            <li class="book">
+                <a href="javascript:;">书</a>
+                <span class="library">
+                    图书馆
+                </span>
+            </li>
+            <li class="listen">
+                <a href="javascript:;">听</a>
+                <span class="listen_mu">
+                    试听馆
+                </span>
+            </li>
+            <li class="culture">
+                <a href="javascript:;">创</a>
+                <span class="culture_mu">
+                    文创馆
+                </span>
+            </li>
+            <li class="login_btn">
+                <a href="javascript:;">登</a>
+                <span class="login_btns">
+                    会员登录
+                </span>
+            </li>
+        </ul>
+        <a href="javascript:;" id="sidebar_close"></a>
+    </div>
+
+    <!-- sidebar部分结束 -->
+    <!-- 设置页面矢量图按钮 -->
+    <script>
+        // 按钮效果
+        $('.test1').hover(function () {
+            $(this).siblings('svg').find('.test2').css('strokeDashoffset', '-860px');
+        }, function () {
+            $(this).siblings('svg').find('.test2').css('strokeDashoffset', '0px');
+        });
+    </script>
+    <!-- 引入页面js文件 -->
+    <script src="./js/index.js"></script>
+    <!-- 引入swiper插件 -->
+    <script src="./lib/swiper.min.js"></script>
+    <!-- 引入jQuery计时器插件：jQueryTimer -->
+    <script src="./lib/jqueryTimers.js"></script>
+    <!-- swiper插件设置 -->
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay: {
+                delay: 6000,
+                stopOnLastSlide: false,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true,
+            },
+        })
+        //鼠标滑过pagination控制swiper切换
+        for (i = 0; i < mySwiper.pagination.bullets.length; i++) {
+            mySwiper.pagination.bullets[i].onmouseover = function () {
+                this.click();
+            };
+        }
+    </script>
+</body>
+
+</html>

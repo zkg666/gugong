@@ -1,0 +1,538 @@
+/* 导航栏头部 */
+.nav_box{
+    z-index: 990;
+    position: absolute;
+    width: 100%;
+}
+.sousuokuang{
+    padding: 40px 0;
+    background-color: white;
+    display: none;
+}
+.ssk{
+    width: 600px;
+    padding: 2px;
+    background-color: brown;
+    border-radius: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.ssk input{
+    width: 500px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 20px;
+    padding-left: 15px;
+    float: left;
+}
+.ssk a{
+    display: block;
+    width: 60px;
+    height: 36px;
+    background-color: brown;
+    background: url('../navimg/icon.png') no-repeat -58px -64px;
+    float: left;
+    cursor: pointer;
+}
+.nav{
+   width: 990px;
+   height: 112px;
+   line-height: 56px;
+   margin: 0 auto;
+   background:url('../navimg/topnavbg.png') no-repeat top;
+   position: relative;
+}
+.nav .logo{
+   display: block;
+   width: 73px;
+   height: 94px;
+   background: url('../navimg/logo.png') no-repeat top;
+   margin: 0 auto;
+   z-index: 1;
+}
+.nav>ul{
+    position: absolute;
+    left: 94px;
+    top: 12px;
+}
+.nav>ul>li{
+    float: left;
+    margin: 0 15px;
+}
+.nav>ul>li a:hover{
+    color: red;
+}
+.nav>ul>li:nth-child(4){
+    margin: 0 140px;
+}
+.active{
+    background-color: #f1eee7;
+}
+.nav .search{
+   display: block;
+   width: 18px;
+   height: 18px;
+   background: url('../navimg/icon.png') no-repeat 0 -73px;
+   margin: 20px 7px;
+}
+.nav .search:hover{
+    background: url('../navimg/icon.png') no-repeat -27px -74px;
+}
+.nav .lidang{
+   display: block;
+   width: 59px;
+   height: 107px;
+   background: url('../navimg/bell.png') no-repeat;
+   position: absolute;
+   right: 40px;
+   top: 50px;
+   animation: abc 1s linear 1s infinite; 
+   transform-origin: top center;         
+}
+@keyframes abc{
+   0%{
+       transform: rotate(0deg);
+   }
+   25%{
+       transform: rotate(10deg);
+   }
+   50%{
+       transform: rotate(0deg);
+   }
+   75%{
+       transform: rotate(-10deg);
+   }
+   100%{
+       transform: rotate(0deg);
+   }
+}
+.three{
+    position: relative;
+}
+.four{
+    position: relative;
+}
+.bottom_list{
+     width: 170px;
+     box-shadow: 0px 0px 5px #666;
+     background-color: #fff;
+     position: absolute;
+     left: -60px;
+     top: 50px;
+     display: none;
+ }
+ .bottom_list1{
+     width: 170px;
+     box-shadow: 0px 0px 5px #666;
+     background-color: #fff;
+     position: absolute;
+     left: -47px;
+     top: 50px;
+ }
+ .bottom_list i{
+     display: block;  
+     border-top: 10px solid transparent;
+     border-bottom: 10px solid #ccc;
+     border-left: 10px solid transparent;
+     border-right: 10px solid transparent;
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
+     top: -20px;
+     
+ }
+ .bottom_list i b{
+     display: block;  
+     border-top: 8px solid transparent;
+     border-bottom: 8px solid #fff;
+     border-left: 8px solid transparent;
+     border-right: 8px solid transparent;
+     position: absolute;
+     left: 50%;
+     transform: translateX(-48%);
+     top: -6px;
+     
+ }
+ .bottom_list li{
+     height: 42px;
+     line-height: 42px;
+     text-align: center;
+     cursor: pointer;
+ }
+
+
+
+/* 包含中部小故事和头部区域 */
+.ency{
+  background: #fff;
+
+}
+/* 除导航栏外的头部广告 */
+.topbgwraper{
+ width: 100%;
+ background: url('../img/tpbg_01.jpg') no-repeat center;
+    height: 410px;
+    /* z-index: 500; */
+    position: relative;
+}
+
+/* 旁边的小提示 */
+.tips{
+    position: fixed;
+    right: 18px;
+    bottom: 20px;
+    z-index: 1000;
+}
+/* 旁边的小导航 */
+.slide_nav{
+    z-index: 1000;
+    margin-left: 100px;
+    margin-top: 42px;
+   
+}
+.slide_nav a:hover{
+    opacity: 1;
+}
+.slide_nav .top{
+    display:none;
+    height: 63px;
+    width: 63px;
+    background: url('../gushitupian/uptop.png') no-repeat;
+    background-position: 0 -94px;
+    opacity: 0.5;
+}
+.slide_nav .center{
+    display: block;
+    height: 63px;
+    width: 63px;
+    background: url('../gushitupian/uptop.png') no-repeat;
+    background-position: 0 -166px;
+    opacity: 0.5;
+    margin-top: 10px;
+    margin-bottom: 10px;
+   
+}
+.slide_nav .bottom{
+    display: block;
+    height: 74px;
+    width: 63px;
+    background: url('../gushitupian/uptop.png') no-repeat;
+    background-position: 0 -235px;
+    opacity: 0.5;
+}
+.erweima{
+    width: 400px;
+    height: 200px;
+    padding: 20px 10px;
+    background-color:#fff;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px 10px 10px 10px;
+    position: fixed;
+    right: 125px;
+    bottom: 30px;
+    display: none;
+}
+.erweima img{
+    widows: 260px;
+    height: 180px;
+}
+.erweima .sanjiaoda{
+    width: 0;
+    height: 0;
+    border-left: 13px solid #000; 
+    border-right: 13px solid transparent; 
+    border-top: 13px solid transparent; 
+    border-bottom: 13px solid transparent; 
+    position: absolute;
+    right: -27px;
+    top:50%;
+}
+.erweima .sanjiaoxiao{
+    width: 0;
+    height: 0;
+    border-left: 12px solid #fff; 
+    border-right: 12px solid transparent; 
+    border-top: 12px solid transparent; 
+    border-bottom: 12px solid transparent; 
+    position: absolute;
+    right: -24px;
+    top:121px;
+}
+.active{
+    display: block;
+}
+
+/* 中间的故事 */
+ .encylist{
+   width: 100%;
+   margin-top: 50px;
+
+}
+.encylist .mainwrap{
+    width: 1100px;
+    margin: 0 auto;
+    height: 5600px;
+}
+.mainwrap .gsxhz{
+    width: 25%;
+    height: 320px;
+    float: left;
+    text-align: center;
+    position: relative; 
+} 
+.gsxhz .gstp{
+    height: 220px;
+    vertical-align: middle;
+    line-height: 220px;
+    width: 100%;
+    position: relative;
+
+}
+.gsxhz .gstp b{
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    animation: rot 4s infinite  linear;
+}
+.mainwrap .gsxhz h3{  
+    font-size: 14px;
+    line-height: 22px;
+}
+.mainwrap .gsxhz h3:hover{
+    color: red;
+}
+.gsxhz .gstp{
+    position: relative;
+    margin-bottom: 50px;
+
+}
+.gsxhz  a{
+    display: block;
+    zoom: 1;
+}
+.gstp img{
+    vertical-align: middle;
+    position: relative;
+    /* z-index: 1; */
+    /* transform: translate(10px,10px);
+    transform-origin: bottom */
+}
+.gsxhz .gstp:hover{
+    transform: rotate(10px,10px);
+    transform-origin: bottom;
+}
+@keyframes rot{
+0% {
+    transform: rotate(0deg);
+}
+
+100% {
+    transform: rotate(360deg);
+}
+}
+.gsxhz .gstp img:hover{
+    /* animation: myfirst 4s infinite  linear; */
+    /* animation: jelly 1s linear infinite; */
+    animation: heart 0.5s infinite;
+
+}
+/* 果冻抖动 */
+@keyframes jelly {
+    0% {
+      transform: scale(1, 1);
+    }
+  
+    30% {   
+      transform: scale(1.25, 0.75);
+    }
+  
+    40% {    
+      transform: scale(0.75, 1.25);
+    }
+  
+    50% {     
+      transform: scale(1.15, 0.85);
+    }
+  
+    65% {   
+      transform: scale(0.95, 1.05);
+    }
+  
+    75% {   
+      transform: scale(1.05, 0.95);
+    }
+
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+/* 心跳 */
+  @keyframes heart{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    } 
+}
+/* 背景效果  */
+.diy-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    /* background-image: url('../loginbg.jpg');
+    background-size: cover; */
+    /* background-color: #fff; */
+}
+
+
+/* 底部 */
+.footer {
+    background: #960300 url('../gushitupian/bottom1.png') no-repeat center top;
+    padding: 60px 0 0 0;
+}
+.mainwrap {
+    width: 1200px;
+    margin: auto;
+}
+.footer .cr {
+    padding: 0px 0 20px 100px;
+    line-height: 24px;
+    background: url('../gushitupian/icon.png') no-repeat -279px top;
+    position: relative;
+    width: 890px;
+    margin: auto;
+}
+.footer .cr .footerhouse {
+    background: url('../gushitupian/bottomhouse.png') no-repeat;
+    width: 248px;
+    height: 250px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.footer .cr .relink {
+    background: #A81B1A url(../gushitupian/icon.png) 106px -315px;
+    padding:3px 13px 4px 11px;
+    width: 100px;
+    color: #e8918f;
+    margin-bottom: 5px;
+    position: relative;
+    font-size: 12px;
+}
+.footer .cr .relink ul {
+    position: absolute;
+    background-color: #A81B1A;
+    line-height: 40px;
+    width: 180px;
+    left: 0;
+    bottom: 30px;
+    display: none;
+   
+}
+.footer .cr .relink ul a {
+    display: block;
+    text-indent: 10px;
+    color: #fff;
+    font-size: 12px;
+}
+.footer .cr .relink ul a:hover{
+    background: chocolate;
+}
+
+.footer .cr .link {
+    color: #d1b97e;
+    font-size: 12px;
+}
+.footer .cr .link a {
+    color: #d1b97e;
+    font-size: 12px;
+}
+.footer .cr .copyrights {
+    color: #d2615f;
+    font-size: 12px;
+}
+
+
+/* 弹窗 */
+.zhezhao{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    display: none;
+
+}
+.tankuang{
+    background: url('../gushitupian/pop.png') no-repeat;
+    opacity:2;
+    width: 675px;
+    height: 402px;
+    top: 50%;
+    margin-top: -200px;
+    left: 50%;
+    margin-left: -340px;
+    z-index:999;
+    position: relative;
+    
+     
+}
+.tu{
+
+height: 402px;
+line-height: 402px;
+position: absolute;
+left:-40px;
+}
+.tu .da{
+ width: 380px;
+position: absolute;
+left: -30px;
+top:50px;
+}
+.tu .xbk{   
+    position: absolute;
+    left:280px;
+    top:45px;
+}
+.wenzi{
+    width: 265px;
+    padding-top: 50px;
+    position: absolute;
+    right:80px;   
+}
+#guanbi{
+    position: absolute;
+    top: -1px;
+    right: -30px;
+}
+.wenzi h1{
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 15px;
+    color: #000;
+}
+.wenzi p{
+    padding-bottom: 50px;
+    border-bottom: 1px solid #888;
+}
+.wenzi .gengduo{
+    padding-top: 20px;
+    font-size: 12px;
+    color: #846830;
+    line-height: 45px;
+}
+.wenzi .gengduo:hover{
+    color:red;
+}

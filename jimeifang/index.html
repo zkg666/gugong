@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>故宫藏宝/故宫博物院青少年版官网</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/footer_youth.css">
+    <link rel="icon" href="./images/favicon.ico">
+    
+    <!-- 顶部区域css代码 -->
+    <style>
+        .sousuokuang{
+            padding: 40px 0;
+            background-color: white;
+            display: none;           
+        } 
+        .header{
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+        }
+        .ssk{
+            width: 600px;
+            padding: 3px;
+            background-color: brown;
+            border-radius: 20px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .ssk input{
+            width: 500px;
+            height: 36px;
+            line-height: 36px;
+            border-radius: 20px;
+            padding-left: 15px;
+            float: left;
+        }
+        .ssk a{
+            display: block;
+            width: 60px;
+            height: 36px;
+            background-color: brown;
+            background: url('./navimg/icon.png') no-repeat -58px -64px;
+            float: left;
+            cursor: pointer;
+        }
+       .nav{
+           width: 990px;
+           height: 112px;
+           line-height: 56px;
+           margin: 0 auto;
+           background:url('./navimg/topnavbg.png') no-repeat top;
+           position: relative;
+       }
+       .nav .logo{
+           display: block;
+           width: 73px;
+           height: 94px;
+           background: url('./navimg/logo.png') no-repeat top;
+           margin: 0 auto;
+           z-index: 1;
+           cursor: pointer;
+           position: relative;
+       }
+       .nav>ul{
+           position: absolute;
+           left: 94px;
+           top: 12px;
+       }
+       .nav>ul>li{
+           float: left;
+           margin: 0 15px;
+       }
+       .nav>ul>li a:hover{
+           color: red;
+       }
+       .nav>ul>li:nth-child(4){
+           margin: 0 140px;
+       }
+       .nav .search{
+           display: block;
+           width: 18px;
+           height: 18px;
+           background: url('./navimg/icon.png') no-repeat 0 -73px;
+           margin: 20px 7px;
+       }
+       .nav .search:hover{
+           background-position: -27px -74px;
+       }
+       .three{
+           position: relative;
+       }
+       .four{
+           position: relative;
+       }
+       .bottom_list{
+            width: 170px;
+            box-shadow: 0px 0px 5px #666;
+            background-color: #fff;
+            position: absolute;
+            left: -60px;
+            top: 50px;
+            display: none;
+        }
+        .bottom_list1{
+            width: 170px;
+            box-shadow: 0px 0px 5px #666;
+            background-color: #fff;
+            position: absolute;
+            left: -47px;
+            top: 50px;
+        }
+        .bottom_list i{
+            display: block;  
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid #ccc;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -20px;
+            
+        }
+        .bottom_list i b{
+            display: block;  
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid #fff;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-48%);
+            top: -6px;
+            
+        }
+        .bottom_list li{
+            height: 42px;
+            line-height: 42px;
+            text-align: center;
+            cursor: pointer;
+        }
+       .nav .lidang{
+           display: block;
+           width: 59px;
+           height: 107px;
+           background: url('./navimg/bell.png') no-repeat;
+           position: absolute;
+           right: 40px;
+           top: 50px;
+           animation: abc 1s linear 1s infinite; 
+           transform-origin: top center;         
+       }
+       
+       @keyframes abc{
+           0%{
+               transform: rotate(0deg);
+           }
+           25%{
+               transform: rotate(10deg);
+           }
+           50%{
+               transform: rotate(0deg);
+           }
+           75%{
+               transform: rotate(-10deg);
+           }
+           100%{
+               transform: rotate(0deg);
+           }
+       }
+
+    </style>
+
+
+    
+</head>
+<body>
+    <!-- 顶部导航区域  -->
+    <!-- 头部 -->
+    <div class="header" id="header_top">
+        <div class="sousuokuang">
+            <div class="ssk">
+                <input type="text" placeholder="站内搜索">
+                <a href="#"></a>
+            </div>
+        </div>
+        <div class="nav">       
+            <a href="#" class="logo"></a>
+            <ul>
+                <li id="li1"><a href="javascript:;">首页</a></li>
+                <li id="li2"><a href="javascript:;">故宫动态</a></li>
+                <li id="li3"><a href="javascript:;">我要逛故宫</a></li>
+                <li>&nbsp;</li>
+                <li class="three">
+                    <a href="#">上书房</a>
+                    <ul class="bottom_list bottom_list0">
+                        <i><b></b></i>
+                        <li id="li4"><a href="javascript:;">紫禁学堂</a></li>
+                        <li id="li5"><a href="javascript:;">故宫藏宝</a></li>
+                        <li id="li6"><a href="javascript:;">故宫小百科</a></li>
+                    </ul>
+                        
+                </li>
+                <li class="four">
+                    <a href="#">故宫大冒险</a>
+                    <ul class="bottom_list bottom_list1">
+                        <i><b></b></i>
+                        <li><a href="javascript:;">微剧场</a></li>
+                        <li><a href="javascript:;">游戏区</a></li>
+                        <li><a href="javascript:;">收藏馆</a></li>
+                        <li id="li7"><a href="javascript:;">精彩壁纸</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" title="站内搜索"  class="search"></a></li>
+            </ul>
+            <a href="#" class="lidang"></a>      
+        </div>
+    </div>
+
+
+    <!-- 主体上部内容 -->
+
+    <div class="box w">
+        <img src="./images/man.png" alt="" class="man">
+        <img src="./images/banner.png" alt="" class="banner">
+        <!-- 背景图中的沙漏 -->
+        <img src="./images/hourglass.png" alt="" class="hourglass">
+        <img src="./images/bird.png" alt="" class="bird">
+        <!-- 导航栏 -->
+        <div class="nav1">
+            <ul >
+                <li data-navname="tc"><a href="javascript:;">陶瓷</a></li>
+                <li data-navname="hh"><a href="javascript:;">绘画</a></li>
+                <li data-navname="fs"><a href="javascript:;">法书</a></li>
+                <li data-navname="qtq"><a href="javascript:;">青铜器</a></li>
+                <li data-navname="fl"><a href="javascript:;">珐琅</a></li>
+                <li data-navname="jlxq"><a href="javascript:;">金银锡器</a></li>
+                <li data-navname="ysq"><a href="javascript:;">玉石器</a></li>
+                <li data-navname="xy"><a href="javascript:;">玺印</a></li>
+                <li data-navname="zx"><a href="javascript:;">织绣</a></li>
+                <li data-navname="jj"><a href="javascript:;">家具</a></li>
+                <li data-navname="zbyq"><a href="javascript:;">钟表仪器</a></li>
+                <li data-navname="ss"><a href="javascript:;">首饰</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 图片内容 -->
+    <div class="img_content">
+        <!-- 图片列表 -->
+        <ul>
+            <li class="jlxq" data-covername="lione">
+                <div class="fs_img">
+                    <img src="./images/t_1_s.png" alt="" class="bot_img1">
+                    <img src="./images/ubg2.png" alt="" class="bot_img2">
+                </div>
+                <div class="changediv">
+                    <h4>金瓯永固杯</h4>
+                    <p>清代</p>
+                </div>
+            </li>
+            <li class="fs" data-covername="litwo">
+                <div class="fs_img">
+                    <img src="./images/t_2_s.png" alt="" class="bot_img1">
+                    <img src="./images/ubg2.png" alt="" class="bot_img2">
+                </div>
+                <div class="changediv">
+                    <h4>三希堂字帖</h4>
+                    <p>晋代</p>
+                </div>
+            </li>
+            <li class="hh" data-covername="lithree">
+                <div class="fs_img">
+                    <img src="./images/t_3_s.png" alt="" class="bot_img1">
+                    <img src="./images/ubg2.png" alt="" class="bot_img2">
+                </div>
+                <div class="changediv">
+                    <h4>清明上河图</h4>
+                    <p>宋代</p>
+                </div>
+            </li>
+            <li class="fl" data-covername="lifour">
+                <div class="fs_img">
+                    <img src="./images/t_4_s.png" alt="" class="bot_img1">
+                    <img src="./images/ubg2.png" alt="" class="bot_img2">
+                </div>
+                <div class="changediv">
+                    <h4>掐丝珐琅缠枝莲纹象耳炉</h4>
+                    <p>清代</p>
+                </div>
+            </li>
+            <li class="ysq" data-covername="lifive">
+                <div class="fs_img">
+                    <img src="./images/t_5_s.png" alt="" class="bot_img1">
+                    <img src="./images/ubg2.png" alt="" class="bot_img2">
+                </div>
+                <div class="changediv">
+                    <h4>“大禹治水”玉山</h4>
+                    <p>南唐</p>
+                </div>
+            </li>
+            <li class="xy" data-covername="lisix">
+                <div class="fs_img">
+                    <img src="./images/t_6_s.png" alt="" class="bot_img1">
+                    <img src="./images/ubg2.png" alt="" class="bot_img2">
+                </div>
+                <div class="changediv">
+                    <h4>檀香木“皇帝之宝”</h4>
+                    <p>清代</p>
+                </div>
+            </li>
+            <li class="jj" data-covername="liseven">
+                <div class="fs_img">
+                    <img src="./images/t_7_s.png" alt="" class="bot_img1">
+                    <img src="./images/ubg2.png" alt="" class="bot_img2">
+                </div>
+                <div class="changediv">
+                    <h4>太和殿屏风、宝座</h4>
+                    <p>清代</p>
+                </div>
+            </li>
+            <li class="qtq" data-covername="lieight">
+                <div class="fs_img">
+                    <img src="./images/t_8_s.png" alt="" class="bot_img1">
+                    <img src="./images/ubg2.png" alt="" class="bot_img2">
+                </div>
+                <div class="changediv">
+                    <h4>莲鹤方壶</h4>
+                    <p>春秋</p>
+                </div>
+            </li>
+            <li class="zbyq" data-covername="linine">
+                <div class="fs_img">
+                    <img src="./images/t_9_s.png" alt="" class="bot_img1">
+                    <img src="./images/ubg2.png" alt="" class="bot_img2">
+                </div>
+                <div class="changediv">
+                    <h4>铜镀金写字人钟</h4>
+                    <p>清代</p>
+                </div>
+            </li>
+            <li class="tc" data-covername="liten">
+                <div class="fs_img">
+                    <img src="./images/t_10_s.png" alt="" class="bot_img1">
+                    <img src="./images/ubg2.png" alt="" class="bot_img2">
+                </div>
+                <div class="changediv">
+                    <h4>定窑孩儿枕</h4>
+                    <p>宋代</p>
+                </div>
+            </li>
+            <li class="xy" data-covername="lielven">
+                <div class="fs_img">
+                    <img src="./images/t_13_s.png" alt="" class="bot_img1">
+                    <img src="./images/ubg2.png" alt="" class="bot_img2">
+                </div>
+                <div class="changediv">
+                    <h4>乾隆帝田黄三联玺</h4>
+                    <p>清代</p>
+                </div>
+            </li>
+            <li class="tc" data-covername="litewvel">
+                <div class="fs_img">
+                    <img src="./images/t_14_s.png" alt="" class="bot_img1">
+                    <img src="./images/ubg2.png" alt="" class="bot_img2">
+                </div>
+                <div class="changediv">
+                    <h4>五彩加金鹭莲纹尊</h4>
+                    <p>清代</p>
+                </div>
+            </li>
+            <li class="tc" data-covername="lithreeteen">
+                <div class="fs_img">
+                    <img src="./images/t_15_s.png" alt="" class="bot_img1">
+                    <img src="./images/ubg2.png" alt="" class="bot_img2">
+                </div>
+                <div class="changediv">
+                    <h4>胭脂红、蓝地轧道珐琅彩折枝花纹合欢瓶</h4>
+                    <p>清代</p>
+                </div>
+            </li>
+            <li class="tc" data-covername="lifourteen">
+                <div class="fs_img">
+                    <img src="./images/t_17_s.png" alt="" class="bot_img1">
+                    <img src="./images/ubg2.png" alt="" class="bot_img2">
+                </div>
+                <div class="changediv">
+                    <h4>斗彩鸡缸杯</h4>
+                    <p>明代</p>
+                </div>
+            </li>
+            <li class="tc" data-covername="lifiveteen">
+                <div class="fs_img">
+                    <img src="./images/t_18_s.png" alt="" class="bot_img1">
+                    <img src="./images/ubg2.png" alt="" class="bot_img2">
+                </div>
+                <div class="changediv">
+                    <h4>青花压手杯</h4>
+                    <p>明代</p>
+                </div>
+            </li>
+            <li class="tc" data-covername="lisixteen">
+                <div class="fs_img">
+                    <img src="./images/t_19_s.png" alt="" class="bot_img1">
+                    <img src="./images/ubg2.png" alt="" class="bot_img2">
+                </div>
+                <div class="changediv">
+                    <h4>唐三彩马</h4>
+                    <p>唐代</p>
+                </div>
+            </li>
+            <li class="zx" data-covername="liseventeen">
+                <div class="fs_maximg">
+                    <img src="./images/t_11_s.png" alt="" class="bot_img1">
+                    <img src="./images/ubgl2.png" alt="" class="bot_mimg2">
+                </div>
+                <div class="changediv">
+                    <h4>明黄色缎绣金龙朝袍</h4>
+                    <p>清代</p>
+                </div>
+            </li>
+            <li class="hh" data-covername="lieighteen">
+                <div class="fs_maximg">
+                    <img src="./images/t_12_s.png" alt="" class="bot_img1">
+                    <img src="./images/ubgl2.png" alt="" class="bot_mimg2">
+                </div>
+                <div class="changediv">
+                    <h4>韩熙载夜宴图</h4>
+                    <p>南唐</p>
+                </div>
+            </li>
+            <li class="ss" data-covername="lininteen">
+                <div class="fs_maximg">
+                    <img src="./images/t_16_s.png" alt="" class="bot_img1">
+                    <img src="./images/ubgl2.png" alt="" class="bot_mimg2">
+                </div>
+                <div class="changediv">
+                    <h4>貂皮嵌珠皇后冬朝冠</h4>
+                    <p>清代</p>
+                </div>
+            </li> 
+        </ul>
+        
+    </div>
+    <!-- 点击li弹出来的盒子 -->
+    <div class="cover" id="lione">
+        <div class="cover_box" data-covername="one">
+            <a href="javascript:;" class="close">X</a>
+            <div class="left_cbox left">
+                <div class="t_left">
+                    <div class="left_btn"><</div>
+                    <div class="right_btn">></div>
+                    <p>金瓯永固杯</p>
+                </div>
+                <div class="bot_left">
+                    这件灿烂华美的金杯是由清宫造办处用内府的黄金、珍珠、宝石精细打造的。 用于每年元旦（即现在的大年初一，春节）子时（午夜零点左右）的开笔仪式（又称试笔）。在一片爆竹声中，皇帝坐在养心殿东暖阁西南角一个题为“明窗”的小隔间中，他亲手点燃名为“玉烛长调”的蜡台，向案上刻“金瓯永固”字样的金杯中注入屠苏酒，然后用一支管上镌刻着“万年青”的毛笔先蘸朱墨书写几句诸如“天下太平”、“福寿长春”之类的吉祥语，然后再浏览呈进的新年历书。“金瓯永固”喻意国土完整、国家繁荣。新年的开笔仪式正是在祈求社稷永保、一统万年。
+                </div>
+            </div>
+            <div class="right_cbox right">
+                <img src="./images/t_1_s.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cover" id="litwo">
+        <div class="cover_box" data-covername="one">
+            <a href="javascript:;" class="close">X</a>
+            <div class="left_cbox left">
+                <div class="t_left">
+                    <div class="left_btn"><</div>
+                    <div class="right_btn">></div>
+                    <p>三希堂字帖</p>
+                </div>
+                <div class="bot_left">
+                    故宫博物院养心殿西暖阁，有一间八平米的小屋，名叫三希堂，你可别小看这里，这里曾经是乾隆皇帝的书房。因为乾隆皇帝珍藏了三件最心爱的宝物，才下令让人改名为三希堂。
+
+乾隆皇帝与“三希”
+小伙伴们一定知道晋代“书圣”王羲之，还有他书法成就很高的儿子王献之，和一个远房侄子王珣，他们的书法都写得很好。乾隆皇帝酷爱书法，当他得到了王珣书法作品《伯远帖》后，兴奋地把它和王羲之的《快雪时晴帖》、王献之的《中秋帖》一块珍藏到了养心殿的西暖阁的这间小书房里。乾隆皇帝认为它们是“稀世神物”，不是其它寻常书法作品能够相提并论的，索性将这间袖珍书房命名为“三希堂”。
+                </div>
+            </div>
+            <div class="right_cbox right">
+                <img src="./images/t_2_s.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cover" id="lithree">
+        <div class="cover_box" data-covername="one">
+            <a href="javascript:;" class="close">X</a>
+            <div class="left_cbox left">
+                <div class="t_left">
+                    <div class="left_btn"><</div>
+                    <div class="right_btn">></div>
+                    <p>清明上河图</p>
+                </div>
+                <div class="bot_left">
+                    《清明上河图》的作者是北宋画院翰林待诏张择端，画卷精细地绘制出了北宋都城汴梁（今河南开封）东角子门内外和汴河两岸的繁华热闹景象。在纵24.8厘米，横528厘米的画布上，大致纪录了早春的郊野、繁华的汴河两岸、有序的街市三个部分。当我们展开画卷时，就像在观看一部电影，据统计，《清明上河图》中画有人物五百多名，各种牲畜五六十匹，不同车轿二十余辆，大小船只二十余艘，各种房屋三十余幢。无论是状物还是画人，都达到了生动准确、栩栩如生。瞧！九百年前的繁华都城渐渐在我们眼前“复活”了。
+                </div>
+            </div>
+            <div class="right_cbox right">
+                <img src="./images/t_3_s.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cover" id="lifour">
+        <div class="cover_box" data-covername="one">
+            <a href="javascript:;" class="close">X</a>
+            <div class="left_cbox left">
+                <div class="t_left">
+                    <div class="left_btn"><</div>
+                    <div class="right_btn">></div>
+                    <p>掐丝珐琅缠枝莲纹象耳炉</p>
+                </div>
+                <div class="bot_left">
+                    “金属胎掐丝珐琅”多以蓝色珐琅釉为主，因为明代景泰年间的作品最为精美，所以有了“景泰蓝”这个古色古香的俗称。但今天要介绍的这件“景泰蓝”却有些与众不同。
+
+炉腹部主体纹饰是大朵的缠枝莲花，有红、白、黄三色，周身一共6朵，在这6朵缠枝莲花的上边，接近炉口的位置，还装饰着12朵黄、白、红、紫四色菊花。而在接近炉足部的地方，点缀了一圈红白莲瓣纹，突出了掐丝珐琅富丽堂皇、大气祥和的气质。此炉最可贵的是釉质莹润，有些地方甚至犹如玻璃般的明澈。炉的整体造型也端庄敦厚，堪称经典，与著名的宋代炉和明宣德炉的造型一脉相承，且更臻圆熟。
+                </div>
+            </div>
+            <div class="right_cbox right">
+                <img src="./images/t_4_s.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cover" id="lifive">
+        <div class="cover_box" data-covername="one">
+            <a href="javascript:;" class="close">X</a>
+            <div class="left_cbox left">
+                <div class="t_left">
+                    <div class="left_btn"><</div>
+                    <div class="right_btn">></div>
+                    <p>“大禹治水”玉山</p>
+                </div>
+                <div class="bot_left">
+                    比成年大象还重的玉山
+玉山是一种工艺品，常常是在一整块玉石上雕琢出山林景观。今天要介绍的“大禹治水玉山”高224cm,宽96cm，座高60cm，重5000kg,比一头成年大象还要重呢！
+
+在这座玉山上，精细地雕琢着峻岭、瀑布、古木苍松。在山崖峭壁，共有十几处描绘了劳动者在大禹的带领下开山治水的景象。只见工匠们分别使用不同器械劳作，像是古代开凿技术的大会演。除此之外，玉山上还雕刻有奔跑跳跃的麋鹿和猿猴，有快要登上颠峰的老者及仆从，更有神仙以雷火来助开山，层次分明，各具形态，十分精美。在玉山背面，还铭刻着乾隆皇帝为这座玉山所作的长诗及注文。
+                </div>
+            </div>
+            <div class="right_cbox right">
+                <img src="./images/t_5_s.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cover" id="lisix">
+        <div class="cover_box" data-covername="one">
+            <a href="javascript:;" class="close">X</a>
+            <div class="left_cbox left">
+                <div class="t_left">
+                    <div class="left_btn"><</div>
+                    <div class="right_btn">></div>
+                    <p>檀香木“皇帝之宝”</p>
+                </div>
+                <div class="bot_left">
+                    其中最显眼的宝玺。那这二十五方宝玺是怎么来的呢？原来，乾隆皇帝刚刚登基的时候，清朝的宝玺有三十多种，而且常常出现用途不明，认识错误的混乱情况。于是乾隆皇帝下令，对皇帝御用宝玺重新考证排序，确定了二十五方宝玺，并明确规范了各自的用途。有的用来彰显大清皇帝受命于天的正统身份；有的用来大赦天下，颁布诏书；有的用来奖励军功，加官晋爵之论；还有的专门用来对外国使臣回书等等。
+                </div>
+            </div>
+            <div class="right_cbox right">
+                <img src="./images/t_6_s.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cover" id="liseven">
+        <div class="cover_box" data-covername="one">
+            <a href="javascript:;" class="close">X</a>
+            <div class="left_cbox left">
+                <div class="t_left">
+                    <div class="left_btn"><</div>
+                    <div class="right_btn">></div>
+                    <p>太和殿屏风、宝座</p>
+                </div>
+                <div class="bot_left">
+                    在紫禁城内至尊的“金銮宝殿”太和殿内的中央，金柱之间，高台之上，安设着象征无上权威的皇帝宝座——雕龙髹金大椅。 这座皇帝宝座象征着统领天下的无上权威。它通高172.5厘米，座高49厘米，座宽158.5厘米，座前脚踏高30厘米，高高在上，高踞在漆层台阶的座基上，结合太和殿外层层升起的崇高气势，显示出天子皇位的至尊无上。宝座由最珍贵稀有的金丝楠木制成，有一个圈椅式的椅背，上面精细地雕刻着13条栩栩如生的金龙。龙椅背后衬托着高大宽阔的雕龙髹金屏风，周边对称陈列着仙鹤、香炉等礼器，尊贵无比，使整个大殿显得更加金碧辉煌，别提多气派了！然而，随着大清王朝的衰亡，这把尽享尊荣的宝座也曾被丢弃沦落。1915年，梦想称帝的袁世凯用一把中西式结合的高背大椅替换掉了原来的宝座。1959年，朱家溍先生根据旧照片在存放破旧家具的库房重新找到了这把龙椅。1963-64年，故宫博物院集能工巧匠，用了一年多的时间将其修复完整，宝座才又在太和殿上放射出灿烂的光彩。
+                </div>
+            </div>
+            <div class="right_cbox right">
+                <img src="./images/t_7_s.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cover" id="lieight">
+        <div class="cover_box" data-covername="one">
+            <a href="javascript:;" class="close">X</a>
+            <div class="left_cbox left">
+                <div class="t_left">
+                    <div class="left_btn"><</div>
+                    <div class="right_btn">></div>
+                    <p>莲鹤方壶</p>
+                </div>
+                <div class="bot_left">
+                    这件“莲鹤方壶”出土于河南省新郑市李家楼村春秋时期的郑国国君墓中，是用来盛酒的容器。方壶形体巨大，有一米多高。它造型典雅华美，充满了浪漫的想象，方壶集中了圆雕、浅浮雕、细刻，焊接等多种技法，充分体现了当时青铜器的高超工艺。你看！在壶的两侧，有蟠龙纹样作为壶耳，龙角竖立，似乎正在回首反顾。在壶的腹部四角，也各攀附着一条栩栩如生的飞龙。圈足下的双虎，似乎在倾其全力承托着这尊宝物。而最精彩的，就是盖顶上莲花与仙鹤的造型了。莲鹤方壶的壶盖被铸成仰起怒放的双层莲瓣造型，在莲瓣的中央有一个小盖，上面伫立着一只仙鹤，正昂首振翅，似乎正在翘首望着远方。一花一鸟，一静一动，搭配巧妙。将清新活泼和凝重神秘融为一体，这也是它名字的由来所在
+                </div>
+            </div>
+            <div class="right_cbox right">
+                <img src="./images/t_8_s.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cover" id="linine">
+        <div class="cover_box" data-covername="one">
+            <a href="javascript:;" class="close">X</a>
+            <div class="left_cbox left">
+                <div class="t_left">
+                    <div class="left_btn"><</div>
+                    <div class="right_btn">></div>
+                    <p>铜镀金写字人钟</p>
+                </div>
+                <div class="bot_left">
+                    这座钟是一座华美的西洋阁楼形状，有2米多高，一共有四层。顶层的圆形亭子里，两个小人各举着一个圆筒，摆出优美的造型。时钟启动后，这两个小人就会“跳起舞来”，旋身拉开距离，手里的圆筒展开成为一个横幅，写着“万寿无疆”四字，就像在给皇帝祝寿。第二层有一个敲钟人，每逢报完3、6、9、12时后便奏出优美的音乐。第三层是钟的计时部分。阁楼的第四层是最有趣的部分，一个欧洲绅士模样的机械人偶，他单腿跪地，一手扶案，一手握毛笔，栩栩如生。最神奇的是，当宫人们将人偶的毛笔蘸好墨汁，开动开关，这位“绅士”就会一边摇头晃脑，一边在纸上写下“八方向化，九土来王”八个汉字，字迹工整有神，横竖撇捺都有笔锋，别提多好玩了！
+                </div>
+            </div>
+            <div class="right_cbox right">
+                <img src="./images/t_9_s.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cover" id="liten">
+        <div class="cover_box" data-covername="one">
+            <a href="javascript:;" class="close">X</a>
+            <div class="left_cbox left">
+                <div class="t_left">
+                    <div class="left_btn"><</div>
+                    <div class="right_btn">></div>
+                    <p>定窑孩儿枕</p>
+                </div>
+                <div class="bot_left">
+                    瓷枕始创于隋代，在唐、宋、元各代盛行。特别是在宋代，以定窑烧制的瓷枕最有名气。连皇宫中也有它的身影。比如今天要介绍的现藏于北京故宫博物院的宋代定窑孩儿枕，就是其中的精品。
+
+定窑孩儿枕高18.3cm，长30cm，宽18.3cm，比我们现在的枕头要小很多。定窑的能工巧匠们将瓷枕塑造成一个天真、活泼可爱的男孩形象，他的背部就是枕头的枕面。你看，他眉清目秀，眼睛圆而有神，神色悠闲地铺伏在榻上，两臂环抱垫起头部，两只小脚丫顽皮地交叉上跷，似乎正在床上撒娇蹬腿。他穿着宋代人的衣服，右手上拿着一个绣球。卧榻四周还装饰着象征吉祥如意的精美花纹，栩栩如生，漂亮极了。
+                </div>
+            </div>
+            <div class="right_cbox right">
+                <img src="./images/t_10_s.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cover" id="lielven">
+        <div class="cover_box" data-covername="one">
+            <a href="javascript:;" class="close">X</a>
+            <div class="left_cbox left">
+                <div class="t_left">
+                    <div class="left_btn"><</div>
+                    <div class="right_btn">></div>
+                    <p>乾隆帝田黄三联玺</p>
+                </div>
+                <div class="bot_left">
+                    “黄金易求，田黄难得”。田黄石，因为仅产于我国福建省福州市北寿山乡的一小块水田中而得名。它产量稀有，材质温润凝腻，被尊为“石中之王”，是印章石中的极品。
+
+田黄三联玺是清高宗乾隆皇帝做太上皇时镌刻的，由一块完整的大田黄石雕刻而成，材质十分珍贵。造型上也别出匠心，一圆两方的三枚小玺，由石链连在一起，每一枚玺印高均为1厘米，边长均不超过3厘米，十分精巧可爱。
+
+三联玺上的印文也各有讲究。“乾隆宸翰”“指乾隆皇帝的翰墨手书，我们常常能在乾隆皇帝的御笔书画上看到这个印文。“惟精惟一”和“乐天”都出自儒家经典。“惟精惟一”出自《尚书·大禹漠》，指用功精深，用心专一，乾隆皇帝在位时就对这个印文钟爱有加，认为特别能代表他的政治思想。中间椭圆形印上的“乐天”取自《周易·系辞》，指要顺应天命，知足常乐，反映的是乾隆皇帝退居太上皇位后的精神追求。
+                </div>
+            </div>
+            <div class="right_cbox right">
+                <img src="./images/t_13_s.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cover" id="litewvel">
+        <div class="cover_box" data-covername="one">
+            <a href="javascript:;" class="close">X</a>
+            <div class="left_cbox left">
+                <div class="t_left">
+                    <div class="left_btn"><</div>
+                    <div class="right_btn">></div>
+                    <p>五彩加金鹭莲纹尊</p>
+                </div>
+                <div class="bot_left">
+                    在故宫博物院，珍藏着很多精美的瓷尊，五彩加金鹭莲纹尊就是其中之一。它器身高大，有44cm之高，足径为14.2cm，腰腹圆鼓，长长的颈上有一个直径为22.4cm的敞口。因为腹下部内收，到靠近圈足处又开始外撇，形似凤尾，所以又被称为“凤尾尊”。
+
+静观这件精美的瓷器，一幅自然恬静的夏日荷塘美景映入眼帘。瓷器通体以白釉为地，用红、黄、绿、蓝、紫、金等色彩描绘出鹭鸶莲塘纹饰。塘中的水草、浮萍随波荡漾；嫩绿的新枝托起硕大的莲叶，随风摇曳；红色、紫色、金色的莲花，或含苞待放，或娇艳盛开；莲间点缀着彩蝶、鹭鸶，生趣盎然。
+
+莲花因为“亭亭玉立”，具有“出淤泥而不染”的特性，所以被人们所喜爱，在明清时期，很多瓷器都以莲花为装饰。它器型秀美，色彩丰富，纹饰生动，尤其是金彩的应用，使它显得富丽堂皇，精美非凡。
+                </div>
+            </div>
+            <div class="right_cbox right">
+                <img src="./images/t_14_s.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cover" id="lithreeteen">
+        <div class="cover_box" data-covername="one">
+            <a href="javascript:;" class="close">X</a>
+            <div class="left_cbox left">
+                <div class="t_left">
+                    <div class="left_btn"><</div>
+                    <div class="right_btn">></div>
+                    <p>胭脂红、蓝地轧道珐琅彩折枝花纹合欢瓶</p>
+                </div>
+                <div class="bot_left">
+                    看到这件文物，你一定会好奇，这两个瓶子为什么连在一起呢？原来这叫做合欢瓶。两个瓶合在一起，有和合吉祥之意。这件胭脂红、蓝地轧道珐琅彩折枝花纹合欢瓶，是清代乾隆时期的产物。这长长的名字，信息量特别大，我来一一介绍给你吧！
+
+珐琅彩是一种彩瓷品种,是将人工烧炼的特殊彩料——珐琅料绘制在瓷胎上烧制而成。雍正六年（1728年）以前，珐琅彩料需要依赖欧洲进口，而雍正六年以后，清宫造办处成功地自炼出了珐琅彩料，而且有20多种色彩，比进口彩料还丰富，这使珐琅彩瓷器的生产获得突飞猛进的发展，这款合欢瓶就是其中的精品之一。
+
+这个瓶子高16.8cm，口径6.8cm，足径7.5cm，造型优美，设计精巧。它的瓶口呈盘子状，瓶盖上有宝珠形纽。如果把它比喻成人，那它的样子就是短脖溜肩，大腹便便，到小腿处又变瘦了。在它的底部有一个圆形的圈足来支撑全身。圈足内施白釉，自右向左，用蓝料彩署下篆书“大清乾隆年制”横排六字款。
+                </div>
+            </div>
+            <div class="right_cbox right">
+                <img src="./images/t_15_s.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cover" id="lifourteen">
+        <div class="cover_box" data-covername="one">
+            <a href="javascript:;" class="close">X</a>
+            <div class="left_cbox left">
+                <div class="t_left">
+                    <div class="left_btn"><</div>
+                    <div class="right_btn">></div>
+                    <p>斗彩鸡缸杯</p>
+                </div>
+                <div class="bot_left">
+                    斗彩鸡缸杯，个头不大，却十分珍贵。明万历年间的《神宗实录》中就有记载“成化彩鸡缸杯一双，值钱十万”。
+
+斗彩是一种彩瓷品种，创烧于明代成化时期。斗彩瓷器需要先在釉下用青花勾画纹饰轮廓线，然后入窑烧制，再在釉上填绘各种色彩，二次入炉烘烤之后才能制成，是釉上彩和釉下彩相结合的彩瓷品种。因为烧制有难度，所以多是小件器物。
+
+斗彩鸡缸杯高3.4cm，口径8.3cm，足径4.3cm。它的杯口微撇，口下渐敛，深腹，平底，因为样子像个小缸，所以被称为“缸杯”。在它的足底还有个青花双方栏，当中用楷书写着“大明成化年制”双行六字款。
+                </div>
+            </div>
+            <div class="right_cbox right">
+                <img src="./images/t_17_s.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cover" id="lifiveteen">
+        <div class="cover_box" data-covername="one">
+            <a href="javascript:;" class="close">X</a>
+            <div class="left_cbox left">
+                <div class="t_left">
+                    <div class="left_btn"><</div>
+                    <div class="right_btn">></div>
+                    <p>青花压手杯</p>
+                </div>
+                <div class="bot_left">
+                    压手杯是明代永乐时期，景德镇御窑厂创制的一种新型瓷杯。为什么叫做压手杯呢？原来，这种形状的杯子重心在杯的下部，杯口的口沿微微外撇，当你手握瓷杯，外撇的杯沿正好会压合在手的虎口上，让你有一种沉甸甸的压手之感，所以叫做“压手杯”。
+
+明代永乐年间，青花瓷器迅猛发展，出现了自元代末年青花瓷成熟以来的第二个高峰。这一时期的青花瓷器呈现出了浓艳、凝重、古朴、典雅的艺术风采。故宫博物院珍藏的几只明永乐青花压手杯就有这样的特点。不信，你看！
+                </div>
+            </div>
+            <div class="right_cbox right">
+                <img src="./images/t_18_s.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cover" id="lisixteen">
+        <div class="cover_box" data-covername="one">
+            <a href="javascript:;" class="close">X</a>
+            <div class="left_cbox left">
+                <div class="t_left">
+                    <div class="left_btn"><</div>
+                    <div class="right_btn">></div>
+                    <p>唐三彩马</p>
+                </div>
+                <div class="bot_left">
+                    你听说过唐三彩吗？这是指唐代的一种低温釉陶器，名字叫“三彩”，却并不只有三种颜色，而是以不同的矿物做呈色剂，包括黄、绿、白、褐、蓝、黑、紫等多种颜色。这些颜色有单用，也有混合使用的，以黄、白、绿三色最常见。
+
+<br>这匹以白、绿、赭三色为主的陶马有半米多高，昂首挺胸，威风凛凛。瞧！它的两只耳朵向上耸立，双目圆睁炯炯有神，挺拔有力的四腿刻画得尤其生动。马像的配饰也被刻画得细致入微。它头戴络头，身披攀胸和鞦带，上面还挂着杏叶形状的饰物，马背配鞍，外包鞍袱，下衬雕花垫和障泥（指垂于马腹两侧，用于遮挡尘土的东西），尾系花结。
+
+唐三彩的题材多为动物和人物，其中以三彩马最常见。这是为什么呢？原来，李唐王朝本身具有游牧民族的血统，后来又要抗击北部各少数民族的侵扰，唐朝特别注意对马的驯养。唐太宗李世民将骑马狩猎看作是大丈夫的三大乐事之一，为了追念随他转战沙场统一天下的六匹战马，唐太宗让著名画师阎立本画出六骏的样本，命工匠雕刻成石质浮雕，立在昭陵（唐太宗的陵墓）中，永远陪伴。唐玄宗李隆基也曾驯养舞马，在自己的生日宴上应节踢踏，翩翩起舞。诗人李白还曾吟出“五花马，千金裘，呼儿将出换美酒，与尔同销万古愁”的千古佳句。马已经是唐人生活不可或缺的组成部分。
+                </div>
+            </div>
+            <div class="right_cbox right">
+                <img src="./images/t_19_s.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cover" id="liseventeen">
+        <div class="cover_box" data-covername="one">
+            <a href="javascript:;" class="close">X</a>
+            <div class="left_cbox left">
+                <div class="t_left">
+                    <div class="left_btn"><</div>
+                    <div class="right_btn">></div>
+                    <p>明黄色缎绣金龙朝袍</p>
+                </div>
+                <div class="bot_left">
+                    这件华美的朝袍是乾隆朝的皇帝礼服，面料采用明黄色素缎，袍身上绣着43条金龙。绣工精妙，针法多变，配色华美富丽。你知道么？朝服是清代皇帝服饰中等级最高的穿着，是皇帝在出席国家重大典礼时的服装。让我们来看看它有哪些特点吧，首先，在式样上朝服上下连体，有披领和马蹄袖。在装饰纹饰上，除了象征皇帝高贵身份的龙纹，朝服上还装饰着帝王专用的“十二章”纹，依次是日、月、星辰、山、龙、华虫、黼、黻、宗彝、藻、火、粉米。这些纹样分别对应着皇帝的品德，比如日、月、星辰带来光芒，山可以兴云雨，龙善于变化，华虫取其文章和耿介，宗彝取其威猛和忠孝，藻取其文，火取炎上，粉取洁白，米取能滋养，黼取能决断，黻取善恶相背。“十二章”纹样装饰有着森严的等级，除了帝王的朝服，公卿大臣的服饰上只能依照等级装饰九章、七章、五章、三章不等。有时在玉器等工艺品上我们也可以看到十二章纹样的身影。
+                </div>
+            </div>
+            <div class="right_cbox right">
+                <img src="./images/t_11_s.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cover" id="lieighteen">
+        <div class="cover_box" data-covername="one">
+            <a href="javascript:;" class="close">X</a>
+            <div class="left_cbox left">
+                <div class="t_left">
+                    <div class="left_btn"><</div>
+                    <div class="right_btn">></div>
+                    <p>韩熙载夜宴图</p>
+                </div>
+                <div class="bot_left">
+                    《韩熙载夜宴图》出自五代南唐名画家顾闳（hóng）中之手，它像一幅长长的连环画，为我们讲述了南唐大臣韩熙载家夜宴宾客的故事。画卷可以分为悉听琵琶、击鼓观舞、更衣暂歇、清吹合奏、曲终人散五个段落，每段中间画有屏风隔扇加以分隔，既独立成章，又巧妙地相互联结，细致生动地描绘出宴会上歌舞升平的热闹景象。除了惟妙惟肖的人物和家具描绘，这幅图卷最令人叹赏的还有艳而不俗的色彩，仕女的素妆艳服与男宾的青黑色衣衫，几案坐榻等深色家具沉厚古雅，仕女裙衫、帘幕、帐幔与枕席上的图案又绚烂多采，交相辉映。
+                </div>
+            </div>
+            <div class="right_cbox right">
+                <img src="./images/t_12_s.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cover" id="lininteen">
+        <div class="cover_box" data-covername="one">
+            <a href="javascript:;" class="close">X</a>
+            <div class="left_cbox left">
+                <div class="t_left">
+                    <div class="left_btn"><</div>
+                    <div class="right_btn">></div>
+                    <p>貂皮嵌珠皇后冬朝冠</p>
+                </div>
+                <div class="bot_left">
+                    就像欧洲的王室有自己的皇冠，清代的皇帝皇后在重大场合不仅有自己的朝冠，而且还有季节之分。这顶镶着貂皮的华丽冠帽就是皇后冬季重大典礼时候穿戴的，比如万寿节（皇帝的生日）、冬至、元旦（古时候称春节为元旦）等等。
+
+这顶貂皮嵌珠皇后冬朝冠通高30cm，口径23cm，金灿夺目，细细看来更是十分精致奢华。不信？我们就一起来数一数上面的奇珍异宝吧。
+
+这顶朝冠为圆式，以貂皮为底，缀红色缨穗。冠顶有三只金凤叠压在一起，顶尖镶着一枚大东珠，每层金凤之间也各穿着一枚东珠。每只金凤上还另外装饰着三枚东珠，凤尾点缀着无数珍珠。在红色缨穗周围还有七只金凤，每只都装饰着一枚猫眼石和九枚东珠，凤尾还点缀着珍珠。朝冠的后部是一只金翟(dí )（一种长尾的野鸡），装饰着一枚猫眼石和数颗珍珠。翟尾垂挂着横二排竖五列的珠穗，珠穗上饰有金累丝与珊瑚制成的坠角。这种珠穗的排列称为“五行二就”，是清代后妃朝冠形制中最高等级的标志之一，只有皇后或皇太后可享用，皇后以下皇贵妃或皇子福晋的朝冠则只能享用“三行二就”。
+                </div>
+            </div>
+            <div class="right_cbox right">
+                <img src="./images/t_16_s.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- 底部图片bottom -->
+    <div class="bottom">
+        <!-- 底部背景图 -->
+    <div class="bottom_bg"></div>
+        
+    </div>
+    <!-- 底部内容 -->
+    
+    <!-- 青少版底部内容 -->
+    <footer>
+        <div class="footer_wrap">
+            <div class="footer_content">
+                <div class="footer_selection">
+                    故宫其他站点
+                    <div class="footer_list">
+                        <ul>
+                            <li><a href="javascript:;">故宫官网</a></li>
+                            <li><a href="javascript:;">故宫出版社</a></li>
+                            <li><a href="javascript:;">中国古代书画研究系统</a></li>
+                            <li><a href="javascript:;">故宫商城</a></li>
+                            <li><a href="javascript:;">故宫博物院藏品总目</a></li>
+                            <li><a href="javascript:;">北京故宫文物保护基金会</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="clearfix">
+                    <li><a href="javascript:;">· 隐私政策</a></li>
+                    <li><a href="javascript:;">· 联系我们</a></li>
+                    <li><a href="javascript:;">· 版权声明</a></li>
+                </ul>
+                <p>© 2001-2019 故宫博物院 京ICP备05067311号-1 网站建设：清石信息</p>
+                <div class="footer_house"></div>
+            </div>
+        </div>
+    </footer>
+    <!-- 侧边框 -->
+    <div class="tips">  
+        <a href="javascript:;"><img src="./images/licon.png" alt=""></a>
+        <!-- 旁边的小导航 -->
+        <div class="slide_nav">
+            <a href="#header_top" class="top"></a>
+            <a href="javascript:;" class="center"></a>
+            <div class="erweima">
+                <img src="./images/2dcode.png" alt="">
+             <span class="sanjiaoda"></span>
+             <span class="sanjiaoxiao"></span></div>
+            <a href="javascript:;" class="bottom"></a>
+         
+        </div>
+    </div>
+     
+
+    <!-- js文件 -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/link_youth.js"></script>
+    <script src="./js/index.js"></script>
+    <!-- 顶部区域的js代码 -->
+    <!-- 顶部导航栏js部分 -->
+    <script>
+        var btn = document.querySelector('.nav ul li:nth-child(7) a');
+        var search = document.querySelector('.sousuokuang');
+        var flag = true;
+        (function () {
+            btn.onclick = function () {
+                if (flag) {
+                    search.style.display = 'block';
+                    flag = false;
+                } else {
+                    search.style.display = 'none';
+                    flag = true;
+                }
+            }
+        })();
+
+    //导航啦的下拉列表
+    var bottom_list0 = document.querySelector('.bottom_list0');
+    var bottom_list1 = document.querySelector('.bottom_list1');
+    var li1 = document.querySelector('.three');
+    var li2 = document.querySelector('.four');
+    //获取下拉菜单的li元素
+    var bottom_li = document.querySelectorAll('.bottom_list li');
+    // 鼠标进入显示
+    li1.onmouseenter=function(){
+    bottom_list0.style.display='block';
+    for(var i=0;i<bottom_li.length;i++){
+        bottom_li[i].onmouseenter=function(){
+            this.className='active';
+            this.children[0].style.color='red';          
+        }
+        bottom_li[i].onmouseleave=function(){
+            this.className='';
+            this.children[0].style.color='';   
+        }
+    }
+}
+//鼠标离开隐藏
+li1.onmouseleave=function(){
+    bottom_list0.style.display='none';
+}
+// 鼠标进入显示
+li2.onmouseenter=function(){
+    bottom_list1.style.display='block';
+    for(var i=0;i<bottom_li.length;i++){
+        bottom_li[i].onmouseenter=function(){
+            this.className='active';
+            this.children[0].style.color='red';          
+        }
+        bottom_li[i].onmouseleave=function(){
+            this.className='';
+            this.children[0].style.color='';   
+        }
+    }
+}
+//鼠标离开隐藏
+li2.onmouseleave=function(){
+    bottom_list1.style.display='none';
+}
+
+    </script>
+    <!-- 侧边框js代码 -->
+    <script>
+        //旁边的小导航滚动事件
+    //侧边小导航事件
+var tips = document.querySelector('.tips');
+var top1 = document.querySelector('.top');
+$(window).scroll(function(){
+    var t = $('html').scrollTop();
+    if( t >= 300 ) {
+        top1.style.display = 'block';
+    } else {
+        top1.style.display = 'none';
+    }
+})
+$('.top').click(function(){
+    $('html').animate({
+        scrollTop:0
+    },1000)
+})
+// 二维码
+var erweima=document.querySelector('.erweima');
+var center=document.querySelector('.center');
+    center.onclick=function(){
+    erweima.classList.toggle('active1');
+    }
+    center.onmouseleave=function(){
+    erweima.style.opacity=0.5; 
+    }
+    center.onmouseenter=function(){
+    erweima.style.opacity=1;
+    }
+    erweima.onmouseenter=function(){
+    erweima.style.opacity=1;
+    }
+    erweima.onmouseleave=function(){
+    erweima.style.opacity=0.5;
+    }
+
+    </script>
+
+    
+</body>
+</html>

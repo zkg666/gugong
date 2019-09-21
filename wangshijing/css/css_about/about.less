@@ -1,0 +1,631 @@
+.m_body {
+    .t_m_body {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+
+        a {
+            color: #707070;
+        }
+
+        span {
+            color: #707070;
+            padding: 0 10px;
+        }
+    }
+
+    //故宫博物院总说
+    .content1 {
+        .t_content1 {
+            text-align: center;
+            margin-top: 20px;
+
+            span:nth-child(1) img,
+            span:nth-child(3) img {
+                width: 22px;
+                height: 33px;
+            }
+
+            span:nth-child(2) {
+                display: inline-block;
+                font-size: 26px;
+                position: relative;
+                top: 7px;
+            }
+
+            p {
+                font-size: 14px;
+                color: #707070;
+                margin: 40px 180px 20px;
+                text-indent: 2em;
+            }
+
+            span:nth-child(5) {
+                display: inline-block;
+                width: 110px;
+                height: 35px;
+                line-height: 35px;
+                background: url('../../img/img_about/btn1.png') no-repeat;
+                margin-bottom: 30px;
+            }
+        }
+
+        .m_content1 {
+            width: 100%;
+            height: 439px;
+
+            .l_content1 {
+                height: 439px;
+                width: 337px;
+                background: url('../../img/img_about/bg1.jpg');
+                padding-top: 25px;
+                box-sizing: border-box;
+                cursor: pointer;
+
+                ul {
+                    text-align: left;
+                    width: 100%;
+
+                    .active {
+                        background: #942928;
+                    }
+
+                    li {
+                        width: 100%;
+                        height: 45px;
+                        line-height: 45px;
+                        color: white;
+                        font-size: 18px;
+                        padding-left: 40px;
+                        box-sizing: border-box;
+                        position: relative;
+                    }
+
+                    li span {
+                        font-size: 16px;
+                        color: white;
+                    }
+
+                    // li::after{
+                    //     content: '';
+                    //     position: absolute;
+                    //     left: 100%;
+                    //     top: 0;
+                    //     border-left:17px solid #942928;
+                    //     border-top:23px solid transparent;
+                    //     border-right:0px solid transparent;
+                    //     border-bottom:23px solid transparent;
+                    // }
+                    div {
+                        position: absolute;
+                        left: 100%;
+                        top: 0;
+                        border-left: 17px solid #942928;
+                        border-top: 23px solid transparent;
+                        border-right: 0px solid transparent;
+                        border-bottom: 23px solid transparent;
+                        display: none;
+                    }
+                }
+            }
+
+            .r_content1 {
+                height: 439px;
+                width: 900px;
+                overflow: hidden;
+
+                .item {
+                    height: 100%;
+                    width: 100%;
+                    background: url('../../img/img_about/bg2.jpg');
+                    padding: 35px 40px;
+                    box-sizing: border-box;
+
+                    .title {
+                        width: 100%;
+                        position: relative;
+                        margin-bottom: 15px;
+
+                        img {
+                            width: 145px;
+                            margin-right: 30px;
+                        }
+
+                        span:nth-child(2) {
+                            font-size: 26px;
+                            color: White;
+                            font-weight: normal;
+                            position: absolute;
+                            bottom: 30px;
+                        }
+
+                        span:nth-child(3) {
+                            display: block;
+                            font-size: 20px;
+                            color: White;
+                            font-weight: normal;
+                            position: absolute;
+                            bottom: 0px;
+                            left: 175px;
+                        }
+                    }
+
+                    p {
+                        text-indent: 2em;
+                        color: White;
+                        line-height: 25px;
+                        height: 150px;
+                        overflow: hidden;
+                        word-break: break-all;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 6;
+                        -webkit-box-orient: vertical;
+                    }
+                }
+            }
+        }
+    }
+
+    //院史编年部分
+    .content2 {
+        .t_content2 {
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 40px;
+
+            span:nth-child(1) img,
+            span:nth-child(3) img {
+                width: 22px;
+                height: 33px;
+            }
+
+            span:nth-child(2) {
+                display: inline-block;
+                font-size: 26px;
+                position: relative;
+                top: 7px;
+            }
+        }
+
+        .tap {
+            width: 100%;
+            height: 38px;
+            margin-bottom: 30px;
+
+            .prev {
+                margin-right: 113px;
+            }
+
+            .next {
+                margin-left: 110px;
+            }
+
+            .tap_list {
+                height: 38px;
+                width: 956px;
+                overflow: hidden;
+
+                ul {
+                    height: 38px;
+                    width:1700px;
+                    li {
+                        float: left;
+                        height: 38px;
+                        line-height: 38px;
+                        padding-left: 43px;
+                        background: url(../../img/img_about/list_dragon.png) no-repeat;
+                        background-position: left top;
+                        margin-right: 42px;
+
+                        a {
+                            font-size: 22px;
+                            color: #474747;
+                        }
+                    }
+
+                    .act {
+                        background: url(../../img/img_about/list_dragon.png) no-repeat;
+                        background-position: left bottom;
+                    }
+
+                    li:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        .list {
+            height: 480px;
+            width: 100%;
+
+            ul {
+                width: 580px;
+                background: url("../../img/img_about/list_cir.png") no-repeat;
+                background-position: left 10px;
+
+                li {
+                    padding-left: 25px;
+                    height: 30px;
+                    line-height: 30px;
+                    margin-bottom: 44px;
+                }
+
+                li:last-child {
+                    margin-bottom: 0;
+                }
+
+                span {
+                    font-size: 20px;
+                }
+
+                a {
+                    font-size: 16px;
+                }
+
+                .qj {
+                    height: 30px;
+                    width: 30px;
+                    margin-left: 10px;
+                }
+
+                .qj1-1 {
+                    height: 30px;
+                    width: 30px;
+                    margin-left: 10px;
+                    display: none;
+                }
+            }
+        }
+
+        .gd {
+            margin-top: 50px;
+            width: 100%;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            position: relative;
+
+            a {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                display: block;
+                background: url('../../img/img_about/btn1.png') no-repeat;
+                background-size: 150px 35px;
+                height: 35px;
+                width: 150px;
+            }
+        }
+
+        .line {
+            margin: 30px 0;
+            width: 100%;
+        }
+    }
+
+    //机构设置部分
+    .content3 {
+        .t_content3 {
+            text-align: center;
+            margin-bottom: 40px;
+
+            span:nth-child(1) img,
+            span:nth-child(3) img {
+                width: 22px;
+                height: 33px;
+            }
+
+            span:nth-child(2) {
+                display: inline-block;
+                font-size: 26px;
+                position: relative;
+                top: 7px;
+            }
+        }
+
+        .m_content3 {
+            height: 506px;
+            width: 100%;
+
+            .lbs {
+
+                // position: absolute;
+                // z-index: 1;
+                .public {
+                    height: 506px;
+                    width: 250px;
+                    padding-top: 50px;
+                    box-sizing: border-box;
+                    margin-right: 2px;
+
+                    ul {
+                        padding: 0 10px;
+                        box-sizing: border-box;
+
+                        li {
+                            border: 1px solid transparent;
+                            border-radius: 8px;
+                            height: 48px;
+                            text-align: center;
+
+                            a {
+                                display: inline-block;
+                                color: #fff;
+                                font-size: 16px;
+                            }
+
+                        }
+
+                        // 使用伪元素使文字垂直居中
+                        li::after {
+                            content: "";
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 0;
+                            height: 100%;
+                            overflow: hidden;
+                        }
+
+                        li:hover {
+                            border: 1px solid #fff;
+                        }
+                    }
+                }
+
+                .lb1 {
+                    background: url("../../img/img_about/bg3.jpg");
+                }
+
+                .lb2 {
+                    background: url("../../img/img_about/bg4.jpg");
+                }
+
+                .lb3 {
+                    background: url("../../img/img_about/bg5.jpg");
+                }
+
+                .lb4 {
+                    background: url("../../img/img_about/bg6.jpg");
+                }
+
+                .lb5 {
+                    background: url("../../img/img_about/bg7.jpg");
+                    margin-right: 0;
+                }
+            }
+
+            // .pops {
+            //     height: 506px;
+            //     width: 100%;
+            //     position: absolute;
+            //     border: 1px solid #ccc;
+
+            .pop {
+                height: 506px;
+                width: 100%;
+                position: absolute;
+                background-color: #fff;
+                padding: 30px 70px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+
+                span {
+                    display: inline-block;
+                    position: absolute;
+                    right: 20px;
+                    top: 20px;
+                    width: 25px;
+                    height: 25px;
+                }
+
+                .text {
+                    h1 {
+                        font-size: 20px;
+                        padding: 30px 0;
+                        text-align: center;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        line-height: 25px;
+                    }
+                }
+            }
+
+            // }
+        }
+    }
+
+    //故宫资讯部分
+    .content4 {
+        .t_content4 {
+            margin-top: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+
+            span:nth-child(1) img,
+            span:nth-child(3) img {
+                width: 22px;
+                height: 33px;
+            }
+
+            span:nth-child(2) {
+                display: inline-block;
+                font-size: 26px;
+                position: relative;
+                top: 7px;
+            }
+        }
+
+        .m_content4 {
+            height: 290px;
+            overflow: hidden;
+        }
+
+        .l_content4 {
+            height: 290px;
+            width: 460px;
+            overflow: hidden;
+            position: relative;
+
+            ul {
+                width: 1380px;
+                height: 100%;
+                position: absolute;
+
+                li {
+                    float: left;
+
+                    img {
+                        width: 460px;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .dotted {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 20px;
+
+                span {
+                    height: 24px;
+                    width: 27px;
+                    float: left;
+                    display: block;
+                    margin-right: 10px;
+                    background: url("../../img/img_about/dian2.png") no-repeat;
+                    background-position: left top;
+                }
+
+                .special {
+                    background: url("../../img/img_about/dian2.png") no-repeat;
+                    background-position: -27px top;
+                }
+            }
+        }
+
+        .r_content4 {
+            height: 290px;
+            width: 770px;
+
+            li {
+                width: 100%;
+                height: 70px;
+                line-height: 70px;
+                border-bottom: 1px solid #ccc;
+
+                span {
+                    color: #94774D;
+
+                    i {
+                        font-size: 22px;
+                        font-style: normal;
+                    }
+                }
+
+                a {
+                    font-size: 18px;
+                }
+
+                img {
+                    margin: 0 10px;
+                }
+            }
+
+            li:last-child {
+                border-bottom: 0 none;
+            }
+        }
+
+        .gd {
+            margin-top: 50px;
+            width: 100%;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            position: relative;
+
+            a {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                display: block;
+                background: url('../../img/img_about/btn1.png') no-repeat;
+                background-size: 110px 35px;
+                height: 35px;
+                width: 110px;
+            }
+        }
+
+        .line {
+            margin: 30px 0;
+            width: 100%;
+        }
+    }
+
+    // 景仁榜部分
+    .content5 {
+        width: 100%;
+        height: 437px;
+        background: url(../../img/img_about/bg8.jpg);
+        overflow: hidden;
+        margin-bottom: 20px;
+
+        .wz {
+            width: 485px;
+            height: 100%;
+            margin-left: 60px;
+            margin-top: 50px;
+
+            .title {
+                margin-bottom: 20px;
+
+                span:nth-child(1) img,
+                span:nth-child(3) img {
+                    width: 22px;
+                    height: 33px;
+                }
+
+                span:nth-child(2) {
+                    display: inline-block;
+                    font-size: 40px;
+                    color: #fff;
+                    position: relative;
+                    top: 7px;
+                }
+            }
+
+            p {
+                text-indent: 2em;
+                line-height: 22px;
+                color: #fff;
+                word-break: break-all;
+            }
+
+            .gd {
+                margin-top: 20px;
+                width: 485px;
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                position: relative;
+
+                a {
+                    position: absolute;
+                    left: 0;
+                    display: block;
+                    background: url('../../img/img_about/btn1.png') no-repeat;
+                    background-size: 150px 35px;
+                    color: #fff;
+                    height: 35px;
+                    width: 150px;
+                }
+            }
+        }
+    }
+}
